@@ -1,0 +1,140 @@
+@font-face {
+  font-family: "hn";
+  src: url("../fonts/HelveticaNeue Medium.ttf");
+}
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  font-family: "hn";
+}
+
+img {
+  width: 100%;
+}
+
+/* Header */
+header, footer {
+  background: linear-gradient(to right, rgba(233, 241, 250, 0.745), rgba(255, 255, 255, 0.5), rgba(246, 250, 255, 0.868));
+  height: 2.15%;
+  justify-content: space-around;
+  -webkit-backdrop-filter: blur(0.25rem);
+          backdrop-filter: blur(0.25rem);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.104);
+}
+
+.menu {
+  position: relative;
+  top: 0;
+}
+
+.menu > .menu-left > ul {
+  display: flex;
+}
+
+.menu > .menu-left > ul > li {
+  padding: 0.05rem 0.75rem;
+  font-size: 0.9rem;
+}
+
+#cover {
+  background-image: url("../assets/yosemite.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  max-width: 100vw;
+}
+
+ul {
+  list-style-type: none;
+}
+
+#logo {
+  padding-left: 0.25rem;
+  width: 2rem;
+  height: 1.25rem;
+  opacity: 100%;
+  transition: 0.3s ease;
+}
+
+#finder {
+  padding-left: 0.1rem;
+}
+
+#logo:hover {
+  opacity: 70%;
+}
+
+.menu-right {
+  position: absolute;
+  left: 89%;
+  top: 8%;
+}
+
+.menu-right > ul {
+  display: flex;
+}
+
+.menu-right > ul > li {
+  padding-right: 0.4rem;
+  font-size: 0.87rem;
+}
+
+#battery {
+  height: 1.1rem;
+  width: 1.1rem;
+}
+
+#wifi {
+  height: 1rem;
+  width: 1rem;
+}
+
+/* Desktop Environment */
+.apps-container {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  position: relative;
+  top: 1rem;
+  left: 88%;
+}
+
+.app-image {
+  width: 5.5rem;
+  height: 5.5rem;
+}
+
+/* Footer */
+footer {
+  position: absolute;
+  bottom: 0rem;
+  left: 20%;
+  height: 3.7rem;
+  overflow: hidden;
+}
+
+.icon {
+  height: 2.8rem;
+  width: 2.9rem;
+  padding: 0rem 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.icon:hover {
+  transform: scale(1.25);
+}
+
+.dock > ul {
+  display: flex;
+}
+
+#border-icon {
+  border-left: 2px solid rgba(0, 0, 0, 0.479);
+  width: 2.25rem;
+}/*# sourceMappingURL=style.css.map */
