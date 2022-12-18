@@ -5,9 +5,12 @@ Link
 ![CaptureFakeOS](https://user-images.githubusercontent.com/119549394/208293947-d399030a-f4f8-4c14-830e-e4400ed3bc2e.PNG)
 
 ## Outline
-The main aim of this project was to further consolidate our understanding of HTML, CSS/SCSS and Javascript. This project involved looking at a reference image of an OS and replicating it. I chose to base my project around this image (below) and therefore base it off Mac OSX (version 10.10) Yosemite.
+The main aim of this project was to further consolidate our understanding of HTML, CSS/SCSS and Javascript. This project involved looking at a reference image of an OS and replicating it. I chose to base my project around several images (shown in the Reference Images section) and therefore I based my design off the Mac OSX (version 10.10) Yosemite.
+
+### Reference Images
 
 ![image](https://user-images.githubusercontent.com/119549394/208292679-d47792d7-f9d4-4527-88f7-d4ebd0c09e03.png)
+![image](https://user-images.githubusercontent.com/119549394/208294238-2bf08c84-432c-4038-98af-977629c521f4.png)
 
 ### Features
 - Single Page Application.
