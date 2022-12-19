@@ -8,13 +8,14 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="icon" href="assets/ico.png" />
   </head>
+
   <body id="cover">
     <header>
       <div class="menu">
         <div class="menu-left">
           <ul>
             <li>
-              <a href="index.html"> <img id="logo" src="assets/logo.png" /></a>
+              <img id="logo" src="assets/logo.png" />
             </li>
             <li id="finder"><a href="#"></a>Finder</li>
             <li><a href="#"></a>File</li>
@@ -45,8 +46,10 @@
         <img class="app-image" src="assets/harddisk-app.png" />
       </div>
       <div class="app">
-        <img class="app-image" id="safari" src="assets/safari-icon.png" />
-        <img class="app-image" id="hard-disk" src="assets/harddisk-app.png" />
+        <img class="app-image" id="safari-app" src="assets/safari-icon.png" />
+      </div>
+      <div class="app">
+        <img class="app-image" id="hard-disk" src="assets/my-website-app.png" />
       </div>
     </main>
 
@@ -60,10 +63,10 @@
             <img src="assets/launchpad-icon.png" />
           </li>
           <li class="icon">
-            <img src="assets/safari-icon.png" />
+            <img src="assets/safari-icon.png" id="safari" />
           </li>
           <li class="icon">
-            <img src="assets/mail-icon.png" />
+            <a href="mailto:"> <img src="assets/mail-icon.png" /></a>
           </li>
           <li class="icon">
             <img src="assets/contacts-icon.png" />
@@ -78,31 +81,114 @@
             <img src="assets/reminders-icon.png" />
           </li>
           <li class="icon">
-            <img src="assets/maps-icon.png" />
+            <a
+              href="https://duckduckgo.com/?q=Sydney%2C+NSW&t=h_&ia=places&iaxm=maps&strict_bbox=0&bbox=-33.74968094658189%2C150.9731900225512%2C-34.07927708364575%2C151.5846099461628&metatoken=0"
+              target="_blank"
+            >
+              <img src="assets/maps-icon.png" />
+            </a>
           </li>
           <li class="icon">
-            <img src="assets/messages-icon.png" />
+            <a href="https://simsimi.com/" target="_blank">
+              <img src="assets/messages-icon.png"
+            /></a>
           </li>
           <li class="icon">
             <img src="assets/facetime-icon.png" />
           </li>
           <li class="icon">
-            <img src="assets/appstore-icon.png" />
+            <a href="https://apps.apple.com/au/genre/ios/id36" target="_blank">
+              <img src="assets/appstore-icon.png" />
+            </a>
           </li>
           <li class="icon">
-            <img src="assets/system-preferences-icon.png" />
+            <a href="https://github.com/StanleyY7" target="_blank">
+              <img src="assets/github-icon.png" />
+            </a>
           </li>
           <li class="icon">
-            <img src="assets/system-preferences-icon.png" />
+            <img src="assets/my-website-app.png" id="portfolio" />
           </li>
-          <li class="icon">
-            <img src="assets/system-preferences-icon.png" />
+          <li class="icon" id="settings-icon">
+            <img src="assets/system-preferences-icon.png" id="settings" />
           </li>
+          <li id="border-line"></li>
           <li class="icon" id="border-icon">
             <img src="assets/trash-icon.png" />
           </li>
         </ul>
       </div>
     </footer>
+
+    <main>
+      <div class="app-window" id="intro-window">
+        <div class="app-window-wrapper">
+          <div class="dots-wrapper">
+            <div class="dots-close" id="dot-one">
+              <script src="js/dom.js"></script>
+              <p id="close">X</p>
+            </div>
+          </div>
+          <div class="app-window-grid">
+            <div id="left-col">
+              <img id="intro-image" src="assets/intro-logo.png" />
+            </div>
+            <div id="right-col">
+              <div id="intro-text-container">
+                <p id="intro-title">Fake OS<strong>X</strong> Yosemite</p>
+                <p>
+                  Welcome to this project, my own personal website mock-up of
+                  the Mac OSX (version 10.10) Yosemite operating system. This
+                  project was made entirely using HTML, CSS, SCSS and
+                  Javascript.
+                </p>
+                <br />
+                <p>
+                  All apps do a particular action as well. If you are interested
+                  as to how I created this project, check out my Github
+                  repository by using the Github app available at the bottom
+                  dock.
+                </p>
+                <br />
+                <p>
+                  Alternatively if you wanted to check out my other projects,
+                  select the :S app from the dock.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <main>
+      <div id="sticky-note">
+        <input type="text" id="sticky-input" />
+      </div>
+    </main>
+
+    <main>
+      <div class="app-window" id="internet-window">
+        <div class="app-window-wrapper" id="portfolio-window-wrapper">
+          <div class="dots-wrapper">
+            <div class="dots-close" id="portfolio-dot">
+              <script src="js/dom.js"></script>
+              <p id="portfolio-close">X</p>
+            </div>
+          </div>
+          <div class="app-window-grid">
+            <div>
+              <div class="app-text-container">
+                <iframe
+                  id="portfolio-iframe"
+                  src="https://stanleyy7.github.io/"
+                ></iframe>
+                <iframe id="safari-iframe" src="https://bing.com"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
   </body>
 </html>

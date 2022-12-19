@@ -2,6 +2,61 @@
   font-family: "hn";
   src: url("../fonts/HelveticaNeue Medium.ttf");
 }
+/* Sticky-Note */
+#sticky-note {
+  position: fixed;
+  top: 10%;
+  left: 70%;
+  background-color: yellow;
+}
+
+#sticky-input {
+  width: 20rem;
+  height: 20rem;
+  background-color: yellow;
+  overflow-wrap: hidden;
+}
+
+/* Internet Apps */
+#internet-window {
+  z-index: 100;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0%;
+  left: 0%;
+  display: none;
+}
+#internet-window #portfolio-window-wrapper {
+  width: 100vw;
+  border-radius: 0rem;
+}
+
+#portfolio-dot {
+  font-size: 0.65rem;
+}
+#portfolio-dot #portfolio-close {
+  margin-left: 0.15rem;
+  cursor: default;
+  display: none;
+}
+
+iframe {
+  width: 100vw;
+  height: 98vh;
+  position: fixed;
+  left: 0%;
+  top: 1.7%;
+  z-index: 95;
+  border: none;
+}
+iframe #portfolio-iframe {
+  display: none;
+}
+iframe #safari-iframe {
+  display: none;
+}
+
 /* General Styles */
 * {
   margin: 0;
@@ -11,16 +66,23 @@
 html,
 body {
   overflow-x: hidden;
+  overflow: hidden;
   font-family: "hn";
+  font-weight: 300;
 }
 
 img {
   width: 100%;
 }
 
+ul > li:hover,
+.icon > a {
+  cursor: default;
+}
+
 /* Header */
 header, footer {
-  background: linear-gradient(to right, rgba(233, 241, 250, 0.745), rgba(255, 255, 255, 0.5), rgba(246, 250, 255, 0.868));
+  background: linear-gradient(to right, rgb(255, 244, 243), rgba(255, 255, 255, 0.66), rgb(255, 244, 243));
   height: 2.15%;
   justify-content: space-around;
   -webkit-backdrop-filter: blur(0.25rem);
@@ -30,6 +92,8 @@ header, footer {
 
 .menu {
   position: relative;
+  display: flex;
+  justify-content: space-between;
   top: 0;
 }
 
@@ -57,24 +121,20 @@ ul {
 
 #logo {
   padding-left: 0.25rem;
-  width: 2rem;
-  height: 1.25rem;
+  width: 1.8rem;
+  height: 1.1rem;
   opacity: 100%;
   transition: 0.3s ease;
+  overflow-y: hidden;
 }
 
 #finder {
   padding-left: 0.1rem;
+  font-weight: 600;
 }
 
 #logo:hover {
   opacity: 70%;
-}
-
-.menu-right {
-  position: absolute;
-  left: 89%;
-  top: 8%;
 }
 
 .menu-right > ul {
@@ -99,10 +159,10 @@ ul {
 /* Desktop Environment */
 .apps-container {
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr;
   position: relative;
   top: 1rem;
-  left: 88%;
+  left: 93%;
 }
 
 .app-image {
@@ -110,31 +170,133 @@ ul {
   height: 5.5rem;
 }
 
+.app {
+  padding: 0.5rem;
+}
+
+#border-line {
+  border-left: 1.5px solid black;
+  margin-top: 0.2rem;
+  padding-left: 0.25rem;
+}
+
+#border-icon {
+  width: 2.25rem;
+}
+
+#settings-icon {
+  padding-right: 0.75rem;
+}
+
 /* Footer */
 footer {
+  background: linear-gradient(to right, rgba(139, 142, 155, 0.777), rgba(152, 149, 165, 0.752), rgba(154, 157, 188, 0.824));
   position: absolute;
   bottom: 0rem;
   left: 20%;
-  height: 3.7rem;
-  overflow: hidden;
+  height: 3.2rem;
 }
 
 .icon {
   height: 2.8rem;
   width: 2.9rem;
   padding: 0rem 0.5rem;
-  margin-top: 0.5rem;
+  margin-top: 0.2rem;
 }
 
 .icon:hover {
-  transform: scale(1.25);
+  transform: scale(1.3);
+  margin-top: -10px;
 }
 
 .dock > ul {
   display: flex;
 }
 
-#border-icon {
-  border-left: 2px solid rgba(0, 0, 0, 0.479);
-  width: 2.25rem;
+/* App Open */
+.app-window {
+  background-color: #f7f7f7;
+  border: 1px solid #a0a0a3;
+  position: relative;
+  width: 50rem;
+  height: 30rem;
+  top: -12rem;
+  left: 10%;
+  border-radius: 0.5rem;
+}
+
+.app-window-wrapper {
+  border: 1px solid #a0a0a3;
+  position: relative;
+  top: -0.25rem;
+  background-color: #f6f6f6;
+  height: 1rem;
+  width: 50rem;
+  left: -0.9px;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  display: flex;
+}
+
+.dots-wrapper {
+  display: flex;
+}
+
+.dots-close {
+  background-color: #ff6052;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  margin: 0.15rem;
+}
+
+#close {
+  font-size: 0.55rem;
+  padding-top: 0.05rem;
+  margin-left: 0.187rem;
+  display: none;
+  color: #101820;
+}
+
+.app-window-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  margin-top: 10rem;
+}
+
+#close:hover {
+  cursor: default;
+}
+
+#intro-text-container {
+  position: relative;
+  top: -8rem;
+  left: -1rem;
+  padding: 1.2rem;
+}
+
+#intro-title {
+  text-align: center;
+  padding-bottom: 0.85rem;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+#intro-image {
+  position: relative;
+  top: -5.5rem;
+  left: 2rem;
+}
+
+strong {
+  color: #fcf258;
+}
+
+#left-col {
+  transition: 6s ease;
+}
+
+#left-col:hover {
+  filter: sepia(60%) saturate(85%) hue-rotate(320deg);
 }/*# sourceMappingURL=style.css.map */

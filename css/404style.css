@@ -15,4 +15,18 @@ body:hover {
   max-height: -webkit-fit-content;
   max-height: -moz-fit-content;
   max-height: fit-content;
+}
+
+.error-text-container {
+  margin-top: 25rem;
+  text-align: center;
+}
+
+.error-text-container > h1 {
+  font-size: 4rem;
+  padding-bottom: 2rem;
+}
+
+.error-text-container > p {
+  font-size: 2rem;
 }/*# sourceMappingURL=404style.css.map */

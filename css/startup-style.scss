@@ -1,0 +1,26 @@
+html,
+body {
+  overflow: hidden;
+}
+
+body {
+  background-color: #e7e8e9;
+  background-image: url("../assets/startup.png");
+  background-size: 75%;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+  background-position-x: 35%;
+  background-position-y: 68%;
+  z-index: 80;
+  position: relative;
+}
+
+#loader {
+  z-index: 100;
+  opacity: 50%;
+  position: absolute;
+  bottom: 19.25rem;
+  left: 39.5%;
+  transform: scale(0.7);
+}
