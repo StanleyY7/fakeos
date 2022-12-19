@@ -29,19 +29,33 @@ window.addEventListener("DOMContentLoaded", () => {
   settings.addEventListener("click", displayIntro);
 
   /* For Logo */
-  const logo = document.getElementById("logo");
-
-  const displayIntroLogo = () => {
-    logo.style.backgroundColor = "#ddddff";
-    introWindow.style.display = "block";
+  const toggleIntroLogo = (clicked) => {
+    if (clicked) {
+      logo.style.backgroundColor = "#ddddff";
+      introWindow.style.display = "block";
+    } else {
+      logo.style.backgroundColor = "rgb(255, 244, 243)";
+    }
   };
 
-  const noBackgroundLogo = () => {
-    logo.style.backgroundColor = "rgb(255, 244, 243)";
+  logo.addEventListener("click", () => toggleIntroLogo(true));
+  logo.addEventListener("mouseleave", () => toggleIntroLogo(false));
+
+  /* For Stickies App */
+  const stickiesClose = document.getElementById("stickies-close");
+  const stickies = document.getElementById("stickies");
+  const stickiesNote = document.getElementById("stickies-note");
+
+  const closeStickies = () => {
+    stickiesNote.style.display = "none";
   };
 
-  logo.addEventListener("click", displayIntroLogo);
-  logo.addEventListener("mouseleave", noBackgroundLogo);
+  const openStickies = () => {
+    stickiesNote.style.display = "block";
+  };
+
+  stickiesClose.addEventListener("click", closeStickies);
+  stickies.addEventListener("click", openStickies);
 
   /* For Portfolio App */
 
@@ -82,6 +96,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
   const displaySafari = () => {
     const safariIframe = document.getElementById("safari-iframe");
+    document.getElementById("portfolio-iframe").style.display = "none";
     internetWindow.style.display = "block";
     safariIframe.style.display = "block";
   };

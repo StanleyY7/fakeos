@@ -2,19 +2,39 @@
   font-family: "hn";
   src: url("../fonts/HelveticaNeue Medium.ttf");
 }
-/* Sticky-Note */
-#sticky-note {
+/* stickies-Note */
+#stickies-note {
   position: fixed;
   top: 10%;
   left: 70%;
-  background-color: yellow;
+  background-color: #fef485;
+  display: none;
 }
 
-#sticky-input {
+#stickies-input {
+  margin-top: 0.25rem;
   width: 20rem;
-  height: 20rem;
-  background-color: yellow;
-  overflow-wrap: hidden;
+  height: 15rem;
+  background-color: #fef485;
+  word-wrap: break-word;
+  outline: none;
+  border: none;
+  border-top: 1px solid black;
+  padding-left: 0.2rem;
+  padding-top: 0.2rem;
+}
+
+#stickies-note > p {
+  margin-top: 0.2rem;
+}
+
+#stickies-close {
+  padding-top: 0.5rem;
+  font-size: 1rem;
+  margin-left: 0.25rem;
+  cursor: default;
+  color: #101820;
+  font-weight: 100;
 }
 
 /* Internet Apps */
@@ -54,6 +74,14 @@ iframe #portfolio-iframe {
   display: none;
 }
 iframe #safari-iframe {
+  display: none;
+}
+
+/* Calender App */
+#calender-app {
+  position: fixed;
+  top: 10%;
+  left: 20%;
   display: none;
 }
 

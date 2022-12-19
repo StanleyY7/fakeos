@@ -18,12 +18,12 @@
               <img id="logo" src="assets/logo.png" />
             </li>
             <li id="finder"><a href="#"></a>Finder</li>
-            <li><a href="#"></a>File</li>
-            <li><a href="#"></a>Edit</li>
-            <li><a href="#"></a>View</li>
-            <li><a href="#"></a>Go</li>
-            <li><a href="#"></a>Window</li>
-            <li><a href="#"></a>Help</li>
+            <li id="file"><a href="#"></a>File</li>
+            <li id="edit"><a href="#"></a>Edit</li>
+            <li id="view"><a href="#"></a>View</li>
+            <li id="go"><a href="#"></a>Go</li>
+            <li id="window"><a href="#"></a>Window</li>
+            <li id="help"><a href="#"></a>Help</li>
           </ul>
         </div>
 
@@ -75,7 +75,7 @@
             <img src="assets/calendar-icon.png" />
           </li>
           <li class="icon">
-            <img src="assets/notes-icon.png" />
+            <img src="assets/notes-icon.png" id="stickies" />
           </li>
           <li class="icon">
             <img src="assets/reminders-icon.png" />
@@ -162,8 +162,10 @@
     </main>
 
     <main>
-      <div id="sticky-note">
-        <input type="text" id="sticky-input" />
+      <div id="stickies-note">
+        <p><strong id="stickies-close">X</strong></p>
+        <textarea id="stickies-input"></textarea>
+        <script src="js/dom.js"></script>
       </div>
     </main>
 
@@ -187,6 +189,15 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </main>
+
+    <main>
+      <div id="calender-app">
+        <div id="calender-app-top"></div>
+        <div id="calender-image-container">
+          <img src="assets/calender.png" id="calender-image" />
         </div>
       </div>
     </main>
