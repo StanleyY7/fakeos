@@ -17,7 +17,7 @@
             <li>
               <img id="logo" src="assets/logo.png" />
             </li>
-            <li id="finder"><a href="#"></a>Finder</li>
+            <li id="menu-finder"><a href="#"></a>Finder</li>
             <li id="file"><a href="#"></a>File</li>
             <li id="edit"><a href="#"></a>Edit</li>
             <li id="view"><a href="#"></a>View</li>
@@ -67,7 +67,7 @@
       <div class="dock">
         <ul>
           <li class="icon">
-            <img src="assets/finder-icon.png" />
+            <img src="assets/finder-icon.png" id="finder" />
           </li>
           <li class="icon">
             <img src="assets/launchpad-icon.png" id="launchpad" />
@@ -164,6 +164,95 @@
                   Alternatively if you wanted to check out my other projects,
                   select the :S app from the dock.
                 </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="app-window" id="finder-app">
+        <div class="app-window-wrapper">
+          <div class="dots-wrapper">
+            <div class="dots-close" id="finder-dot">
+              <p id="finder-close">X</p>
+            </div>
+          </div>
+          <div class="app-window-grid" id="finder-app-grid">
+            <div id="finder-left-col">
+              <ul>
+                <li>
+                  Favourites
+                  <ul class="nested-list">
+                    <li>
+                      <div class="list-wrapper">
+                        <img
+                          class="finder-icon"
+                          src="assets/finderAssets/finder-recents.png"
+                        />
+                        Recents
+                      </div>
+                    </li>
+                    <li>
+                      <div class="list-wrapper">
+                        <img
+                          class="finder-icon"
+                          src="assets/finderAssets/finder-desktop.png"
+                        />
+                        Desktop
+                      </div>
+                    </li>
+                    <li>
+                      <div class="list-wrapper">
+                        <img
+                          class="finder-icon"
+                          src="assets/finderAssets/finder-documents.png"
+                        />
+                        Documents
+                      </div>
+                    </li>
+                    <li>
+                      <div class="list-wrapper">
+                        <img
+                          class="finder-icon"
+                          src="assets/finderAssets/finder-downloads.png"
+                        />
+                        Downloads
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  Devices
+                  <ul class="nested-list">
+                    <li>
+                      <div class="list-wrapper">
+                        <img
+                          class="finder-icon"
+                          src="assets/finderAssets/finder-mac.png"
+                        />
+                        Your Mac
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div id="finder-right-col">
+              <div id="finder-text-container">
+                <p class="finder-text">
+                  Welcome to Finder, click on one of the categories on the left
+                  to get started.
+                </p>
+              </div>
+              <div id="finder-recents-container">
+                <a href="https://google.com">
+                  <img src="assets/safari-icon.png" />
+                </a>
+                <a href="https://google.com">
+                  <img src="assets/github-icon.png" />
+                </a>
               </div>
             </div>
           </div>

@@ -1,7 +1,7 @@
 window.addEventListener("DOMContentLoaded", () => {
   /* Top Menu */
 
-  const menuFinder = document.getElementById("finder");
+  const menuFinder = document.getElementById("menu-finder");
   const menuFile = document.getElementById("file");
   const menuEdit = document.getElementById("edit");
   const menuView = document.getElementById("view");
@@ -177,6 +177,28 @@ window.addEventListener("DOMContentLoaded", () => {
   dotOne.addEventListener("mouseover", displayClose);
   dotOne.addEventListener("mouseleave", hideClose);
   settings.addEventListener("click", displayIntro);
+
+  /* For Finder App */
+  const finderDot = document.getElementById("finder-dot");
+  const finderClose = document.getElementById("finder-close");
+  const finderApp = document.getElementById("finder-app");
+  const finder = document.getElementById("finder");
+
+  const toggleFinderClose = (event) => {
+    if (event.type === "mouseover") {
+      finderClose.style.display = "block";
+    } else {
+      finderClose.style.display = "none";
+    }
+  };
+
+  const closeFinder = () => (finderApp.style.display = "none");
+  const displayFinder = () => (finderApp.style.display = "block");
+
+  finderDot.addEventListener("mouseover", toggleFinderClose);
+  finderDot.addEventListener("mouseleave", toggleFinderClose);
+  finderClose.addEventListener("click", closeFinder);
+  finder.addEventListener("click", displayFinder);
 
   /* For Contacts App */
 

@@ -107,6 +107,87 @@ iframe {
   }
 }
 
+/* Finder App */
+
+#finder-app {
+  left: 30%;
+  height: 29.75rem;
+  display: none;
+}
+
+#finder-close {
+  @extend #close;
+}
+
+#finder-app-grid {
+  grid-template-columns: 0.2fr 1fr;
+  padding: 0.25rem;
+  margin-top: 1rem;
+}
+
+#finder-left-col {
+  height: 28.95rem;
+  padding-right: 1rem;
+  border-right: 1px solid black;
+  margin-top: -0.2rem;
+}
+
+#finder-left-col > ul > li {
+  font-size: 1.2rem;
+  padding-top: 1rem;
+}
+
+.list-wrapper {
+  display: flex;
+}
+
+.finder-icon {
+  width: 1rem;
+  padding-right: 0.2rem;
+}
+
+.nested-list {
+  padding-top: 0.2rem;
+  font-size: 0.8rem;
+  margin-left: 0.25rem;
+}
+
+.nested-list > li {
+  padding-top: 0.25rem;
+}
+
+#finder-right-col {
+  margin-top: -0.25rem;
+  height: auto;
+  padding: 2rem;
+}
+
+.finder-text {
+  margin-top: 10rem;
+  text-align: center;
+  padding-right: 6rem;
+  cursor: default;
+}
+
+#finder-recents-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 12rem;
+  position: relative;
+  bottom: 60%;
+  left: -51%;
+
+  display: none;
+
+  > a > img {
+    width: 5rem;
+  }
+  > a > img:hover {
+    transform: scale(1.05);
+    cursor: default;
+  }
+}
+
 /* Contacts-App */
 
 #contacts-app {
@@ -118,6 +199,7 @@ iframe {
   background-color: #f7f7f7;
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
+  display: none;
 }
 
 #contacts-app-top {

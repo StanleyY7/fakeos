@@ -1,5 +1,6 @@
 body {
   transition: 10s ease-in-out;
+  text-align: center;
 }
 
 body:hover {
@@ -8,10 +9,7 @@ body:hover {
 
 img {
   width: 20rem;
-  position: relative;
-  top: 75%;
-  left: 40%;
-  margin-top: -2rem;
+  margin: -2rem auto;
 }
 
 a {
@@ -19,9 +17,8 @@ a {
 }
 
 .error-text-container {
-  margin-top: 12rem;
+  margin-top: 15rem;
   text-align: center;
-  position: relative;
 }
 
 .error-text-container > h1 {
