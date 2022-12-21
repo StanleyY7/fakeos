@@ -1,5 +1,6 @@
 window.addEventListener("DOMContentLoaded", () => {
   /* Top Menu */
+
   const menuFinder = document.getElementById("finder");
   const menuFile = document.getElementById("file");
   const menuEdit = document.getElementById("edit");
@@ -79,7 +80,21 @@ window.addEventListener("DOMContentLoaded", () => {
   menuHelp.addEventListener("click", () => toggleMenuHelp(true));
   menuHelp.addEventListener("mouseleave", () => toggleMenuHelp(false));
 
+  /* For Logo */
+  const toggleIntroLogo = (clicked) => {
+    if (clicked) {
+      logo.style.backgroundColor = "#ddddff";
+      introWindow.style.display = "block";
+    } else {
+      logo.style.backgroundColor = "rgb(255, 244, 243)";
+    }
+  };
+
+  logo.addEventListener("click", () => toggleIntroLogo(true));
+  logo.addEventListener("mouseleave", () => toggleIntroLogo(false));
+
   /* Draggable Desktop Apps  */
+
   const collision = (rect1, rect2) =>
     !(
       rect1.right < rect2.left ||
@@ -163,18 +178,28 @@ window.addEventListener("DOMContentLoaded", () => {
   dotOne.addEventListener("mouseleave", hideClose);
   settings.addEventListener("click", displayIntro);
 
-  /* For Logo */
-  const toggleIntroLogo = (clicked) => {
-    if (clicked) {
-      logo.style.backgroundColor = "#ddddff";
-      introWindow.style.display = "block";
+  /* For Contacts App */
+
+  const contacts = document.getElementById("contacts");
+  const contactsApp = document.getElementById("contacts-app");
+  const contactsClose = document.getElementById("contacts-close");
+  const contactsDot = document.getElementById("contacts-dot");
+
+  const toggleContactsClose = (event) => {
+    if (event.type === "mouseover") {
+      contactsClose.style.display = "block";
     } else {
-      logo.style.backgroundColor = "rgb(255, 244, 243)";
+      contactsClose.style.display = "none";
     }
   };
 
-  logo.addEventListener("click", () => toggleIntroLogo(true));
-  logo.addEventListener("mouseleave", () => toggleIntroLogo(false));
+  const displayContacts = () => (contactsApp.style.display = "block");
+  const closeContacts = () => (contactsApp.style.display = "none");
+
+  contacts.addEventListener("click", displayContacts);
+  contactsClose.addEventListener("click", closeContacts);
+  contactsDot.addEventListener("mouseover", toggleContactsClose);
+  contactsDot.addEventListener("mouseleave", toggleContactsClose);
 
   /* For Stickies App */
   const stickiesClose = document.getElementById("stickies-close");

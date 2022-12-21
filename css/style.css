@@ -101,6 +101,70 @@ iframe #safari-iframe {
   cursor: default;
   display: none;
   color: #101820;
+  display: none;
+}
+
+/* Contacts-App */
+#contacts-app {
+  position: fixed;
+  top: 10%;
+  right: 25%;
+  height: auto;
+  width: 30rem;
+  background-color: #f7f7f7;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+#contacts-app-top {
+  border-bottom: 1px solid black;
+}
+
+#contacts-dot {
+  margin-left: 0.2rem;
+}
+
+#contacts-close {
+  font-size: 0.55rem;
+  padding-top: 0.05rem;
+  margin-left: 0.18rem;
+  cursor: default;
+  color: #101820;
+  display: none;
+}
+
+#contacts-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+}
+
+#contacts-grid-col-left {
+  padding: 1rem;
+  text-align: center;
+  height: 100%;
+}
+
+#contacts-grid-col-left > h3 {
+  padding-bottom: 1rem;
+}
+
+#contacts-grid-col-right {
+  border-left: 1px solid black;
+  padding: 2rem;
+  font-size: 0.8rem;
+}
+
+#contacts-grid-col-right > h3 {
+  text-align: center;
+  font-size: 1.75rem;
+}
+
+#contacts-grid-col-right > img {
+  padding-bottom: 0.5rem;
+}
+
+#contacts-grid-col-right > ul > li {
+  padding-bottom: 0.5rem;
 }
 
 /* Reminders App */
@@ -273,9 +337,13 @@ ul > li:hover,
   cursor: default;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* Header */
 header, footer {
-  background: rgb(255, 244, 243);
+  background-color: rgb(255, 244, 243);
   height: 2.15%;
   justify-content: space-around;
   -webkit-backdrop-filter: blur(0.25rem);
@@ -295,7 +363,7 @@ header, footer {
 }
 
 .menu > .menu-left > ul > li {
-  padding: 0.05rem 0.6rem;
+  padding: 0.05rem 0.7rem;
   font-size: 0.9rem;
   height: 1rem;
 }
@@ -320,6 +388,7 @@ ul {
   opacity: 100%;
   transition: 0.3s ease;
   overflow-y: hidden;
+  margin-right: -0.5rem;
 }
 
 #finder {
