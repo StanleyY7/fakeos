@@ -77,12 +77,177 @@ iframe #safari-iframe {
   display: none;
 }
 
-/* Calender App */
-#calender-app {
+/* Calendar App */
+#calendar-app {
   position: fixed;
   top: 10%;
   left: 20%;
   display: none;
+}
+#calendar-app #calendar-app-top {
+  border: 1px solid rgb(255, 244, 243);
+  background-color: rgb(255, 244, 243);
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  height: 1rem;
+}
+#calendar-app #calendar-image-container {
+  width: 50rem;
+}
+#calendar-app #calendar-close {
+  font-size: 0.55rem;
+  padding-top: 0.05rem;
+  margin-left: 0.187rem;
+  cursor: default;
+  display: none;
+  color: #101820;
+}
+
+/* Reminders App */
+#reminders-app {
+  position: fixed;
+  top: 10%;
+  left: 5%;
+  height: 25rem;
+  width: 20rem;
+  background-color: white;
+  display: none;
+}
+
+#reminders-app-top {
+  border-bottom: 1px solid black;
+}
+
+#reminders-close {
+  font-size: 0.55rem;
+  padding-top: 0.05rem;
+  margin-left: 0.18rem;
+  cursor: default;
+  color: #101820;
+  display: none;
+}
+
+#reminders-app-container > h3 {
+  text-align: center;
+  padding: 0.5rem 0;
+}
+
+#reminders-app-container > ol {
+  margin-left: 2rem;
+  height: auto;
+}
+
+#reminders-app-container > ol > li {
+  padding-top: 1.25rem;
+}
+
+.reminders-textarea-container {
+  position: relative;
+  top: 0.2rem;
+  margin-right: 1rem;
+}
+
+#reminders-app-container > ol > li > div > textarea {
+  width: 100%;
+  font-size: 1rem;
+  outline: none;
+  border: none;
+  resize: none;
+  overflow: hidden;
+  border-bottom: 1px solid black;
+}
+
+/* Facetime App */
+#facetime-app {
+  width: 55vw;
+  height: 75vh;
+  position: fixed;
+  top: 10%;
+  left: 20%;
+  display: none;
+}
+
+#facetime-text-container {
+  padding: 0.2rem;
+  border: 1px solid black;
+  background-color: rgba(255, 255, 255, 0.66);
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+#facetime-close {
+  position: fixed;
+  font-size: 0.55rem;
+  top: 10.25%;
+  margin-top: 0.3rem;
+  margin-left: 0.19rem;
+  cursor: default;
+  display: none;
+}
+
+#facetime-image {
+  position: fixed;
+  top: 14.5%;
+  margin-left: 0.75rem;
+  width: 15rem;
+  display: none;
+  border-radius: 0.5rem;
+}
+
+#webcam {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* Launchpad App */
+#launchpad-app {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  -webkit-backdrop-filter: blur(1rem);
+          backdrop-filter: blur(1rem);
+  display: none;
+}
+
+.launchpad-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 16rem;
+}
+
+.launchpad-grid > div {
+  margin-top: -12.5rem;
+  margin-left: 3.25rem;
+}
+
+#launchpad-close {
+  margin-left: 0.5rem;
+  cursor: default;
+  opacity: 75%;
+}
+
+.launchpad-content-container {
+  text-align: center;
+}
+
+.launchpad-content-container > a {
+  cursor: default;
+}
+
+.launchpad-image {
+  width: 9.5rem;
+}
+
+.launchpad-image:hover {
+  transform: scale(1.025);
+}
+
+.launchpad-text {
+  color: white;
+  font-size: 0.8rem;
 }
 
 /* General Styles */
@@ -110,7 +275,7 @@ ul > li:hover,
 
 /* Header */
 header, footer {
-  background: linear-gradient(to right, rgb(255, 244, 243), rgba(255, 255, 255, 0.66), rgb(255, 244, 243));
+  background: rgb(255, 244, 243);
   height: 2.15%;
   justify-content: space-around;
   -webkit-backdrop-filter: blur(0.25rem);
@@ -130,8 +295,9 @@ header, footer {
 }
 
 .menu > .menu-left > ul > li {
-  padding: 0.05rem 0.75rem;
+  padding: 0.05rem 0.6rem;
   font-size: 0.9rem;
+  height: 1rem;
 }
 
 #cover {
@@ -157,7 +323,6 @@ ul {
 }
 
 #finder {
-  padding-left: 0.1rem;
   font-weight: 600;
 }
 
@@ -196,6 +361,9 @@ ul {
 .app-image {
   width: 5.5rem;
   height: 5.5rem;
+  position: relative;
+  top: 0;
+  left: 0;
 }
 
 .app {
@@ -245,10 +413,10 @@ footer {
 .app-window {
   background-color: #f7f7f7;
   border: 1px solid #a0a0a3;
-  position: relative;
+  position: fixed;
   width: 50rem;
   height: 30rem;
-  top: -12rem;
+  top: 15%;
   left: 10%;
   border-radius: 0.5rem;
 }
@@ -284,6 +452,7 @@ footer {
   margin-left: 0.187rem;
   display: none;
   color: #101820;
+  cursor: default;
 }
 
 .app-window-grid {
@@ -291,10 +460,6 @@ footer {
   grid-template-columns: 1fr 1fr;
   gap: 5rem;
   margin-top: 10rem;
-}
-
-#close:hover {
-  cursor: default;
 }
 
 #intro-text-container {

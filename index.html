@@ -41,17 +41,27 @@
       </div>
     </header>
 
-    <main class="apps-container">
+    <section class="apps-container">
       <div class="app">
-        <img class="app-image" src="assets/harddisk-app.png" />
+        <img class="app-image" src="assets/harddisk-app.png" draggable="true" />
       </div>
       <div class="app">
-        <img class="app-image" id="safari-app" src="assets/safari-icon.png" />
+        <img
+          class="app-image"
+          id="safari-app"
+          src="assets/safari-icon.png"
+          draggable="true"
+        />
       </div>
       <div class="app">
-        <img class="app-image" id="hard-disk" src="assets/my-website-app.png" />
+        <img
+          class="app-image"
+          id="hard-disk"
+          src="assets/my-website-app.png"
+          draggable="true"
+        />
       </div>
-    </main>
+    </section>
 
     <footer>
       <div class="dock">
@@ -60,7 +70,7 @@
             <img src="assets/finder-icon.png" />
           </li>
           <li class="icon">
-            <img src="assets/launchpad-icon.png" />
+            <img src="assets/launchpad-icon.png" id="launchpad" />
           </li>
           <li class="icon">
             <img src="assets/safari-icon.png" id="safari" />
@@ -72,13 +82,13 @@
             <img src="assets/contacts-icon.png" />
           </li>
           <li class="icon">
-            <img src="assets/calendar-icon.png" />
+            <img src="assets/calendar-icon.png" id="calendar" />
           </li>
           <li class="icon">
             <img src="assets/notes-icon.png" id="stickies" />
           </li>
           <li class="icon">
-            <img src="assets/reminders-icon.png" />
+            <img src="assets/reminders-icon.png" id="reminders" />
           </li>
           <li class="icon">
             <a
@@ -94,7 +104,7 @@
             /></a>
           </li>
           <li class="icon">
-            <img src="assets/facetime-icon.png" />
+            <img src="assets/facetime-icon.png" id="facetime" />
           </li>
           <li class="icon">
             <a href="https://apps.apple.com/au/genre/ios/id36" target="_blank">
@@ -114,13 +124,13 @@
           </li>
           <li id="border-line"></li>
           <li class="icon" id="border-icon">
-            <img src="assets/trash-icon.png" />
+            <img src="assets/trash-icon.png" id="trash" />
           </li>
         </ul>
       </div>
     </footer>
 
-    <main>
+    <section>
       <div class="app-window" id="intro-window">
         <div class="app-window-wrapper">
           <div class="dots-wrapper">
@@ -159,17 +169,17 @@
           </div>
         </div>
       </div>
-    </main>
+    </section>
 
-    <main>
+    <section>
       <div id="stickies-note">
         <p><strong id="stickies-close">X</strong></p>
         <textarea id="stickies-input"></textarea>
         <script src="js/dom.js"></script>
       </div>
-    </main>
+    </section>
 
-    <main>
+    <section>
       <div class="app-window" id="internet-window">
         <div class="app-window-wrapper" id="portfolio-window-wrapper">
           <div class="dots-wrapper">
@@ -191,15 +201,224 @@
           </div>
         </div>
       </div>
-    </main>
+    </section>
 
-    <main>
-      <div id="calender-app">
-        <div id="calender-app-top"></div>
-        <div id="calender-image-container">
-          <img src="assets/calender.png" id="calender-image" />
+    <section>
+      <div id="calendar-app">
+        <div id="calendar-app-top">
+          <div class="dots-wrapper">
+            <div class="dots-close" id="calendar-dot">
+              <p id="calendar-close">X</p>
+            </div>
+          </div>
+        </div>
+        <div id="calendar-image-container">
+          <img src="assets/calendar.png" id="calendar-image" />
         </div>
       </div>
-    </main>
+    </section>
+
+    <section>
+      <div id="reminders-app">
+        <div id="reminders-app-top">
+          <div class="dots-wrapper">
+            <div class="dots-close" id="reminders-dot">
+              <p id="reminders-close">X</p>
+            </div>
+          </div>
+        </div>
+        <div id="reminders-app-container">
+          <h3>Reminders</h3>
+          <ol id="reminders-list">
+            <li>
+              <div class="reminders-textarea-container">
+                <textarea
+                  id="reminders-textarea"
+                  maxlength="30"
+                  rows="1"
+                ></textarea>
+              </div>
+            </li>
+            <li>
+              <div class="reminders-textarea-container">
+                <textarea
+                  id="reminders-textarea"
+                  maxlength="30"
+                  rows="1"
+                ></textarea>
+              </div>
+            </li>
+            <li>
+              <div class="reminders-textarea-container">
+                <textarea
+                  id="reminders-textarea"
+                  maxlength="30"
+                  rows="1"
+                ></textarea>
+              </div>
+            </li>
+            <li>
+              <div class="reminders-textarea-container">
+                <textarea
+                  id="reminders-textarea"
+                  maxlength="30"
+                  rows="1"
+                ></textarea>
+              </div>
+            </li>
+            <li>
+              <div class="reminders-textarea-container">
+                <textarea
+                  id="reminders-textarea"
+                  maxlength="30"
+                  rows="1"
+                ></textarea>
+              </div>
+            </li>
+            <li>
+              <div class="reminders-textarea-container">
+                <textarea
+                  id="reminders-textarea"
+                  maxlength="30"
+                  rows="1"
+                ></textarea>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div id="launchpad-app">
+        <p id="launchpad-close">X</p>
+        <div class="launchpad-grid">
+          <div id="launchpad-grid-col-1">
+            <div class="launchpad-content-container">
+              <a href="https://google.com" target="_blank">
+                <img class="launchpad-image" src="assets/safari-icon.png"
+              /></a>
+              <p class="launchpad-text">Safari</p>
+            </div>
+            <div class="launchpad-content-container">
+              <a href="https://stanleyy7.github.io/" target="_blank">
+                <img class="launchpad-image" src="assets/my-website-app.png" />
+              </a>
+              <p class="launchpad-text">Portfolio</p>
+            </div>
+            <div class="launchpad-content-container">
+              <a href="https://github.com/StanleyY7" target="_blank">
+                <img class="launchpad-image" src="assets/github-icon.png" />
+              </a>
+              <p class="launchpad-text">Github</p>
+            </div>
+            <div class="launchpad-content-container">
+              <a
+                href="https://duckduckgo.com/?q=Sydney%2C+NSW&t=h_&ia=places&iaxm=maps&strict_bbox=0&bbox=-33.74968094658189%2C150.9731900225512%2C-34.07927708364575%2C151.5846099461628&metatoken=0"
+                target="_blank"
+              >
+                <img class="launchpad-image" src="assets/maps-icon.png" />
+              </a>
+              <p class="launchpad-text">Maps</p>
+            </div>
+          </div>
+          <div id="launchpad-grid-col-2">
+            <div class="launchpad-content-container">
+              <a href="https://google.com" target="_blank">
+                <img class="launchpad-image" src="assets/firefox-icon.png" />
+              </a>
+              <p class="launchpad-text">Firefox</p>
+            </div>
+            <div class="launchpad-content-container">
+              <a href="https://google.com/calendar" target="_blank">
+                <img class="launchpad-image" src="assets/calendar-icon.png" />
+              </a>
+              <p class="launchpad-text">Calendar</p>
+            </div>
+            <div class="launchpad-content-container">
+              <a href="https://simsimi.com/" target="_blank">
+                <img class="launchpad-image" src="assets/messages-icon.png" />
+              </a>
+              <p class="launchpad-text">Messages</p>
+            </div>
+            <div class="launchpad-content-container">
+              <a href="mailto:">
+                <img class="launchpad-image" src="assets/mail-icon.png" />
+              </a>
+              <p class="launchpad-text">Mail</p>
+            </div>
+          </div>
+          <div id="launchpad-grid-col-3">
+            <div class="launchpad-content-container">
+              <a href="https://google.com" target="_blank">
+                <img class="launchpad-image" src="assets/opera-icon.png" />
+              </a>
+              <p class="launchpad-text">Opera</p>
+            </div>
+            <div class="launchpad-content-container">
+              <a
+                href="https://apps.apple.com/au/genre/ios/id36"
+                target="_blank"
+              >
+                <img class="launchpad-image" src="assets/appstore-icon.png" />
+              </a>
+              <p class="launchpad-text">App Store</p>
+            </div>
+            <div class="launchpad-content-container">
+              <a href="https://www.desmos.com/scientific" target="_blank">
+                <img class="launchpad-image" src="assets/calculator-icon.png" />
+              </a>
+              <p class="launchpad-text">Calculator</p>
+            </div>
+            <div class="launchpad-content-container">
+              <a href="https://twitter.com/" target="_blank">
+                <img class="launchpad-image" src="assets/twitter-icon.png" />
+              </a>
+              <p class="launchpad-text">Twitter</p>
+            </div>
+          </div>
+          <div id="launchpad-grid-col-4">
+            <div class="launchpad-content-container">
+              <a href="https://google.com" target="_blank">
+                <img class="launchpad-image" src="assets/brave-icon.png"
+              /></a>
+              <p class="launchpad-text">Brave</p>
+            </div>
+            <div class="launchpad-content-container">
+              <a href="https://www.office.com/" target="_blank">
+                <img class="launchpad-image" src="assets/word-icon.png" />
+              </a>
+              <p class="launchpad-text">Word</p>
+            </div>
+            <div class="launchpad-content-container">
+              <a href="https://www.office.com/" target="_blank">
+                <img class="launchpad-image" src="assets/excel-icon.png" />
+              </a>
+              <p class="launchpad-text">Excel</p>
+            </div>
+            <div class="launchpad-content-container">
+              <a href="https://www.linkedin.com/in/stanleyyu-ccs/">
+                <img class="launchpad-image" src="assets/linkedin-icon.png" />
+              </a>
+              <p class="launchpad-text">LinkedIn</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div id="facetime-app">
+        <div id="facetime-text-container">
+          <div class="dots-wrapper">
+            <div class="dots-close" id="facetime-dot">
+              <p id="facetime-close">X</p>
+            </div>
+          </div>
+        </div>
+        <video id="webcam" autoplay></video>
+        <img id="facetime-image" src="assets/office.png" />
+      </div>
+    </section>
   </body>
 </html>
