@@ -468,12 +468,14 @@ header, footer {
 
 .menu > .menu-left > ul {
   display: flex;
+  position: relative;
 }
 
 .menu > .menu-left > ul > li {
   padding: 0.05rem 0.7rem;
   font-size: 0.9rem;
   height: 1rem;
+  text-align: center;
 }
 
 #cover {
@@ -524,6 +526,52 @@ ul {
 #wifi {
   height: 1rem;
   width: 1rem;
+}
+
+/* Header Menu */
+#finder-list, #window-list, #go-list, #view-list, #edit-list, #file-list {
+  background-color: rgb(255, 244, 243);
+  text-align: center;
+  font-size: 0.75rem;
+  margin-top: 0.1rem;
+  margin-left: -0.7rem;
+  width: 3.5rem;
+  padding: 0.25rem;
+  position: absolute;
+  display: none;
+}
+#finder-list > li, #window-list > li, #go-list > li, #view-list > li, #edit-list > li, #file-list > li {
+  padding: 0.25rem 0.5rem;
+}
+
+#file-list {
+  margin-left: -0.7rem;
+  padding: 0.25rem 0 0.25rem 0;
+  width: 3.15rem;
+}
+
+#edit-list {
+  margin-left: -0.6rem;
+  padding: 0.25rem 0 0.25rem 0;
+  width: 3.15rem;
+}
+
+#view-list {
+  margin-left: -0.6rem;
+  padding: 0.25rem 0 0.25rem 0;
+  width: 3.25rem;
+}
+
+#go-list {
+  margin-left: -0.9rem;
+  padding: 0.25rem 0 0.25rem 0;
+  width: 3.15rem;
+}
+
+#window-list {
+  margin-left: -0.6rem;
+  width: 3.35rem;
+  padding: 0.25rem 0.5rem 0.25rem 0.75rem;
 }
 
 /* Desktop Environment */

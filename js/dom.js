@@ -8,52 +8,79 @@ window.addEventListener("DOMContentLoaded", () => {
   const menuGo = document.getElementById("go");
   const menuWindow = document.getElementById("window");
   const menuHelp = document.getElementById("help");
+  const finderList = document.getElementById("finder-list");
+  const fileList = document.getElementById("file-list");
+  const editList = document.getElementById("edit-list");
+  const viewList = document.getElementById("view-list");
+  const goList = document.getElementById("go-list");
+  const windowList = document.getElementById("window-list");
+
+  const closeAllMenu = () => {
+    finderList.style.display = "none";
+    fileList.style.display = "none";
+    editList.style.display = "none";
+    viewList.style.display = "none";
+    goList.style.display = "none";
+    windowList.style.display = "none";
+  };
 
   const toggleMenuFinder = (clicked) => {
     if (clicked) {
       menuFinder.style.backgroundColor = "#ddddff";
+      finderList.style.display = "block";
     } else {
       menuFinder.style.backgroundColor = "rgb(255, 244, 243)";
+      closeAllMenu();
     }
   };
 
   const toggleMenuFile = (clicked) => {
     if (clicked) {
       menuFile.style.backgroundColor = "#ddddff";
+      fileList.style.display = "block";
     } else {
       menuFile.style.backgroundColor = "rgb(255, 244, 243)";
+      closeAllMenu();
     }
   };
 
   const toggleMenuEdit = (clicked) => {
     if (clicked) {
       menuEdit.style.backgroundColor = "#ddddff";
+      editList.style.display = "block";
     } else {
       menuEdit.style.backgroundColor = "rgb(255, 244, 243)";
+      closeAllMenu();
     }
   };
 
   const toggleMenuView = (clicked) => {
     if (clicked) {
       menuView.style.backgroundColor = "#ddddff";
+      viewList.style.display = "block";
     } else {
       menuView.style.backgroundColor = "rgb(255, 244, 243)";
+      closeAllMenu();
     }
   };
 
   const toggleMenuGo = (clicked) => {
     if (clicked) {
       menuGo.style.backgroundColor = "#ddddff";
+      goList.style.display = "block";
     } else {
       menuGo.style.backgroundColor = "rgb(255, 244, 243)";
+      closeAllMenu();
     }
   };
 
   const toggleMenuWindow = (clicked) => {
     if (clicked) {
       menuWindow.style.backgroundColor = "#ddddff";
+      windowList.style.display = "block";
     } else {
       menuWindow.style.backgroundColor = "rgb(255, 244, 243)";
+      closeAllMenu();
     }
   };
 
@@ -62,6 +89,7 @@ window.addEventListener("DOMContentLoaded", () => {
       menuHelp.style.backgroundColor = "#ddddff";
     } else {
       menuHelp.style.backgroundColor = "rgb(255, 244, 243)";
+      closeAllMenu();
     }
   };
 
@@ -405,6 +433,7 @@ window.addEventListener("DOMContentLoaded", () => {
   const facetime = document.getElementById("facetime");
   const facetimeDot = document.getElementById("facetime-dot");
   const facetimeClose = document.getElementById("facetime-close");
+  const facetimeApp = document.getElementById("facetime-app");
 
   displayFacetimeClose = () => {
     facetimeClose.style.display = "block";
@@ -417,7 +446,6 @@ window.addEventListener("DOMContentLoaded", () => {
   displayFacetime = () => {
     const webcam = document.getElementById("webcam");
     const facetimeClose = document.getElementById("facetime-close");
-    const facetimeApp = document.getElementById("facetime-app");
     const facetimeImage = document.getElementById("facetime-image");
 
     navigator.mediaDevices.getUserMedia({ video: true }).then((stream) => {
@@ -481,4 +509,22 @@ window.addEventListener("DOMContentLoaded", () => {
   finderHarddisk.addEventListener("click", displayMac);
   finderStickies.addEventListener("click", displayStickies);
   finderPortfolio.addEventListener("click", displayPortfolio);
+
+  /* Top Menu List Functions */
+
+  const menuWindowClose = document.getElementById("menu-window-close");
+  const menuFileClose = document.getElementById("menu-file-close");
+  const closeEverything = () => {
+    calendarApp.style.display = "none";
+    remindersApp.style.display = "none";
+    launchpadApp.style.display = "none";
+    introWindow.style.display = "none";
+    internetWindow.style.display = "none";
+    stickiesNote.style.display = "none";
+    contactsApp.style.display = "none";
+    finderApp.style.display = "none";
+    facetimeApp.style.display = "none";
+  };
+  menuWindowClose.addEventListener("click", closeEverything);
+  menuFileClose.addEventListener("click", closeEverything);
 });
