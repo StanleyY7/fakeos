@@ -1,5 +1,70 @@
 @import "theme";
 
+/* Help App */
+
+#help-app {
+  height: max-content;
+  width: 20rem;
+  background-color: white;
+  position: fixed;
+  top: 10%;
+  right: 20%;
+  border-radius: 0.5rem;
+  display: none;
+}
+
+#help-app-top {
+  border-bottom: 1px solid black;
+}
+
+#help-close {
+  font-size: 0.55rem;
+  padding-top: 0.05rem;
+  margin-left: 0.18rem;
+  cursor: default;
+  color: #101820;
+  display: none;
+}
+
+#help-text-container {
+  padding: 0.5rem 1rem;
+
+  > h3 {
+    text-align: center;
+    padding: 0.25rem;
+  }
+  > p {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* Trash App */
+
+#trash-app {
+  height: 12rem;
+  width: 20rem;
+  background-color: white;
+  border: 1px solid black;
+  position: fixed;
+  top: 10%;
+  left: 10%;
+  border-radius: 0.5rem;
+  display: none;
+}
+
+#trash-app-top {
+  @extend #help-app-top;
+}
+
+#trash-close {
+  @extend #help-close;
+}
+
+#trash-text-container {
+  @extend #help-text-container;
+  margin-top: 1rem;
+}
 /* stickies-Note */
 #stickies-note {
   position: fixed;
@@ -97,13 +162,7 @@ iframe {
   }
 
   #calendar-close {
-    font-size: 0.55rem;
-    padding-top: 0.05rem;
-    margin-left: 0.187rem;
-    cursor: default;
-    display: none;
-    color: #101820;
-    display: none;
+    @extend #help-close;
   }
 }
 
@@ -255,12 +314,7 @@ iframe {
 }
 
 #contacts-close {
-  font-size: 0.55rem;
-  padding-top: 0.05rem;
-  margin-left: 0.18rem;
-  cursor: default;
-  color: #101820;
-  display: none;
+  @extend #help-close;
 }
 
 #contacts-grid {
@@ -310,12 +364,7 @@ iframe {
   border-bottom: 1px solid black;
 }
 #reminders-close {
-  font-size: 0.55rem;
-  padding-top: 0.05rem;
-  margin-left: 0.18rem;
-  cursor: default;
-  color: #101820;
-  display: none;
+  @extend #help-close;
 }
 
 #reminders-app-container > h3 {
@@ -366,13 +415,7 @@ iframe {
 }
 
 #facetime-close {
-  position: fixed;
-  font-size: 0.55rem;
-  top: 10.25%;
-  margin-top: 0.3rem;
-  margin-left: 0.19rem;
-  cursor: default;
-  display: none;
+  @extend #help-close;
 }
 
 #facetime-image {
@@ -556,10 +599,17 @@ ul {
   width: 3.5rem;
   padding: 0.25rem;
   position: absolute;
+  font-weight: 300;
   display: none;
 
   > li {
     padding: 0.25rem 0.5rem;
+  }
+
+  > li > a {
+    text-decoration: none;
+    color: black;
+    cursor: default;
   }
 }
 

@@ -14,6 +14,7 @@ window.addEventListener("DOMContentLoaded", () => {
   const viewList = document.getElementById("view-list");
   const goList = document.getElementById("go-list");
   const windowList = document.getElementById("window-list");
+  const helpApp = document.getElementById("help-app");
 
   const closeAllMenu = () => {
     finderList.style.display = "none";
@@ -87,6 +88,7 @@ window.addEventListener("DOMContentLoaded", () => {
   const toggleMenuHelp = (clicked) => {
     if (clicked) {
       menuHelp.style.backgroundColor = "#ddddff";
+      helpApp.style.display = "block";
     } else {
       menuHelp.style.backgroundColor = "rgb(255, 244, 243)";
       closeAllMenu();
@@ -107,6 +109,24 @@ window.addEventListener("DOMContentLoaded", () => {
   menuWindow.addEventListener("mouseleave", () => toggleMenuWindow(false));
   menuHelp.addEventListener("click", () => toggleMenuHelp(true));
   menuHelp.addEventListener("mouseleave", () => toggleMenuHelp(false));
+
+  /* Help App */
+  const helpDot = document.getElementById("help-dot");
+  const helpClose = document.getElementById("help-close");
+
+  const toggleHelpClose = (event) => {
+    if (event.type === "mouseover") {
+      helpClose.style.display = "block";
+    } else {
+      helpClose.style.display = "none";
+    }
+  };
+
+  const closeHelp = () => (helpApp.style.display = "none");
+
+  helpDot.addEventListener("mouseover", toggleHelpClose);
+  helpDot.addEventListener("mouseleave", toggleHelpClose);
+  helpClose.addEventListener("click", closeHelp);
 
   /* For Logo */
   const toggleIntroLogo = (clicked) => {
@@ -204,7 +224,7 @@ window.addEventListener("DOMContentLoaded", () => {
   dotOne.addEventListener("click", closeIntro);
   dotOne.addEventListener("mouseover", displayClose);
   dotOne.addEventListener("mouseleave", hideClose);
-  settings.addEventListener("click", displayIntro);
+  settings.addEventListener("dblclick", displayIntro);
 
   /* For Finder App */
 
@@ -299,7 +319,7 @@ window.addEventListener("DOMContentLoaded", () => {
   finderDot.addEventListener("mouseover", toggleFinderClose);
   finderDot.addEventListener("mouseleave", toggleFinderClose);
   finderClose.addEventListener("click", closeFinder);
-  finder.addEventListener("click", displayFinder);
+  finder.addEventListener("dblclick", displayFinder);
   recents.addEventListener("click", displayRecents);
   desktop.addEventListener("click", displayDesktop);
   documents.addEventListener("click", displayDocuments);
@@ -324,7 +344,7 @@ window.addEventListener("DOMContentLoaded", () => {
   const displayContacts = () => (contactsApp.style.display = "block");
   const closeContacts = () => (contactsApp.style.display = "none");
 
-  contacts.addEventListener("click", displayContacts);
+  contacts.addEventListener("dblclick", displayContacts);
   contactsClose.addEventListener("click", closeContacts);
   contactsDot.addEventListener("mouseover", toggleContactsClose);
   contactsDot.addEventListener("mouseleave", toggleContactsClose);
@@ -343,7 +363,7 @@ window.addEventListener("DOMContentLoaded", () => {
   };
 
   stickiesClose.addEventListener("click", closeStickies);
-  stickies.addEventListener("click", displayStickies);
+  stickies.addEventListener("dblclick", displayStickies);
 
   /* For Portfolio App */
 
@@ -378,7 +398,7 @@ window.addEventListener("DOMContentLoaded", () => {
   portfolioDot.addEventListener("click", closeInternetWindow);
   portfolioDot.addEventListener("mouseover", displayPortfolioClose);
   portfolioDot.addEventListener("mouseleave", hidePortfolioClose);
-  portfolio.addEventListener("click", displayPortfolio);
+  portfolio.addEventListener("dblclick", displayPortfolio);
 
   /* Safari App */
 
@@ -391,7 +411,7 @@ window.addEventListener("DOMContentLoaded", () => {
     safariIframe.style.display = "block";
   };
 
-  safari.addEventListener("click", displaySafari);
+  safari.addEventListener("dblclick", displaySafari);
 
   /* Launchpad App */
 
@@ -403,7 +423,7 @@ window.addEventListener("DOMContentLoaded", () => {
   const displayLaunchpad = () => (launchpadApp.style.display = "block");
 
   launchpadClose.addEventListener("click", closeLaunchpad);
-  launchpad.addEventListener("click", displayLaunchpad);
+  launchpad.addEventListener("dblclick", displayLaunchpad);
 
   /* Calendar App */
 
@@ -423,7 +443,7 @@ window.addEventListener("DOMContentLoaded", () => {
   const closeCalendar = () => (calendarApp.style.display = "none");
   const displayCalendar = () => (calendarApp.style.display = "block");
 
-  calendar.addEventListener("click", displayCalendar);
+  calendar.addEventListener("dblclick", displayCalendar);
   calendarClose.addEventListener("click", closeCalendar);
   calendarDot.addEventListener("mouseover", toggleCalendarClose);
   calendarDot.addEventListener("mouseleave", toggleCalendarClose);
@@ -465,7 +485,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
   facetimeDot.addEventListener("mouseover", displayFacetimeClose);
   facetimeDot.addEventListener("mouseleave", hideFacetimeClose);
-  facetime.addEventListener("click", displayFacetime);
+  facetime.addEventListener("dblclick", displayFacetime);
 
   /* Reminders App */
 
@@ -488,7 +508,29 @@ window.addEventListener("DOMContentLoaded", () => {
   remindersDot.addEventListener("mouseover", toggleRemindersClose);
   remindersDot.addEventListener("mouseleave", toggleRemindersClose);
   remindersClose.addEventListener("click", closeReminders);
-  reminders.addEventListener("click", displayReminders);
+  reminders.addEventListener("dblclick", displayReminders);
+
+  /* Trash App */
+  const trashDot = document.getElementById("trash-dot");
+  const trashClose = document.getElementById("trash-close");
+  const trashApp = document.getElementById("trash-app");
+  const trash = document.getElementById("trash");
+
+  const toggleTrashClose = (event) => {
+    if (event.type === "mouseover") {
+      trashClose.style.display = "block";
+    } else {
+      trashClose.style.display = "none";
+    }
+  };
+
+  const closeTrash = () => (trashApp.style.display = "none");
+  const displayTrash = () => (trashApp.style.display = "block");
+
+  trashDot.addEventListener("mouseover", toggleTrashClose);
+  trashDot.addEventListener("mouseleave", toggleTrashClose);
+  trashClose.addEventListener("click", closeTrash);
+  trash.addEventListener("dblclick", displayTrash);
 
   /* Desktop Apps */
 
@@ -496,9 +538,9 @@ window.addEventListener("DOMContentLoaded", () => {
   const desktopStickies = document.getElementById("desktop-stickies");
   const desktopPortfolio = document.getElementById("desktop-portfolio");
 
-  harddisk.addEventListener("click", displayMac);
-  desktopStickies.addEventListener("click", displayStickies);
-  desktopPortfolio.addEventListener("click", displayPortfolio);
+  harddisk.addEventListener("dblclick", displayMac);
+  desktopStickies.addEventListener("dblclick", displayStickies);
+  desktopPortfolio.addEventListener("dblclick", displayPortfolio);
 
   /* Finder Apps */
 
@@ -506,14 +548,20 @@ window.addEventListener("DOMContentLoaded", () => {
   const finderStickies = document.getElementById("finder-stickies");
   const finderPortfolio = document.getElementById("finder-portfolio");
 
-  finderHarddisk.addEventListener("click", displayMac);
-  finderStickies.addEventListener("click", displayStickies);
-  finderPortfolio.addEventListener("click", displayPortfolio);
+  finderHarddisk.addEventListener("dblclick", displayMac);
+  finderStickies.addEventListener("dblclick", displayStickies);
+  finderPortfolio.addEventListener("dblclick", displayPortfolio);
 
   /* Top Menu List Functions */
 
-  const menuWindowClose = document.getElementById("menu-window-close");
   const menuFileClose = document.getElementById("menu-file-close");
+  const menuWindowClose = document.getElementById("menu-window-close");
+  const menuFinderAbout = document.getElementById("menu-finder-about");
+  const menuFinderOpen = document.getElementById("menu-finder-open");
+  const menuFinderLaunch = document.getElementById("menu-finder-launch");
+  const menuViewAbout = document.getElementById("menu-view-about");
+  const menuGoOpen = document.getElementById("menu-go-open");
+
   const closeEverything = () => {
     calendarApp.style.display = "none";
     remindersApp.style.display = "none";
@@ -524,7 +572,15 @@ window.addEventListener("DOMContentLoaded", () => {
     contactsApp.style.display = "none";
     finderApp.style.display = "none";
     facetimeApp.style.display = "none";
+    helpApp.style.display = "none";
+    trashApp.style.display = "none";
   };
+
   menuWindowClose.addEventListener("click", closeEverything);
   menuFileClose.addEventListener("click", closeEverything);
+  menuFinderAbout.addEventListener("click", displayIntro);
+  menuFinderOpen.addEventListener("click", displayFinder);
+  menuFinderLaunch.addEventListener("click", displayLaunchpad);
+  menuViewAbout.addEventListener("click", displayIntro);
+  menuGoOpen.addEventListener("click", displaySafari);
 });
