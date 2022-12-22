@@ -158,24 +158,57 @@ iframe #safari-iframe {
   margin-top: 10rem;
   text-align: center;
   padding-right: 6rem;
+  opacity: 60%;
   cursor: default;
 }
 
-#finder-recents-container {
+#finder-recents-container, #finder-mac-container, #finder-documents-container, #finder-desktop-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  padding: 12rem;
+  grid-template-rows: 1fr 1fr;
   position: relative;
-  bottom: 60%;
-  left: -51%;
+  bottom: 55%;
+  left: -20%;
   display: none;
 }
-#finder-recents-container > a > img {
-  width: 5rem;
+#finder-recents-container > a > img, #finder-mac-container > a > img, #finder-documents-container > a > img, #finder-desktop-container > a > img {
+  width: 4rem;
 }
-#finder-recents-container > a > img:hover {
+#finder-recents-container > a > img:hover, #finder-mac-container > a > img:hover, #finder-documents-container > a > img:hover, #finder-desktop-container > a > img:hover {
   transform: scale(1.05);
   cursor: default;
+}
+
+#finder-desktop-container > div > img {
+  width: 4rem;
+}
+#finder-desktop-container > div > img:hover {
+  transform: scale(1.05);
+  cursor: default;
+}
+
+#finder-documents-container > div > a > img {
+  width: 4rem;
+}
+#finder-documents-container > div > a > img:hover {
+  transform: scale(1.05);
+  cursor: default;
+}
+#finder-documents-container #resume {
+  font-size: 0.75rem;
+  margin-top: -0.4rem;
+  margin-left: 0.7rem;
+  color: black;
+}
+
+#finder-mac-container > div > img {
+  width: 3.5rem;
+}
+#finder-mac-container > div > img:hover {
+  transform: scale(1.05);
+  cursor: default;
+}
+#finder-mac-container > div > p {
+  font-size: 0.75rem;
 }
 
 /* Contacts-App */

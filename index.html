@@ -43,20 +43,25 @@
 
     <section class="apps-container">
       <div class="app">
-        <img class="app-image" src="assets/harddisk-app.png" draggable="true" />
-      </div>
-      <div class="app">
         <img
           class="app-image"
-          id="safari-app"
-          src="assets/safari-icon.png"
+          id="harddisk"
+          src="assets/harddisk-app.png"
           draggable="true"
         />
       </div>
       <div class="app">
         <img
           class="app-image"
-          id="hard-disk"
+          id="desktop-stickies"
+          src="assets/notes-icon.png"
+          draggable="true"
+        />
+      </div>
+      <div class="app">
+        <img
+          class="app-image"
+          id="desktop-portfolio"
           src="assets/my-website-app.png"
           draggable="true"
         />
@@ -191,7 +196,7 @@
                           class="finder-icon"
                           src="assets/finderAssets/finder-recents.png"
                         />
-                        Recents
+                        <p id="recents">Recents</p>
                       </div>
                     </li>
                     <li>
@@ -200,7 +205,7 @@
                           class="finder-icon"
                           src="assets/finderAssets/finder-desktop.png"
                         />
-                        Desktop
+                        <p id="desktop">Desktop</p>
                       </div>
                     </li>
                     <li>
@@ -209,7 +214,7 @@
                           class="finder-icon"
                           src="assets/finderAssets/finder-documents.png"
                         />
-                        Documents
+                        <p id="documents">Documents</p>
                       </div>
                     </li>
                     <li>
@@ -218,7 +223,7 @@
                           class="finder-icon"
                           src="assets/finderAssets/finder-downloads.png"
                         />
-                        Downloads
+                        <p id="downloads">Downloads</p>
                       </div>
                     </li>
                   </ul>
@@ -232,7 +237,7 @@
                           class="finder-icon"
                           src="assets/finderAssets/finder-mac.png"
                         />
-                        Your Mac
+                        <p id="your-mac">Your Mac</p>
                       </div>
                     </li>
                   </ul>
@@ -247,12 +252,40 @@
                 </p>
               </div>
               <div id="finder-recents-container">
-                <a href="https://google.com">
+                <a href="https://google.com" target="_blank">
                   <img src="assets/safari-icon.png" />
                 </a>
-                <a href="https://google.com">
+                <a href="https://github.com/StanleyY7" target="_blank">
                   <img src="assets/github-icon.png" />
                 </a>
+              </div>
+              <div id="finder-desktop-container">
+                <div>
+                  <img src="assets/harddisk-app.png" id="finder-harddisk" />
+                </div>
+                <div>
+                  <img src="assets/notes-icon.png" id="finder-stickies" />
+                </div>
+                <div>
+                  <img src="assets/my-website-app.png" id="finder-portfolio" />
+                </div>
+              </div>
+              <div id="finder-documents-container">
+                <div>
+                  <a
+                    href="https://drive.google.com/file/d/1hKb3OQTfr_CInHHN64FhlbGA_b1gct2W/view?usp=sharing"
+                    target="_blank"
+                  >
+                    <img src="assets/word-icon.png" />
+                  </a>
+                  <p id="resume">Resume</p>
+                </div>
+              </div>
+              <div id="finder-mac-container">
+                <div>
+                  <img src="assets/harddisk-app.png" />
+                  <p>15GB Free</p>
+                </div>
               </div>
             </div>
           </div>

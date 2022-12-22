@@ -166,25 +166,69 @@ iframe {
   margin-top: 10rem;
   text-align: center;
   padding-right: 6rem;
+  opacity: 60%;
   cursor: default;
 }
 
 #finder-recents-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  padding: 12rem;
+  grid-template-rows: 1fr 1fr;
   position: relative;
-  bottom: 60%;
-  left: -51%;
-
+  bottom: 55%;
+  left: -20%;
   display: none;
-
   > a > img {
-    width: 5rem;
+    width: 4rem;
   }
   > a > img:hover {
     transform: scale(1.05);
     cursor: default;
+  }
+}
+
+#finder-desktop-container {
+  @extend #finder-recents-container;
+
+  > div > img {
+    width: 4rem;
+  }
+  > div > img:hover {
+    transform: scale(1.05);
+    cursor: default;
+  }
+}
+
+#finder-documents-container {
+  @extend #finder-recents-container;
+
+  > div > a > img {
+    width: 4rem;
+  }
+  > div > a > img:hover {
+    transform: scale(1.05);
+    cursor: default;
+  }
+
+  #resume {
+    font-size: 0.75rem;
+    margin-top: -0.4rem;
+    margin-left: 0.7rem;
+    color: black;
+  }
+}
+
+#finder-mac-container {
+  @extend #finder-recents-container;
+  > div > img {
+    width: 3.5rem;
+  }
+  > div > img:hover {
+    transform: scale(1.05);
+    cursor: default;
+  }
+
+  > div > p {
+    font-size: 0.75rem;
   }
 }
 

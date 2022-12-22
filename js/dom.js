@@ -179,10 +179,28 @@ window.addEventListener("DOMContentLoaded", () => {
   settings.addEventListener("click", displayIntro);
 
   /* For Finder App */
+
   const finderDot = document.getElementById("finder-dot");
   const finderClose = document.getElementById("finder-close");
   const finderApp = document.getElementById("finder-app");
   const finder = document.getElementById("finder");
+  const recents = document.getElementById("recents");
+  const desktop = document.getElementById("desktop");
+  const finderText = document.getElementsByClassName("finder-text")[0];
+  const documents = document.getElementById("documents");
+  const downloads = document.getElementById("downloads");
+  const yourMac = document.getElementById("your-mac");
+
+  const finderRecentsContainer = document.getElementById(
+    "finder-recents-container"
+  );
+  const finderDesktopContainer = document.getElementById(
+    "finder-desktop-container"
+  );
+  const finderDocumentsContainer = document.getElementById(
+    "finder-documents-container"
+  );
+  const finderMacContainer = document.getElementById("finder-mac-container");
 
   const toggleFinderClose = (event) => {
     if (event.type === "mouseover") {
@@ -192,13 +210,73 @@ window.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  const closeFinder = () => (finderApp.style.display = "none");
+  const closeAllFinder = () => {
+    finderDesktopContainer.style.display = "none";
+    finderRecentsContainer.style.display = "none";
+    finderDocumentsContainer.style.display = "none";
+    finderMacContainer.style.display = "none";
+  };
+
+  const closeFinder = () => {
+    closeAllFinder();
+    finderApp.style.display = "none";
+    finderText.innerHTML =
+      "Welcome to Finder, click on one of the categories on the left to get started.";
+  };
   const displayFinder = () => (finderApp.style.display = "block");
+
+  const displayRecents = () => {
+    finderText.innerHTML =
+      "All of your most recent applications are shown and displayed here.";
+    finderRecentsContainer.style.display = "block";
+    finderDesktopContainer.style.display = "none";
+    finderDocumentsContainer.style.display = "none";
+    finderMacContainer.style.display = "none";
+  };
+
+  const displayDesktop = () => {
+    finderText.innerHTML =
+      "All of your Desktop applications are shown and displayed here.";
+    finderRecentsContainer.style.display = "none";
+    finderDocumentsContainer.style.display = "none";
+    finderMacContainer.style.display = "none";
+    finderDesktopContainer.style.display = "block";
+  };
+
+  const displayDocuments = () => {
+    finderText.innerHTML =
+      "All of your Documents in your Documents folder are shown and displayed here.";
+    finderRecentsContainer.style.display = "none";
+    finderDesktopContainer.style.display = "none";
+    finderMacContainer.style.display = "none";
+    finderDocumentsContainer.style.display = "block";
+  };
+
+  const displayDownloads = () => {
+    finderText.innerHTML =
+      "All of your Downloads are shown here, currently you have no downloads.";
+    closeAllFinder();
+  };
+
+  const displayMac = () => {
+    finderApp.style.display = "block";
+    finderText.innerHTML =
+      "Further information for your available Devices are shown here, currently you have 1 Device.";
+    finderMacContainer.style.display = "block";
+    finderRecentsContainer.style.display = "none";
+    finderDesktopContainer.style.display = "none";
+    finderDocumentsContainer.style.display = "none";
+  };
 
   finderDot.addEventListener("mouseover", toggleFinderClose);
   finderDot.addEventListener("mouseleave", toggleFinderClose);
   finderClose.addEventListener("click", closeFinder);
   finder.addEventListener("click", displayFinder);
+  recents.addEventListener("click", displayRecents);
+  desktop.addEventListener("click", displayDesktop);
+  documents.addEventListener("click", displayDocuments);
+  downloads.addEventListener("click", displayDownloads);
+  yourMac.addEventListener("click", displayMac);
 
   /* For Contacts App */
 
@@ -232,12 +310,12 @@ window.addEventListener("DOMContentLoaded", () => {
     stickiesNote.style.display = "none";
   };
 
-  const openStickies = () => {
+  const displayStickies = () => {
     stickiesNote.style.display = "block";
   };
 
   stickiesClose.addEventListener("click", closeStickies);
-  stickies.addEventListener("click", openStickies);
+  stickies.addEventListener("click", displayStickies);
 
   /* For Portfolio App */
 
@@ -264,6 +342,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
   const displayPortfolio = () => {
     const portfolioIframe = document.getElementById("portfolio-iframe");
+    document.getElementById("safari-iframe").style.display = "none";
     internetWindow.style.display = "block";
     portfolioIframe.style.display = "block";
   };
@@ -274,6 +353,7 @@ window.addEventListener("DOMContentLoaded", () => {
   portfolio.addEventListener("click", displayPortfolio);
 
   /* Safari App */
+
   const safari = document.getElementById("safari");
 
   const displaySafari = () => {
@@ -381,4 +461,24 @@ window.addEventListener("DOMContentLoaded", () => {
   remindersDot.addEventListener("mouseleave", toggleRemindersClose);
   remindersClose.addEventListener("click", closeReminders);
   reminders.addEventListener("click", displayReminders);
+
+  /* Desktop Apps */
+
+  const harddisk = document.getElementById("harddisk");
+  const desktopStickies = document.getElementById("desktop-stickies");
+  const desktopPortfolio = document.getElementById("desktop-portfolio");
+
+  harddisk.addEventListener("click", displayMac);
+  desktopStickies.addEventListener("click", displayStickies);
+  desktopPortfolio.addEventListener("click", displayPortfolio);
+
+  /* Finder Apps */
+
+  const finderHarddisk = document.getElementById("finder-harddisk");
+  const finderStickies = document.getElementById("finder-stickies");
+  const finderPortfolio = document.getElementById("finder-portfolio");
+
+  finderHarddisk.addEventListener("click", displayMac);
+  finderStickies.addEventListener("click", displayStickies);
+  finderPortfolio.addEventListener("click", displayPortfolio);
 });
