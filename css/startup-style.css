@@ -1,9 +1,16 @@
-html,
-body {
+/* Colors */
+/* Font */
+@font-face {
+  font-family: "hn";
+  src: url("../fonts/HelveticaNeue Medium.ttf");
+}
+/* One Size Fits All */
+/* Sizes */
+/* General Styles */
+html, html body {
   overflow: hidden;
 }
-
-body {
+html body {
   background-color: #e7e8e9;
   background-image: url("../assets/startup.png");
   background-size: 75%;
@@ -16,6 +23,7 @@ body {
   position: relative;
 }
 
+/* Content */
 #loader {
   z-index: 100;
   opacity: 50%;
@@ -23,4 +31,6 @@ body {
   bottom: 19.25rem;
   left: 39.5%;
   transform: scale(0.7);
-}/*# sourceMappingURL=startup-style.css.map */
+}
+
+/* Media Queries *//*# sourceMappingURL=startup-style.css.map */

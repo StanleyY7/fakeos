@@ -1,28 +1,260 @@
 @import "theme";
 
+/* General Styles */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  overflow: hidden;
+  font-family: $mainFont;
+  font-weight: 300;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a,
+ul > li:hover,
+.icon > a {
+  cursor: default;
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+/* Header */
+
+header {
+  background-color: $headerColor;
+  backdrop-filter: blur(0.25rem);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.104);
+  justify-content: space-around;
+  height: 2.15%;
+}
+
+.menu {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  top: 0;
+
+  > .menu-left > ul {
+    display: flex;
+    position: relative;
+
+    > li {
+      font-size: 0.9rem;
+      text-align: center;
+      padding: 0.05rem 0.7rem;
+      height: 1rem;
+    }
+  }
+
+  .menu-right > ul {
+    display: flex;
+
+    > li {
+      padding-right: 0.4rem;
+      font-size: 0.87rem;
+    }
+  }
+}
+
+#cover {
+  background-image: url("../assets/yosemite.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  max-width: 100vw;
+}
+
+#logo {
+  padding-left: 0.25rem;
+  width: 1.8rem;
+  height: 1.1rem;
+  opacity: 100%;
+  transition: 0.3s ease;
+  overflow-y: hidden;
+  margin-right: -0.5rem;
+}
+
+#logo:hover {
+  opacity: 70%;
+}
+
+#finder {
+  font-weight: 600;
+}
+
+#battery {
+  height: 1.1rem;
+  width: 1.1rem;
+}
+
+#wifi {
+  height: 1rem;
+  width: 1rem;
+}
+
+/* App Open */
+.app-window {
+  background-color: $windowContentColor;
+  border: $border;
+  position: fixed;
+  width: 50rem;
+  height: 30rem;
+  top: 15%;
+  left: 10%;
+  border-radius: $borderRadiusSize;
+
+  .app-window-wrapper {
+    border: $border;
+    position: relative;
+    top: -0.25rem;
+    background-color: $windowTopColor;
+    height: 1rem;
+    width: 50rem;
+    left: -0.9px;
+    display: flex;
+    border-top-left-radius: $borderRadiusSize;
+    border-top-right-radius: $borderRadiusSize;
+  }
+}
+
+.dots-wrapper {
+  display: flex;
+
+  .dots-close {
+    background-color: $closeDotColor;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    margin: 0.15rem;
+  }
+}
+
+#close {
+  font-size: 0.55rem;
+  padding-top: 0.05rem;
+  margin-left: 0.187rem;
+  display: none;
+  color: $closeColor;
+  cursor: default;
+}
+
+.app-window-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  margin-top: 10rem;
+
+  #left-col {
+    transition: 6s ease;
+    &:hover {
+      filter: sepia(60%) saturate(85%) hue-rotate(320deg);
+    }
+
+    #intro-image {
+      position: relative;
+      top: -5.5rem;
+      left: 2rem;
+    }
+  }
+
+  #intro-text-container {
+    position: relative;
+    top: -8rem;
+    left: -1rem;
+    padding: 1.2rem;
+
+    #intro-title {
+      text-align: center;
+      padding-bottom: 0.85rem;
+      font-weight: 600;
+      font-size: 1.5rem;
+
+      strong {
+        color: #fcf258;
+      }
+    }
+  }
+}
+
+/* Internet Apps */
+
+#internet-window {
+  z-index: 100;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0%;
+  left: 0%;
+  display: none;
+
+  #internet-window-wrapper {
+    width: 100vw;
+    border-radius: 0rem;
+
+    #internet-dot {
+      font-size: 0.65rem;
+      #internet-close {
+        margin-left: 0.15rem;
+        cursor: default;
+        display: none;
+      }
+    }
+  }
+}
+
+iframe {
+  width: 100vw;
+  height: 98vh;
+  position: fixed;
+  left: 0%;
+  top: 1.7%;
+  z-index: 95;
+  border: none;
+  #portfolio-iframe {
+    display: none;
+  }
+  #safari-iframe {
+    display: none;
+  }
+}
+
 /* Help App */
 
 #help-app {
   height: max-content;
   width: 20rem;
-  background-color: white;
+  border: $border;
+  border-radius: 0.5rem;
+  background-color: $windowContentColor;
   position: fixed;
   top: 10%;
   right: 20%;
-  border-radius: 0.5rem;
   display: none;
 }
 
 #help-app-top {
-  border-bottom: 1px solid black;
+  border-bottom: $border;
 }
 
 #help-close {
+  color: $closeColor;
   font-size: 0.55rem;
   padding-top: 0.05rem;
   margin-left: 0.18rem;
   cursor: default;
-  color: #101820;
   display: none;
 }
 
@@ -44,101 +276,61 @@
 #trash-app {
   height: 12rem;
   width: 20rem;
-  background-color: white;
-  border: 1px solid black;
+  background-color: $windowContentColor;
+  border: $border;
+  border-radius: 0.5rem;
   position: fixed;
   top: 10%;
   left: 10%;
-  border-radius: 0.5rem;
   display: none;
+
+  #trash-app-top {
+    @extend #help-app-top;
+  }
+
+  #trash-close {
+    @extend #help-close;
+  }
+
+  #trash-text-container {
+    @extend #help-text-container;
+    margin-top: 1rem;
+  }
 }
 
-#trash-app-top {
-  @extend #help-app-top;
-}
+/* Stickies-note App */
 
-#trash-close {
-  @extend #help-close;
-}
-
-#trash-text-container {
-  @extend #help-text-container;
-  margin-top: 1rem;
-}
-/* stickies-Note */
 #stickies-note {
+  background-color: $stickiesPColor;
   position: fixed;
   top: 10%;
   left: 70%;
-  background-color: #fef485;
-  display: none;
-}
-
-#stickies-input {
-  margin-top: 0.25rem;
-  width: 20rem;
-  height: 15rem;
-  background-color: #fef485;
-  word-wrap: break-word;
-  outline: none;
-  border: none;
-  border-top: 1px solid black;
-  padding-left: 0.2rem;
-  padding-top: 0.2rem;
-}
-
-#stickies-note > p {
-  margin-top: 0.2rem;
-}
-
-#stickies-close {
-  padding-top: 0.5rem;
-  font-size: 1rem;
-  margin-left: 0.25rem;
-  cursor: default;
-  color: #101820;
-  font-weight: 100;
-}
-
-/* Internet Apps */
-
-#internet-window {
-  z-index: 100;
-  position: fixed;
-  height: 100vh;
-  width: 100vw;
-  top: 0%;
-  left: 0%;
   display: none;
 
-  #portfolio-window-wrapper {
-    width: 100vw;
-    border-radius: 0rem;
+  > p {
+    margin-top: 0.2rem;
   }
-}
 
-#portfolio-dot {
-  font-size: 0.65rem;
-  #portfolio-close {
-    margin-left: 0.15rem;
+  #stickies-input {
+    background-color: $stickiesPColor;
+    margin-top: 0.25rem;
+    width: 20rem;
+    height: 15rem;
+    word-wrap: break-word;
+    outline: none;
+    border: none;
+    border-top: $border;
+    padding-left: 0.2rem;
+    padding-top: 0.2rem;
+  }
+
+  #stickies-close {
+    padding-top: 0.5rem;
+    font-size: 1rem;
+    margin-left: 0.25rem;
     cursor: default;
-    display: none;
-  }
-}
-
-iframe {
-  width: 100vw;
-  height: 98vh;
-  position: fixed;
-  left: 0%;
-  top: 1.7%;
-  z-index: 95;
-  border: none;
-  #portfolio-iframe {
-    display: none;
-  }
-  #safari-iframe {
-    display: none;
+    color: $closeColor;
+    font-weight: 100;
   }
 }
 
@@ -150,8 +342,8 @@ iframe {
   left: 20%;
   display: none;
   #calendar-app-top {
-    border: 1px solid rgb(255, 244, 243);
-    background-color: rgb(255, 244, 243);
+    border: $border;
+    background-color: $windowTopColor;
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
     height: 1rem;
@@ -172,30 +364,36 @@ iframe {
   left: 30%;
   height: 29.75rem;
   display: none;
+
+  #finder-close {
+    @extend #close;
+  }
+
+  #finder-app-grid {
+    grid-template-columns: 0.2fr 1fr;
+    padding: 0.25rem;
+    margin-top: 1rem;
+
+    #finder-left-col {
+      height: 28.95rem;
+      padding-right: 1rem;
+      border-right: 1px solid black;
+      margin-top: -0.2rem;
+
+      > ul > li {
+        font-size: 1.2rem;
+        padding-top: 1rem;
+      }
+    }
+    #finder-right-col {
+      margin-top: -0.25rem;
+      height: auto;
+      padding: 2rem;
+    }
+  }
 }
 
-#finder-close {
-  @extend #close;
-}
-
-#finder-app-grid {
-  grid-template-columns: 0.2fr 1fr;
-  padding: 0.25rem;
-  margin-top: 1rem;
-}
-
-#finder-left-col {
-  height: 28.95rem;
-  padding-right: 1rem;
-  border-right: 1px solid black;
-  margin-top: -0.2rem;
-}
-
-#finder-left-col > ul > li {
-  font-size: 1.2rem;
-  padding-top: 1rem;
-}
-
+// Finder Lists in Finder App
 .list-wrapper {
   display: flex;
 }
@@ -209,16 +407,10 @@ iframe {
   padding-top: 0.2rem;
   font-size: 0.8rem;
   margin-left: 0.25rem;
-}
 
-.nested-list > li {
-  padding-top: 0.25rem;
-}
-
-#finder-right-col {
-  margin-top: -0.25rem;
-  height: auto;
-  padding: 2rem;
+  > li {
+    padding-top: 0.25rem;
+  }
 }
 
 .finder-text {
@@ -299,55 +491,58 @@ iframe {
   right: 25%;
   height: auto;
   width: 30rem;
-  background-color: #f7f7f7;
-  border-top-left-radius: 0.5rem;
-  border-top-right-radius: 0.5rem;
+  background-color: $windowContentColor;
+  border-top-left-radius: $borderRadiusSize;
+  border-top-right-radius: $borderRadiusSize;
   display: none;
-}
 
-#contacts-app-top {
-  border-bottom: 1px solid black;
-}
+  #contacts-app-top {
+    border-bottom: $border;
+  }
 
-#contacts-dot {
-  margin-left: 0.2rem;
-}
+  #contacts-dot {
+    margin-left: 0.2rem;
+  }
 
-#contacts-close {
-  @extend #help-close;
+  #contacts-close {
+    @extend #help-close;
+  }
 }
 
 #contacts-grid {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
+
+  #contacts-grid-col-left {
+    padding: 1rem;
+    text-align: center;
+    height: 100%;
+
+    > h3 {
+      padding-bottom: 1rem;
+    }
+  }
+
+  #contacts-grid-col-right {
+    border-left: $border;
+    padding: 2rem;
+    font-size: 0.8rem;
+
+    > h3 {
+      text-align: center;
+      font-size: 1.75rem;
+    }
+
+    > img {
+      padding-bottom: 0.5rem;
+    }
+
+    > ul > li {
+      padding-bottom: 0.5rem;
+    }
+  }
 }
 
-#contacts-grid-col-left {
-  padding: 1rem;
-  text-align: center;
-  height: 100%;
-}
-#contacts-grid-col-left > h3 {
-  padding-bottom: 1rem;
-}
-
-#contacts-grid-col-right {
-  border-left: 1px solid black;
-  padding: 2rem;
-  font-size: 0.8rem;
-}
-
-#contacts-grid-col-right > h3 {
-  text-align: center;
-  font-size: 1.75rem;
-}
-#contacts-grid-col-right > img {
-  padding-bottom: 0.5rem;
-}
-
-#contacts-grid-col-right > ul > li {
-  padding-bottom: 0.5rem;
-}
 /* Reminders App */
 
 #reminders-app {
@@ -356,45 +551,50 @@ iframe {
   left: 5%;
   height: 25rem;
   width: 20rem;
-  background-color: white;
+  background-color: $windowContentColor;
   display: none;
+
+  #reminders-app-top {
+    border-bottom: $border;
+  }
+
+  #reminders-close {
+    @extend #help-close;
+  }
 }
 
-#reminders-app-top {
-  border-bottom: 1px solid black;
-}
-#reminders-close {
-  @extend #help-close;
+#reminders-app-container {
+  > h3 {
+    text-align: center;
+    padding: 0.5rem 0;
+  }
+
+  > ol {
+    margin-left: 2rem;
+    height: auto;
+
+    > li {
+      padding-top: 1.25rem;
+
+      > div > textarea {
+        width: 100%;
+        font-size: 1rem;
+        outline: none;
+        border: none;
+        resize: none;
+        overflow: hidden;
+        border-bottom: $border;
+      }
+    }
+  }
 }
 
-#reminders-app-container > h3 {
-  text-align: center;
-  padding: 0.5rem 0;
-}
-
-#reminders-app-container > ol {
-  margin-left: 2rem;
-  height: auto;
-}
-
-#reminders-app-container > ol > li {
-  padding-top: 1.25rem;
-}
 .reminders-textarea-container {
   position: relative;
   top: 0.2rem;
   margin-right: 1rem;
 }
 
-#reminders-app-container > ol > li > div > textarea {
-  width: 100%;
-  font-size: 1rem;
-  outline: none;
-  border: none;
-  resize: none;
-  overflow: hidden;
-  border-bottom: 1px solid black;
-}
 /* Facetime App */
 
 #facetime-app {
@@ -404,35 +604,37 @@ iframe {
   top: 10%;
   left: 20%;
   display: none;
+
+  #facetime-close {
+    @extend #help-close;
+  }
+
+  #facetime-image {
+    position: fixed;
+    top: 14.5%;
+    margin-left: 0.75rem;
+    width: 15rem;
+    display: none;
+    border-radius: 0.5rem;
+  }
+
+  #webcam {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
 #facetime-text-container {
   padding: 0.2rem;
-  border: 1px solid black;
-  background-color: rgba(255, 255, 255, 0.66);
-  border-top-left-radius: 1rem;
-  border-top-right-radius: 1rem;
-}
-
-#facetime-close {
-  @extend #help-close;
-}
-
-#facetime-image {
-  position: fixed;
-  top: 14.5%;
-  margin-left: 0.75rem;
-  width: 15rem;
-  display: none;
-  border-radius: 0.5rem;
-}
-#webcam {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  border: $border;
+  background-color: $windowContentColor;
+  border-top-left-radius: $borderRadiusSize;
+  border-top-right-radius: $borderRadiusSize;
 }
 
 /* Launchpad App */
+
 #launchpad-app {
   position: fixed;
   top: 0;
@@ -441,157 +643,46 @@ iframe {
 
   backdrop-filter: blur(1rem);
   display: none;
+
+  #launchpad-close {
+    margin-left: 0.5rem;
+    cursor: default;
+    opacity: 75%;
+  }
 }
 
 .launchpad-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   padding: 16rem;
-}
 
-.launchpad-grid > div {
-  margin-top: -12.5rem;
-  margin-left: 3.25rem;
-}
+  > div {
+    margin-top: -12.5rem;
+    margin-left: 3.25rem;
+  }
 
-#launchpad-close {
-  margin-left: 0.5rem;
-  cursor: default;
-  opacity: 75%;
-}
+  .launchpad-content-container {
+    text-align: center;
 
-.launchpad-content-container {
-  text-align: center;
-}
+    .launchpad-image {
+      width: 9.5rem;
 
-.launchpad-content-container > a {
-  cursor: default;
-}
+      &:hover {
+        transform: scale(1.025);
+      }
+    }
 
-.launchpad-image {
-  width: 9.5rem;
-}
-
-.launchpad-image:hover {
-  transform: scale(1.025);
-}
-
-.launchpad-text {
-  color: white;
-  font-size: 0.8rem;
-}
-
-/* General Styles */
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
-html,
-body {
-  overflow-x: hidden;
-  overflow: hidden;
-  font-family: $mainFont;
-  font-weight: 300;
-}
-
-img {
-  width: 100%;
-}
-
-ul > li:hover,
-.icon > a {
-  cursor: default;
-}
-
-a {
-  text-decoration: none;
-}
-
-/* Header */
-
-header {
-  background-color: rgb(255, 244, 243);
-  height: 2.15%;
-  justify-content: space-around;
-  backdrop-filter: blur(0.25rem);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.104);
-}
-
-.menu {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  top: 0;
-}
-
-.menu > .menu-left > ul {
-  display: flex;
-  position: relative;
-}
-
-.menu > .menu-left > ul > li {
-  padding: 0.05rem 0.7rem;
-  font-size: 0.9rem;
-  height: 1rem;
-  text-align: center;
-}
-
-#cover {
-  background-image: url("../assets/yosemite.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 100vh;
-  max-width: 100vw;
-}
-
-ul {
-  list-style-type: none;
-}
-
-#logo {
-  padding-left: 0.25rem;
-  width: 1.8rem;
-  height: 1.1rem;
-  opacity: 100%;
-  transition: 0.3s ease;
-  overflow-y: hidden;
-  margin-right: -0.5rem;
-}
-
-#finder {
-  font-weight: 600;
-}
-
-#logo:hover {
-  opacity: 70%;
-}
-
-.menu-right > ul {
-  display: flex;
-}
-
-.menu-right > ul > li {
-  padding-right: 0.4rem;
-  font-size: 0.87rem;
-}
-
-#battery {
-  height: 1.1rem;
-  width: 1.1rem;
-}
-
-#wifi {
-  height: 1rem;
-  width: 1rem;
+    .launchpad-text {
+      color: $windowContentColor;
+      font-size: 0.8rem;
+    }
+  }
 }
 
 /* Header Menu */
 
 #finder-list {
-  background-color: rgb(255, 244, 243);
+  background-color: $windowContentColor;
   text-align: center;
   font-size: 0.75rem;
   margin-top: 0.1rem;
@@ -599,45 +690,38 @@ ul {
   width: 3.5rem;
   padding: 0.25rem;
   position: absolute;
-  font-weight: 300;
   display: none;
 
   > li {
     padding: 0.25rem 0.5rem;
-  }
-
-  > li > a {
-    text-decoration: none;
-    color: black;
-    cursor: default;
   }
 }
 
 #file-list {
   @extend #finder-list;
   margin-left: -0.7rem;
-  padding: 0.25rem 0 0.25rem 0;
+  padding: $paddingList;
   width: 3.15rem;
 }
 
 #edit-list {
   @extend #finder-list;
   margin-left: -0.6rem;
-  padding: 0.25rem 0 0.25rem 0;
+  padding: $paddingList;
   width: 3.15rem;
 }
 
 #view-list {
   @extend #finder-list;
   margin-left: -0.6rem;
-  padding: 0.25rem 0 0.25rem 0;
+  padding: $paddingList;
   width: 3.25rem;
 }
 
 #go-list {
   @extend #finder-list;
   margin-left: -0.9rem;
-  padding: 0.25rem 0 0.25rem 0;
+  padding: $paddingList;
   width: 3.15rem;
 }
 
@@ -645,7 +729,7 @@ ul {
   @extend #finder-list;
   margin-left: -0.6rem;
   width: 3.35rem;
-  padding: 0.25rem 0.5rem 0.25rem 0.75rem;
+  padding: $paddingList;
 }
 
 /* Desktop Environment */
@@ -653,38 +737,36 @@ ul {
 .apps-container {
   display: grid;
   grid-template-rows: 1fr;
-  position: relative;
-  top: 1rem;
-  left: 93%;
+
+  .app {
+    position: relative;
+    top: 1rem;
+    left: 93%;
+    height: 10vh;
+    padding: 0.5rem;
+
+    .app-image {
+      width: 5.5rem;
+      height: 5.5rem;
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      #desktop-stickies {
+        position: absolute;
+        top: 40;
+      }
+
+      #desktop-portfolio {
+        position: absolute;
+        top: 30;
+        left: 20;
+      }
+    }
+  }
 }
 
-.app-image {
-  width: 5.5rem;
-  height: 5.5rem;
-  position: relative;
-  top: 0;
-  left: 0;
-}
-
-.app {
-  padding: 0.5rem;
-}
-
-#border-line {
-  border-left: 1.5px solid black;
-  margin-top: 0.2rem;
-  padding-left: 0.25rem;
-}
-
-#border-icon {
-  width: 2.25rem;
-}
-
-#settings-icon {
-  padding-right: 0.75rem;
-}
-
-/* Footer */
+/* Footer & Dock */
 
 footer {
   @extend header;
@@ -698,6 +780,10 @@ footer {
   bottom: 0rem;
   left: 20%;
   height: 3.2rem;
+
+  .dock > ul {
+    display: flex;
+  }
 }
 
 .icon {
@@ -705,98 +791,25 @@ footer {
   width: 2.9rem;
   padding: 0rem 0.5rem;
   margin-top: 0.2rem;
+
+  &:hover {
+    transform: scale(1.3);
+    margin-top: -10px;
+  }
 }
 
-.icon:hover {
-  transform: scale(1.3);
-  margin-top: -10px;
+#border-line {
+  border-left: 1.5px solid black;
+  margin-top: 0.2rem;
+  padding-left: 0.25rem;
+
+  #border-icon {
+    width: 2.25rem;
+  }
 }
 
-.dock > ul {
-  display: flex;
+#settings-icon {
+  padding-right: 0.75rem;
 }
 
-/* App Open */
-.app-window {
-  background-color: #f7f7f7;
-  border: 1px solid #a0a0a3;
-  position: fixed;
-  width: 50rem;
-  height: 30rem;
-  top: 15%;
-  left: 10%;
-  border-radius: 0.5rem;
-}
-
-.app-window-wrapper {
-  border: 1px solid #a0a0a3;
-  position: relative;
-  top: -0.25rem;
-  background-color: #f6f6f6;
-  height: 1rem;
-  width: 50rem;
-  left: -0.9px;
-  border-top-left-radius: 0.5rem;
-  border-top-right-radius: 0.5rem;
-  display: flex;
-}
-
-.dots-wrapper {
-  display: flex;
-}
-
-.dots-close {
-  background-color: #ff6052;
-  height: 12px;
-  width: 12px;
-  border-radius: 50%;
-  margin: 0.15rem;
-}
-
-#close {
-  font-size: 0.55rem;
-  padding-top: 0.05rem;
-  margin-left: 0.187rem;
-  display: none;
-  color: #101820;
-  cursor: default;
-}
-
-.app-window-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 5rem;
-  margin-top: 10rem;
-}
-
-#intro-text-container {
-  position: relative;
-  top: -8rem;
-  left: -1rem;
-  padding: 1.2rem;
-}
-
-#intro-title {
-  text-align: center;
-  padding-bottom: 0.85rem;
-  font-weight: 600;
-  font-size: 1.5rem;
-}
-
-#intro-image {
-  position: relative;
-  top: -5.5rem;
-  left: 2rem;
-}
-
-strong {
-  color: #fcf258;
-}
-
-#left-col {
-  transition: 6s ease;
-}
-
-#left-col:hover {
-  filter: sepia(60%) saturate(85%) hue-rotate(320deg);
-}
+/* Media Queries */

@@ -1,3 +1,5 @@
+/* General Styles */
+
 body {
   transition: 10s ease-in-out;
   text-align: center;
@@ -16,17 +18,21 @@ a {
   cursor: default;
 }
 
+/* Content */
+
 .error-text-container {
   margin-top: 15rem;
   text-align: center;
+
+  > h1 {
+    font-size: 4rem;
+    padding-bottom: 1.8rem;
+  }
+
+  > p {
+    font-size: 2rem;
+    padding-top: 1.5rem;
+  }
 }
 
-.error-text-container > h1 {
-  font-size: 4rem;
-  padding-bottom: 1.8rem;
-}
-
-.error-text-container > p {
-  font-size: 2rem;
-  padding-top: 1.5rem;
-}
+/* Media Queries */

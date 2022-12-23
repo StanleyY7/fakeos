@@ -1,10 +1,12 @@
 /* Colors */
 
-$headerColor: "rgb(255, 244, 243)";
+$headerColor: rgb(255, 244, 243);
 $windowTopColor: #f6f6f6;
 $closeDotColor: red;
+$closeColor: #101820;
 $borderColor: #a0a0a3;
 $windowContentColor: #f7f7f7;
+$stickiesPColor: #fef485;
 
 /* Font */
 
@@ -14,3 +16,12 @@ $windowContentColor: #f7f7f7;
 }
 
 $mainFont: "hn";
+
+/* One Size Fits All */
+
+$border: 1px solid $borderColor;
+
+/* Sizes */
+
+$borderRadiusSize: 0.5rem;
+$paddingList: 0.25rem 0 0.25rem 0;

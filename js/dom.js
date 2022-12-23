@@ -155,17 +155,17 @@ window.addEventListener("DOMContentLoaded", () => {
     let isDragging = false;
     let initialPosition = {};
     let currentPosition = {};
-
-    // Set the initial position of the img element
-    img.style.left = "0px";
-    img.style.top = "0px";
+    let initialX;
+    let initialY;
 
     img.addEventListener("mousedown", (event) => {
       isDragging = true;
       initialPosition = {
-        x: event.clientX,
-        y: event.clientY,
+        x: img.offsetLeft,
+        y: img.offsetTop,
       };
+      initialX = event.clientX;
+      initialY = event.clientY;
     });
 
     document.addEventListener("mousemove", (event) => {
@@ -175,11 +175,11 @@ window.addEventListener("DOMContentLoaded", () => {
           y: event.clientY,
         };
 
-        let diffX = currentPosition.x - initialPosition.x;
-        let diffY = currentPosition.y - initialPosition.y;
+        let diffX = currentPosition.x - initialX;
+        let diffY = currentPosition.y - initialY;
 
-        img.style.left = diffX + "px";
-        img.style.top = diffY + "px";
+        img.style.left = initialPosition.x + diffX + "px";
+        img.style.top = initialPosition.y + diffY + "px";
       }
     });
 
@@ -368,16 +368,16 @@ window.addEventListener("DOMContentLoaded", () => {
   /* For Portfolio App */
 
   const internetWindow = document.getElementById("internet-window");
-  const portfolioDot = document.getElementById("portfolio-dot");
+  const internetDot = document.getElementById("internet-dot");
   const portfolio = document.getElementById("portfolio");
 
-  const displayPortfolioClose = () => {
-    const closeInternetWindowX = document.getElementById("portfolio-close");
+  const displayinternetClose = () => {
+    const closeInternetWindowX = document.getElementById("internet-close");
     closeInternetWindowX.style.display = "block";
   };
 
-  const hidePortfolioClose = () => {
-    const displayPortfolioX = document.getElementById("portfolio-close");
+  const hideinternetClose = () => {
+    const displayPortfolioX = document.getElementById("internet-close");
     displayPortfolioX.style.display = "none";
   };
 
@@ -395,9 +395,9 @@ window.addEventListener("DOMContentLoaded", () => {
     portfolioIframe.style.display = "block";
   };
 
-  portfolioDot.addEventListener("click", closeInternetWindow);
-  portfolioDot.addEventListener("mouseover", displayPortfolioClose);
-  portfolioDot.addEventListener("mouseleave", hidePortfolioClose);
+  internetDot.addEventListener("click", closeInternetWindow);
+  internetDot.addEventListener("mouseover", displayinternetClose);
+  internetDot.addEventListener("mouseleave", hideinternetClose);
   portfolio.addEventListener("dblclick", displayPortfolio);
 
   /* Safari App */

@@ -1,20 +1,25 @@
-html,
-body {
+@import "theme";
+
+/* General Styles */
+
+html {
   overflow: hidden;
+  body {
+    @extend html;
+    background-color: #e7e8e9;
+    background-image: url("../assets/startup.png");
+    background-size: 75%;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+    background-position-x: 35%;
+    background-position-y: 68%;
+    z-index: 80;
+    position: relative;
+  }
 }
 
-body {
-  background-color: #e7e8e9;
-  background-image: url("../assets/startup.png");
-  background-size: 75%;
-  background-repeat: no-repeat;
-  height: 100vh;
-  width: 100vw;
-  background-position-x: 35%;
-  background-position-y: 68%;
-  z-index: 80;
-  position: relative;
-}
+/* Content */
 
 #loader {
   z-index: 100;
@@ -24,3 +29,5 @@ body {
   left: 39.5%;
   transform: scale(0.7);
 }
+
+/* Media Queries */
