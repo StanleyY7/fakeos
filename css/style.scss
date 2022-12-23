@@ -24,6 +24,7 @@ ul > li:hover,
 .icon > a {
   cursor: default;
   text-decoration: none;
+  color: $closeColor;
 }
 
 img {
@@ -341,12 +342,14 @@ iframe {
   top: 10%;
   left: 20%;
   display: none;
+
   #calendar-app-top {
     border: $border;
     background-color: $windowTopColor;
-    border-top-left-radius: 0.5rem;
-    border-top-right-radius: 0.5rem;
+    border-top-left-radius: $borderRadiusSize;
+    border-top-right-radius: $borderRadiusSize;
     height: 1rem;
+    width: 49.9rem;
   }
 
   #calendar-image-container {
@@ -699,14 +702,14 @@ iframe {
 
 #file-list {
   @extend #finder-list;
-  margin-left: -0.7rem;
+  margin-left: -0.8rem;
   padding: $paddingList;
   width: 3.15rem;
 }
 
 #edit-list {
   @extend #finder-list;
-  margin-left: -0.6rem;
+  margin-left: -0.7rem;
   padding: $paddingList;
   width: 3.15rem;
 }
@@ -727,9 +730,9 @@ iframe {
 
 #window-list {
   @extend #finder-list;
-  margin-left: -0.6rem;
-  width: 3.35rem;
-  padding: $paddingList;
+  margin-left: -0.7rem;
+  width: 3.4rem;
+  padding: 0.25rem 0.6rem 0.25rem 0.8rem;
 }
 
 /* Desktop Environment */
