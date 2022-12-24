@@ -33,4 +33,39 @@ html body {
   transform: scale(0.7);
 }
 
-/* Media Queries *//*# sourceMappingURL=startup-style.css.map */
+/* Media Queries */
+/* Medium Sized Tablets */
+@media only screen and (min-width: 891px) and (max-width: 1025px) {
+  /* General Styles */
+  html body {
+    margin-top: -2.5rem;
+  }
+  /* Content */
+  #loader {
+    bottom: 28%;
+    left: 35%;
+  }
+}
+/* Small to Medium sized Laptops */
+@media only screen and (min-width: 1026px) and (max-width: 1535px) {
+  /* Content */
+  #loader {
+    bottom: 32.5%;
+    left: 35%;
+  }
+}
+@media only screen and (min-width: 1536px) and (max-width: 1679px) {
+  /* Content */
+  #loader {
+    bottom: 32.5%;
+    left: 35%;
+  }
+}
+/* Large screen devices */
+@media only screen and (min-width: 1680px) and (min-height: 1000px) {
+  /* Content */
+  #loader {
+    bottom: 34.5%;
+    left: 38%;
+  }
+}/*# sourceMappingURL=startup-style.css.map */

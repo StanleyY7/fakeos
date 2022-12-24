@@ -115,11 +115,7 @@ window.addEventListener("DOMContentLoaded", () => {
   const helpClose = document.getElementById("help-close");
 
   const toggleHelpClose = (event) => {
-    if (event.type === "mouseover") {
-      helpClose.style.display = "block";
-    } else {
-      helpClose.style.display = "none";
-    }
+    helpClose.style.display = event.type === "mouseover" ? "block" : "none";
   };
 
   const closeHelp = () => (helpApp.style.display = "none");
@@ -200,17 +196,12 @@ window.addEventListener("DOMContentLoaded", () => {
   /* For Intro App */
 
   const introWindow = document.getElementById("intro-window");
-  const dotOne = document.getElementById("dot-one");
+  const introDot = document.getElementById("intro-dot");
   const settings = document.getElementById("settings");
+  const introClose = document.getElementById("close");
 
-  const displayClose = () => {
-    const closeX = document.getElementById("close");
-    closeX.style.display = "block";
-  };
-
-  const hideClose = () => {
-    const displayX = document.getElementById("close");
-    displayX.style.display = "none";
+  const toggleClose = (event) => {
+    introClose.style.display = event.type === "mouseover" ? "block" : "none";
   };
 
   const closeIntro = () => {
@@ -221,9 +212,9 @@ window.addEventListener("DOMContentLoaded", () => {
     introWindow.style.display = "block";
   };
 
-  dotOne.addEventListener("click", closeIntro);
-  dotOne.addEventListener("mouseover", displayClose);
-  dotOne.addEventListener("mouseleave", hideClose);
+  introDot.addEventListener("mouseover", toggleClose);
+  introDot.addEventListener("mouseleave", toggleClose);
+  introClose.addEventListener("click", closeIntro);
   settings.addEventListener("dblclick", displayIntro);
 
   /* For Finder App */
@@ -251,11 +242,7 @@ window.addEventListener("DOMContentLoaded", () => {
   const finderMacContainer = document.getElementById("finder-mac-container");
 
   const toggleFinderClose = (event) => {
-    if (event.type === "mouseover") {
-      finderClose.style.display = "block";
-    } else {
-      finderClose.style.display = "none";
-    }
+    finderClose.style.display = event.type === "mouseover" ? "block" : "none";
   };
 
   const closeAllFinder = () => {
@@ -334,11 +321,7 @@ window.addEventListener("DOMContentLoaded", () => {
   const contactsDot = document.getElementById("contacts-dot");
 
   const toggleContactsClose = (event) => {
-    if (event.type === "mouseover") {
-      contactsClose.style.display = "block";
-    } else {
-      contactsClose.style.display = "none";
-    }
+    contactsClose.style.display = event.type === "mouseover" ? "block" : "none";
   };
 
   const displayContacts = () => (contactsApp.style.display = "block");
@@ -366,38 +349,32 @@ window.addEventListener("DOMContentLoaded", () => {
   stickies.addEventListener("dblclick", displayStickies);
 
   /* For Portfolio App */
-
   const internetWindow = document.getElementById("internet-window");
   const internetDot = document.getElementById("internet-dot");
   const portfolio = document.getElementById("portfolio");
+  const internetClose = document.getElementById("internet-close");
+  const portfolioIframe = document.getElementById("portfolio-iframe");
+  const safariIframe = document.getElementById("safari-iframe");
 
-  const displayinternetClose = () => {
-    const closeInternetWindowX = document.getElementById("internet-close");
-    closeInternetWindowX.style.display = "block";
-  };
-
-  const hideinternetClose = () => {
-    const displayPortfolioX = document.getElementById("internet-close");
-    displayPortfolioX.style.display = "none";
+  const toggleInternetClose = (event) => {
+    internetClose.style.display = event.type === "mouseover" ? "block" : "none";
   };
 
   const closeInternetWindow = () => {
-    const portfolioIframe = document.getElementById("portfolio-iframe");
-    document.getElementById("safari-iframe").style.display = "none";
+    safariIframe.style.display = "none";
     internetWindow.style.display = "none";
     portfolioIframe.style.display = "none";
   };
 
   const displayPortfolio = () => {
-    const portfolioIframe = document.getElementById("portfolio-iframe");
-    document.getElementById("safari-iframe").style.display = "none";
+    safariIframe.style.display = "none";
     internetWindow.style.display = "block";
     portfolioIframe.style.display = "block";
   };
 
   internetDot.addEventListener("click", closeInternetWindow);
-  internetDot.addEventListener("mouseover", displayinternetClose);
-  internetDot.addEventListener("mouseleave", hideinternetClose);
+  internetDot.addEventListener("mouseover", toggleInternetClose);
+  internetDot.addEventListener("mouseleave", toggleInternetClose);
   portfolio.addEventListener("dblclick", displayPortfolio);
 
   /* Safari App */
@@ -405,8 +382,7 @@ window.addEventListener("DOMContentLoaded", () => {
   const safari = document.getElementById("safari");
 
   const displaySafari = () => {
-    const safariIframe = document.getElementById("safari-iframe");
-    document.getElementById("portfolio-iframe").style.display = "none";
+    portfolioIframe.style.display = "none";
     internetWindow.style.display = "block";
     safariIframe.style.display = "block";
   };
@@ -433,11 +409,7 @@ window.addEventListener("DOMContentLoaded", () => {
   const calendar = document.getElementById("calendar");
 
   const toggleCalendarClose = (event) => {
-    if (event.type === "mouseover") {
-      calendarClose.style.display = "block";
-    } else {
-      calendarClose.style.display = "none";
-    }
+    calendarClose.style.display = event.type === "mouseover" ? "block" : "none";
   };
 
   const closeCalendar = () => (calendarApp.style.display = "none");
@@ -454,20 +426,14 @@ window.addEventListener("DOMContentLoaded", () => {
   const facetimeDot = document.getElementById("facetime-dot");
   const facetimeClose = document.getElementById("facetime-close");
   const facetimeApp = document.getElementById("facetime-app");
+  const webcam = document.getElementById("webcam");
+  const facetimeImage = document.getElementById("facetime-image");
 
-  displayFacetimeClose = () => {
-    facetimeClose.style.display = "block";
-  };
-
-  hideFacetimeClose = () => {
-    facetimeClose.style.display = "none";
+  const toggleFacetimeClose = (event) => {
+    facetimeClose.style.display = event.type === "mouseover" ? "block" : "none";
   };
 
   displayFacetime = () => {
-    const webcam = document.getElementById("webcam");
-    const facetimeClose = document.getElementById("facetime-close");
-    const facetimeImage = document.getElementById("facetime-image");
-
     navigator.mediaDevices.getUserMedia({ video: true }).then((stream) => {
       webcam.srcObject = stream;
       facetimeApp.style.display = "block";
@@ -483,8 +449,8 @@ window.addEventListener("DOMContentLoaded", () => {
     });
   };
 
-  facetimeDot.addEventListener("mouseover", displayFacetimeClose);
-  facetimeDot.addEventListener("mouseleave", hideFacetimeClose);
+  facetimeDot.addEventListener("mouseover", toggleFacetimeClose);
+  facetimeDot.addEventListener("mouseleave", toggleFacetimeClose);
   facetime.addEventListener("dblclick", displayFacetime);
 
   /* Reminders App */

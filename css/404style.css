@@ -1,3 +1,11 @@
+/* Colors */
+/* Font */
+@font-face {
+  font-family: "hn";
+  src: url("../fonts/HelveticaNeue Medium.ttf");
+}
+/* One Size Fits All */
+/* Sizes */
 /* General Styles */
 body {
   transition: 10s ease-in-out;

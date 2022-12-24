@@ -38,7 +38,7 @@ img {
 
 /* Header */
 header, footer {
-  background-color: rgb(255, 244, 243);
+  background-color: #fff4f3;
   -webkit-backdrop-filter: blur(0.25rem);
           backdrop-filter: blur(0.25rem);
   border-bottom: 1px solid rgba(255, 255, 255, 0.104);
@@ -135,7 +135,7 @@ header, footer {
   display: flex;
 }
 .dots-wrapper .dots-close {
-  background-color: red;
+  background-color: #ff514f;
   height: 12px;
   width: 12px;
   border-radius: 50%;
@@ -146,9 +146,9 @@ header, footer {
   font-size: 0.55rem;
   padding-top: 0.05rem;
   margin-left: 0.187rem;
-  display: none;
   color: #101820;
   cursor: default;
+  display: none;
 }
 
 .app-window-grid {
@@ -356,13 +356,12 @@ iframe #safari-iframe {
   padding: 2rem;
 }
 
-.list-wrapper {
-  display: flex;
-}
-
-.finder-icon {
-  width: 1rem;
-  padding-right: 0.2rem;
+.finder-text {
+  margin-top: 10rem;
+  text-align: center;
+  padding-right: 6rem;
+  opacity: 60%;
+  cursor: default;
 }
 
 .nested-list {
@@ -370,16 +369,15 @@ iframe #safari-iframe {
   font-size: 0.8rem;
   margin-left: 0.25rem;
 }
+.nested-list .list-wrapper {
+  display: flex;
+}
+.nested-list .list-wrapper .finder-icon {
+  width: 1rem;
+  padding-right: 0.2rem;
+}
 .nested-list > li {
   padding-top: 0.25rem;
-}
-
-.finder-text {
-  margin-top: 10rem;
-  text-align: center;
-  padding-right: 6rem;
-  opacity: 60%;
-  cursor: default;
 }
 
 #finder-recents-container, #finder-mac-container, #finder-documents-container, #finder-desktop-container {
@@ -485,6 +483,8 @@ iframe #safari-iframe {
   height: 25rem;
   width: 20rem;
   background-color: #f7f7f7;
+  border: 1px solid #a0a0a3;
+  border-radius: 0.5rem;
   display: none;
 }
 #reminders-app #reminders-app-top {
@@ -509,6 +509,7 @@ iframe #safari-iframe {
   resize: none;
   overflow: hidden;
   border-bottom: 1px solid #a0a0a3;
+  background-color: #f7f7f7;
 }
 
 .reminders-textarea-container {
@@ -674,29 +675,85 @@ footer {
 footer .dock > ul {
   display: flex;
 }
-
-.icon {
+footer .dock .icon {
   height: 2.8rem;
   width: 2.9rem;
   padding: 0rem 0.5rem;
   margin-top: 0.2rem;
 }
-.icon:hover {
+footer .dock .icon:hover {
   transform: scale(1.3);
   margin-top: -10px;
 }
-
-#border-line {
+footer .dock #settings-icon {
+  padding-right: 0.75rem;
+}
+footer .dock #trash {
+  width: 2.4rem;
+}
+footer .dock #border-line {
   border-left: 1.5px solid black;
   margin-top: 0.2rem;
   padding-left: 0.25rem;
 }
-#border-line #border-icon {
+footer .dock #border-line #border-icon {
   width: 2.25rem;
 }
 
-#settings-icon {
-  padding-right: 0.75rem;
+/* Media Queries */
+/* Medium Sized Tablets */
+@media only screen and (min-width: 891px) and (max-width: 1025px) {
+  /*  Apps */
+  .apps-container .app {
+    left: 90%;
+  }
+  .apps-container .app .app-image {
+    transform: scale(0.88);
+  }
+  .app-window {
+    transform: scale(0.8);
+  }
+  #finder-app {
+    left: 10%;
+  }
+  .launchpad-grid {
+    margin-top: 12rem;
+    margin-right: 3rem;
+    padding: 1rem;
+    transform: scale(0.9);
+  }
+  #contacts-app {
+    transform: scale(0.8);
+  }
+  #calendar-app {
+    transform: scale(0.8);
+  }
+  #stickies-note {
+    transform: scale(0.85);
+    left: 55%;
+  }
+  #reminders-app {
+    transform: scale(0.85);
+  }
+  /* Footer & Dock*/
+  footer {
+    bottom: -0.35%;
+    left: 0%;
+    transform: scale(0.9);
+  }
 }
-
-/* Media Queries *//*# sourceMappingURL=style.css.map */
+@media only screen and (min-width: 891px) and (max-width: 1025px) and (min-height: 601px) and (max-height: 770px) {
+  /* Content */
+}
+/* Small to Medium sized Laptops */
+@media only screen and (min-width: 1026px) and (max-width: 1535px) and (min-height: 860px) {
+  /* Content */
+}
+@media only screen and (min-width: 1536px) and (max-width: 1679px) {
+  /* Content */
+}
+/* Large screen devices */
+@media only screen and (min-width: 1680px) and (min-height: 1000px) {
+  /* General */
+  /* Content */
+}/*# sourceMappingURL=style.css.map */
