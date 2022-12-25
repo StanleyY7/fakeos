@@ -15,6 +15,7 @@ window.addEventListener("DOMContentLoaded", () => {
   const goList = document.getElementById("go-list");
   const windowList = document.getElementById("window-list");
   const helpApp = document.getElementById("help-app");
+  const transparent = "rgba(255, 255, 255, 0)";
 
   const closeAllMenu = () => {
     finderList.style.display = "none";
@@ -30,7 +31,7 @@ window.addEventListener("DOMContentLoaded", () => {
       menuFinder.style.backgroundColor = "#ddddff";
       finderList.style.display = "block";
     } else {
-      menuFinder.style.backgroundColor = "rgb(255, 244, 243)";
+      menuFinder.style.backgroundColor = transparent;
       closeAllMenu();
     }
   };
@@ -40,7 +41,7 @@ window.addEventListener("DOMContentLoaded", () => {
       menuFile.style.backgroundColor = "#ddddff";
       fileList.style.display = "block";
     } else {
-      menuFile.style.backgroundColor = "rgb(255, 244, 243)";
+      menuFile.style.backgroundColor = transparent;
       closeAllMenu();
     }
   };
@@ -50,7 +51,7 @@ window.addEventListener("DOMContentLoaded", () => {
       menuEdit.style.backgroundColor = "#ddddff";
       editList.style.display = "block";
     } else {
-      menuEdit.style.backgroundColor = "rgb(255, 244, 243)";
+      menuEdit.style.backgroundColor = transparent;
       closeAllMenu();
     }
   };
@@ -60,7 +61,7 @@ window.addEventListener("DOMContentLoaded", () => {
       menuView.style.backgroundColor = "#ddddff";
       viewList.style.display = "block";
     } else {
-      menuView.style.backgroundColor = "rgb(255, 244, 243)";
+      menuView.style.backgroundColor = transparent;
       closeAllMenu();
     }
   };
@@ -70,7 +71,7 @@ window.addEventListener("DOMContentLoaded", () => {
       menuGo.style.backgroundColor = "#ddddff";
       goList.style.display = "block";
     } else {
-      menuGo.style.backgroundColor = "rgb(255, 244, 243)";
+      menuGo.style.backgroundColor = transparent;
       closeAllMenu();
     }
   };
@@ -80,7 +81,7 @@ window.addEventListener("DOMContentLoaded", () => {
       menuWindow.style.backgroundColor = "#ddddff";
       windowList.style.display = "block";
     } else {
-      menuWindow.style.backgroundColor = "rgb(255, 244, 243)";
+      menuWindow.style.backgroundColor = transparent;
       closeAllMenu();
     }
   };
@@ -90,7 +91,7 @@ window.addEventListener("DOMContentLoaded", () => {
       menuHelp.style.backgroundColor = "#ddddff";
       helpApp.style.display = "block";
     } else {
-      menuHelp.style.backgroundColor = "rgb(255, 244, 243)";
+      menuHelp.style.backgroundColor = transparent;
       closeAllMenu();
     }
   };
@@ -130,7 +131,7 @@ window.addEventListener("DOMContentLoaded", () => {
       logo.style.backgroundColor = "#ddddff";
       introWindow.style.display = "block";
     } else {
-      logo.style.backgroundColor = "rgb(255, 244, 243)";
+      logo.style.backgroundColor = transparent;
     }
   };
 
@@ -595,4 +596,13 @@ window.addEventListener("DOMContentLoaded", () => {
   menuFinderLaunch.addEventListener("click", displayLaunchpad);
   menuViewAbout.addEventListener("click", displayIntro);
   menuGoOpen.addEventListener("click", displaySafari);
+
+  /* Mobile Apps */
+  const mobilePortfolio = document.getElementById("mobile-portfolio");
+  const mobileSafari = document.getElementById("mobile-safari");
+  const mobileStickies = document.getElementById("mobile-stickies");
+
+  mobilePortfolio.addEventListener("click", displayPortfolio);
+  mobileSafari.addEventListener("click", displaySafari);
+  mobileStickies.addEventListener("click", displayStickies);
 });
