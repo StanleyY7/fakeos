@@ -1173,7 +1173,7 @@ footer .dock #border-line #border-icon {
   }
   #intro-window {
     height: 64rem;
-    transform: scale(0.38);
+    transform: scale(0.35);
     top: -31.5%;
     left: -57.75%;
   }
@@ -1205,7 +1205,7 @@ footer .dock #border-line #border-icon {
   #finder-app {
     left: -47.5%;
     margin-top: 5rem;
-    transform: scale(0.5);
+    transform: scale(0.43);
   }
   #stickies-note {
     transform: scale(0.75);
