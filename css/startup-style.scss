@@ -6,7 +6,6 @@ html {
   overflow: hidden;
   body {
     @extend html;
-    background-color: #e7e8e9;
     background-image: url("../assets/startup.png");
     background-size: 75%;
     background-repeat: no-repeat;
@@ -125,7 +124,7 @@ html {
   }
 }
 
-@media only screen and (min-width: 500px) and (max-width: 540px) and (min-height: 700px) and (max-height: 720px) {
+@media only screen and (min-width: 500px) and (max-width: 540px) and (max-height: 720px) {
   /* Content */
   html {
     body {
