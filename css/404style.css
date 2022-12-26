@@ -1,18 +1,287 @@
+/* Colors */
+/* Font */
+@font-face {
+  font-family: "hn";
+  src: url("../fonts/HelveticaNeue Medium.ttf");
+}
+/* One Size Fits All */
+/* Sizes */
+/* General Styles */
 body {
   transition: 10s ease-in-out;
+  text-align: center;
 }
 
 body:hover {
   filter: sepia(25%) contrast(80%) saturate(80%) hue-rotate(320deg);
 }
 
-.ascii {
-  height: 100vh;
-  width: 100vw;
-  max-width: -webkit-fit-content;
-  max-width: -moz-fit-content;
-  max-width: fit-content;
-  max-height: -webkit-fit-content;
-  max-height: -moz-fit-content;
-  max-height: fit-content;
+img {
+  width: 20rem;
+  margin: -2rem auto;
+}
+
+a {
+  cursor: default;
+}
+
+/* Content */
+.error-text-container {
+  margin-top: 15rem;
+  text-align: center;
+}
+.error-text-container > h1 {
+  font-size: 4rem;
+  padding-bottom: 1.8rem;
+}
+.error-text-container > p {
+  font-size: 2rem;
+  padding-top: 1.5rem;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 280px) {
+  img {
+    width: 15rem;
+    margin: -1.5rem auto;
+  }
+  .error-text-container {
+    margin-top: 13rem;
+  }
+  .error-text-container > h1 {
+    font-size: 2.25rem;
+    margin-bottom: -2rem;
+  }
+  .error-text-container > p {
+    font-size: 1rem;
+    padding-top: 1.65rem;
+  }
+}
+@media only screen and (min-width: 281px) and (max-width: 320px) {
+  img {
+    width: 15rem;
+    margin: -1.5rem auto;
+  }
+  .error-text-container {
+    margin-top: 15rem;
+  }
+  .error-text-container > h1 {
+    font-size: 2.25rem;
+    margin-bottom: -2rem;
+  }
+  .error-text-container > p {
+    font-size: 1rem;
+    padding-top: 1.65rem;
+  }
+}
+@media only screen and (min-width: 321px) and (max-width: 426px) and (min-height: 700px) and (max-height: 760px) {
+  /* Content */
+  .error-text-container {
+    margin-top: 15rem;
+  }
+  .error-text-container > h1 {
+    font-size: 2.75rem;
+    margin-bottom: -2rem;
+  }
+  .error-text-container > p {
+    font-size: 1rem;
+    padding-top: 1.65rem;
+  }
+}
+@media only screen and (min-width: 321px) and (max-width: 389px) and (min-height: 600px) and (max-height: 750px) {
+  /* Content */
+  .error-text-container {
+    margin-top: 12.75rem;
+  }
+  .error-text-container > h1 {
+    font-size: 2.6rem;
+    margin-bottom: -2rem;
+  }
+  .error-text-container > p {
+    font-size: 0.95rem;
+    padding-top: 1.65rem;
+    margin-bottom: -0.1rem;
+  }
+  #error-image-container {
+    margin-top: -1rem;
+    transform: scale(0.8);
+  }
+}
+@media only screen and (min-width: 321px) and (max-width: 389px) and (min-height: 751px) and (max-height: 799px) {
+  /* Content */
+  .error-text-container {
+    margin-top: 14.75rem;
+  }
+  .error-text-container > h1 {
+    font-size: 2.6rem;
+    margin-bottom: -2rem;
+  }
+  .error-text-container > p {
+    font-size: 0.95rem;
+    padding-top: 1.65rem;
+    margin-bottom: -0.1rem;
+  }
+  #error-image-container {
+    margin-top: -1rem;
+    transform: scale(0.8);
+  }
+}
+@media only screen and (min-width: 390px) and (max-width: 415px) and (min-height: 800px) {
+  /* Content */
+  .error-text-container {
+    margin-top: 17.5rem;
+  }
+  .error-text-container > h1 {
+    font-size: 3.5rem;
+    margin-bottom: -2rem;
+  }
+  .error-text-container > p {
+    font-size: 1.15rem;
+    padding-top: 1.65rem;
+  }
+}
+/* Medium Sized Tablets */
+@media only screen and (min-width: 416px) and (max-width: 830px) and (min-height: 761px) {
+  /* Content */
+  .error-text-container {
+    margin-top: 29rem;
+  }
+  .error-text-container > h1 {
+    font-size: 3.5rem;
+    margin-bottom: -2rem;
+  }
+  .error-text-container > p {
+    font-size: 1.75rem;
+    padding-top: 1.65rem;
+  }
+}
+@media only screen and (min-width: 500px) and (max-width: 540px) and (min-height: 700px) and (max-height: 720px) {
+  /* Content */
+  .error-text-container {
+    margin-top: 12rem;
+  }
+  .error-text-container > h1 {
+    font-size: 4rem;
+    margin-bottom: -2rem;
+  }
+  .error-text-container > p {
+    font-size: 1.25rem;
+    padding-top: 1.65rem;
+  }
+}
+@media only screen and (min-width: 700px) and (max-width: 770px) and (min-height: 1000px) and (max-height: 1100px) {
+  /* Content */
+  .error-text-container {
+    margin-top: 24.25rem;
+  }
+  .error-text-container > h1 {
+    font-size: 3.5rem;
+    margin-bottom: -2rem;
+  }
+  .error-text-container > p {
+    font-size: 2rem;
+    padding-top: 1.65rem;
+  }
+}
+@media only screen and (min-width: 891px) and (max-width: 1025px) {
+  /* Content */
+  .error-text-container {
+    margin-top: 10rem;
+  }
+  .error-text-container > h1 {
+    font-size: 3.5rem;
+  }
+  .error-text-container > p {
+    font-size: 1.5rem;
+    padding-top: 1.65rem;
+  }
+}
+@media only screen and (min-width: 891px) and (max-width: 1025px) and (min-height: 601px) and (max-height: 770px) {
+  /* Content */
+  .error-text-container {
+    margin-top: 14rem;
+  }
+  .error-text-container > h1 {
+    font-size: 4rem;
+  }
+  .error-text-container > p {
+    font-size: 1.75rem;
+    padding-top: 1.65rem;
+  }
+}
+@media only screen and (min-width: 901px) and (max-width: 920px) and (min-height: 1201px) and (max-height: 1400px) {
+  /* Content */
+  .error-text-container {
+    margin-top: 33.5rem;
+  }
+  .error-text-container > h1 {
+    font-size: 4rem;
+  }
+  .error-text-container > p {
+    font-size: 2.25rem;
+    padding-top: 1.65rem;
+  }
+}
+/* Small to Medium sized Laptops */
+@media only screen and (min-width: 1026px) and (max-width: 1535px) and (min-height: 860px) {
+  /* Content */
+  .error-text-container {
+    margin-top: 18rem;
+  }
+  .error-text-container > h1 {
+    font-size: 5rem;
+  }
+  .error-text-container > p {
+    font-size: 2.25rem;
+    padding-top: 1.65rem;
+  }
+}
+@media only screen and (min-width: 1536px) and (max-width: 1679px) {
+  /* Content */
+  .error-text-container {
+    margin-top: 18rem;
+  }
+  .error-text-container > h1 {
+    font-size: 4.5rem;
+  }
+  .error-text-container > p {
+    font-size: 2rem;
+    padding-top: 1.65rem;
+  }
+}
+/* Large screen devices */
+@media only screen and (min-width: 1680px) and (min-height: 1000px) {
+  /* General */
+  img {
+    width: 20rem;
+    margin: -1.5rem auto;
+  }
+  /* Content */
+  .error-text-container {
+    margin-top: 21rem;
+  }
+  .error-text-container > h1 {
+    font-size: 6rem;
+  }
+  .error-text-container > p {
+    font-size: 2.45rem;
+    padding-top: 1.65rem;
+  }
+}
+@media only screen and (min-width: 1922px) {
+  img {
+    width: 30rem;
+    margin: -1.5rem auto;
+  }
+  /* Content */
+  .error-text-container {
+    margin-top: 32rem;
+  }
+  .error-text-container > h1 {
+    font-size: 8rem;
+  }
+  .error-text-container > p {
+    font-size: 2.75rem;
+    padding-top: 1.65rem;
+  }
 }/*# sourceMappingURL=404style.css.map */

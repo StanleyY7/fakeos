@@ -1,7 +1,11 @@
+/* Colors */
+/* Font */
 @font-face {
   font-family: "hn";
   src: url("../fonts/HelveticaNeue Medium.ttf");
 }
+/* One Size Fits All */
+/* Sizes */
 /* General Styles */
 * {
   margin: 0;
@@ -11,7 +15,21 @@
 html,
 body {
   overflow-x: hidden;
+  overflow: hidden;
   font-family: "hn";
+  font-weight: 300;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a,
+ul > li:hover,
+.icon > a {
+  cursor: default;
+  text-decoration: none;
+  color: #101820;
 }
 
 img {
@@ -20,26 +38,38 @@ img {
 
 /* Header */
 header, footer {
-  background: linear-gradient(to right, rgba(233, 241, 250, 0.745), rgba(255, 255, 255, 0.5), rgba(246, 250, 255, 0.868));
-  height: 2.15%;
-  justify-content: space-around;
+  background-color: #fff4f3;
   -webkit-backdrop-filter: blur(0.25rem);
           backdrop-filter: blur(0.25rem);
   border-bottom: 1px solid rgba(255, 255, 255, 0.104);
+  justify-content: space-around;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .menu {
+  display: flex;
   position: relative;
+  justify-content: space-between;
   top: 0;
 }
-
 .menu > .menu-left > ul {
   display: flex;
+  position: relative;
 }
-
 .menu > .menu-left > ul > li {
-  padding: 0.05rem 0.75rem;
   font-size: 0.9rem;
+  text-align: center;
+  padding: 0.05rem 0.7rem;
+  height: 1rem;
+}
+.menu .menu-right > ul {
+  display: flex;
+}
+.menu .menu-right > ul > li {
+  padding-right: 0.4rem;
+  font-size: 0.87rem;
 }
 
 #cover {
@@ -51,39 +81,22 @@ header, footer {
   max-width: 100vw;
 }
 
-ul {
-  list-style-type: none;
-}
-
 #logo {
   padding-left: 0.25rem;
-  width: 2rem;
-  height: 1.25rem;
+  width: 1.8rem;
+  height: 1.1rem;
   opacity: 100%;
   transition: 0.3s ease;
-}
-
-#finder {
-  padding-left: 0.1rem;
+  overflow-y: hidden;
+  margin-right: -0.5rem;
 }
 
 #logo:hover {
   opacity: 70%;
 }
 
-.menu-right {
-  position: absolute;
-  left: 89%;
-  top: 8%;
-}
-
-.menu-right > ul {
-  display: flex;
-}
-
-.menu-right > ul > li {
-  padding-right: 0.4rem;
-  font-size: 0.87rem;
+#finder {
+  font-weight: 600;
 }
 
 #battery {
@@ -96,45 +109,2118 @@ ul {
   width: 1rem;
 }
 
-/* Desktop Environment */
-.apps-container {
+/* App Open */
+.app-window {
+  background-color: #f7f7f7;
+  border: 1px solid #a0a0a3;
+  position: fixed;
+  width: 50rem;
+  height: 30rem;
+  top: 15%;
+  left: 10%;
+  border-radius: 0.5rem;
+}
+.app-window .app-window-wrapper {
+  border: 1px solid #a0a0a3;
+  position: relative;
+  top: -0.25rem;
+  background-color: #f6f6f6;
+  height: 1rem;
+  width: 50rem;
+  left: -0.9px;
+  display: flex;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.dots-wrapper {
+  display: flex;
+}
+.dots-wrapper .dots-close {
+  background-color: #ff514f;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  margin: 0.15rem;
+}
+
+#close, #finder-app #finder-close {
+  font-size: 0.55rem;
+  padding-top: 0.05rem;
+  margin-left: 0.187rem;
+  color: #101820;
+  cursor: default;
+  display: none;
+}
+
+.app-window-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  margin-top: 10rem;
+}
+.app-window-grid #left-col {
+  transition: 6s ease;
+}
+.app-window-grid #left-col:hover {
+  filter: sepia(60%) saturate(85%) hue-rotate(320deg);
+}
+.app-window-grid #left-col #intro-image {
+  position: relative;
+  top: -5.5rem;
+  left: 2rem;
+}
+.app-window-grid #intro-text-container {
+  position: relative;
+  top: -8rem;
+  left: -1rem;
+  padding: 1.2rem;
+}
+.app-window-grid #intro-text-container #intro-title {
+  text-align: center;
+  padding-bottom: 0.85rem;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+.app-window-grid #intro-text-container #intro-title strong {
+  color: #fcf258;
+}
+
+/* Internet Apps */
+#internet-window {
+  z-index: 100;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0%;
+  left: 0%;
+  display: none;
+}
+#internet-window #internet-window-wrapper {
+  width: 100vw;
+  border-radius: 0rem;
+}
+#internet-window #internet-window-wrapper #internet-dot {
+  font-size: 0.65rem;
+}
+#internet-window #internet-window-wrapper #internet-dot #internet-close {
+  margin-left: 0.15rem;
+  cursor: default;
+  display: none;
+}
+
+iframe {
+  width: 100vw;
+  height: 98vh;
+  position: fixed;
+  left: 0%;
+  top: 1.7%;
+  z-index: 95;
+  border: none;
+}
+iframe #portfolio-iframe {
+  display: none;
+}
+iframe #safari-iframe {
+  display: none;
+}
+
+/* Help App */
+#help-app {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  width: 20rem;
+  border: 1px solid #a0a0a3;
+  border-radius: 0.5rem;
+  background-color: #f7f7f7;
+  position: fixed;
+  top: 10%;
+  right: 20%;
+  display: none;
+}
+
+#help-app-top, #trash-app #trash-app-top {
+  border-bottom: 1px solid #a0a0a3;
+}
+
+#help-close, #facetime-app #facetime-close, #reminders-app #reminders-close, #contacts-app #contacts-close, #calendar-app #calendar-close, #trash-app #trash-close {
+  color: #101820;
+  font-size: 0.55rem;
+  margin-top: 0.05rem;
+  text-align: center;
+  cursor: default;
+  display: none;
+}
+
+#help-text-container, #trash-app #trash-text-container {
+  padding: 0.5rem 1rem;
+}
+#help-text-container > h3, #trash-app #trash-text-container > h3 {
+  text-align: center;
+  padding: 0.25rem;
+}
+#help-text-container > p, #trash-app #trash-text-container > p {
+  padding: 0.5rem;
+  font-size: 0.8rem;
+}
+
+/* Trash App */
+#trash-app {
+  height: 12rem;
+  width: 20rem;
+  background-color: #f7f7f7;
+  border: 1px solid #a0a0a3;
+  border-radius: 0.5rem;
+  position: fixed;
+  top: 10%;
+  left: 10%;
+  display: none;
+}
+#trash-app #trash-text-container {
+  margin-top: 1rem;
+}
+
+/* Stickies-note App */
+#stickies-note {
+  background-color: #fef485;
+  position: fixed;
+  top: 10%;
+  left: 70%;
+  display: none;
+}
+#stickies-note > p {
+  margin-top: 0.2rem;
+}
+#stickies-note #stickies-input {
+  background-color: #fef485;
+  margin-top: 0.25rem;
+  width: 20rem;
+  height: 15rem;
+  word-wrap: break-word;
+  outline: none;
+  border: none;
+  border-top: 1px solid #a0a0a3;
+  padding-left: 0.2rem;
+  padding-top: 0.2rem;
+}
+#stickies-note #stickies-close {
+  padding-top: 0.5rem;
+  font-size: 1rem;
+  margin-left: 0.25rem;
+  cursor: default;
+  color: #101820;
+  font-weight: 100;
+}
+
+/* Calendar App */
+#calendar-app {
+  position: fixed;
+  top: 10%;
+  left: 20%;
+  display: none;
+}
+#calendar-app #calendar-app-top {
+  border: 1px solid #a0a0a3;
+  background-color: #f6f6f6;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  height: 1rem;
+  width: 49.912rem;
+}
+#calendar-app #calendar-image-container {
+  width: 50rem;
+}
+/* Finder App */
+#finder-app {
+  left: 30%;
+  height: 29.75rem;
+  display: none;
+}
+#finder-app #finder-app-grid {
+  grid-template-columns: 0.2fr 1fr;
+  padding: 0.25rem;
+  margin-top: 1rem;
+}
+#finder-app #finder-app-grid #finder-left-col {
+  height: 28.95rem;
+  padding-right: 1rem;
+  border-right: 1px solid black;
+  margin-top: -0.2rem;
+}
+#finder-app #finder-app-grid #finder-left-col > ul > li {
+  font-size: 1.2rem;
+  padding-top: 1rem;
+}
+#finder-app #finder-app-grid #finder-right-col {
+  margin-top: -0.25rem;
+  height: auto;
+  padding: 2rem;
+}
+
+.finder-text {
+  margin-top: 10rem;
+  text-align: center;
+  padding-right: 6rem;
+  opacity: 60%;
+  cursor: default;
+}
+
+.nested-list {
+  padding-top: 0.2rem;
+  font-size: 0.8rem;
+  margin-left: 0.25rem;
+}
+.nested-list .list-wrapper {
+  display: flex;
+}
+.nested-list .list-wrapper .finder-icon {
+  width: 1rem;
+  padding-right: 0.2rem;
+}
+.nested-list > li {
+  padding-top: 0.25rem;
+}
+
+#finder-recents-container, #finder-mac-container, #finder-documents-container, #finder-desktop-container {
   display: grid;
   grid-template-rows: 1fr 1fr;
   position: relative;
-  top: 1rem;
-  left: 88%;
+  bottom: 55%;
+  left: -20%;
+  display: none;
+}
+#finder-recents-container > a > img, #finder-mac-container > a > img, #finder-documents-container > a > img, #finder-desktop-container > a > img {
+  width: 4rem;
+}
+#finder-recents-container > a > img:hover, #finder-mac-container > a > img:hover, #finder-documents-container > a > img:hover, #finder-desktop-container > a > img:hover {
+  transform: scale(1.05);
+  cursor: default;
 }
 
-.app-image {
+#finder-desktop-container > div > img {
+  width: 4rem;
+}
+#finder-desktop-container > div > img:hover {
+  transform: scale(1.05);
+  cursor: default;
+}
+
+#finder-documents-container > div > a > img {
+  width: 4rem;
+}
+#finder-documents-container > div > a > img:hover {
+  transform: scale(1.05);
+  cursor: default;
+}
+#finder-documents-container #resume {
+  font-size: 0.75rem;
+  margin-top: -0.4rem;
+  margin-left: 0.7rem;
+  color: black;
+}
+
+#finder-mac-container > div > img {
+  width: 3.5rem;
+}
+#finder-mac-container > div > img:hover {
+  transform: scale(1.05);
+  cursor: default;
+}
+#finder-mac-container > div > p {
+  font-size: 0.75rem;
+}
+
+/* Contacts-App */
+#contacts-app {
+  position: fixed;
+  top: 10%;
+  right: 25%;
+  height: auto;
+  width: 30rem;
+  background-color: #f7f7f7;
+  border: 1px solid #a0a0a3;
+  border-radius: 0.5rem;
+  display: none;
+}
+#contacts-app #contacts-app-top {
+  border-bottom: 1px solid #a0a0a3;
+}
+#contacts-app #contacts-dot {
+  margin-left: 0.2rem;
+}
+#contacts-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+}
+#contacts-grid #contacts-grid-col-left {
+  padding: 1rem;
+  text-align: center;
+  height: 100%;
+}
+#contacts-grid #contacts-grid-col-left > h3 {
+  padding-bottom: 1rem;
+}
+#contacts-grid #contacts-grid-col-right {
+  border-left: 1px solid #a0a0a3;
+  padding: 2rem;
+  font-size: 0.8rem;
+}
+#contacts-grid #contacts-grid-col-right > h3 {
+  text-align: center;
+  font-size: 1.75rem;
+}
+#contacts-grid #contacts-grid-col-right > img {
+  padding-bottom: 0.5rem;
+}
+#contacts-grid #contacts-grid-col-right > ul > li {
+  padding-bottom: 0.5rem;
+}
+
+/* Reminders App */
+#reminders-app {
+  position: fixed;
+  top: 10%;
+  left: 5%;
+  height: 25rem;
+  width: 20rem;
+  background-color: #f7f7f7;
+  border: 1px solid #a0a0a3;
+  border-radius: 0.5rem;
+  display: none;
+}
+#reminders-app #reminders-app-top {
+  border-bottom: 1px solid #a0a0a3;
+}
+#reminders-app-container > h3 {
+  text-align: center;
+  padding: 0.5rem 0;
+}
+#reminders-app-container > ol {
+  margin-left: 2rem;
+  height: auto;
+}
+#reminders-app-container > ol > li {
+  padding-top: 1.25rem;
+}
+#reminders-app-container > ol > li > div > textarea {
+  width: 100%;
+  font-size: 1rem;
+  outline: none;
+  border: none;
+  resize: none;
+  overflow: hidden;
+  border-bottom: 1px solid #a0a0a3;
+  background-color: #f7f7f7;
+}
+
+.reminders-textarea-container {
+  position: relative;
+  top: 0.2rem;
+  margin-right: 1rem;
+}
+
+/* Facetime App */
+#facetime-app {
+  width: 55vw;
+  height: 75vh;
+  position: fixed;
+  top: 10%;
+  left: 20%;
+  display: none;
+}
+#facetime-app #facetime-image {
+  position: fixed;
+  top: 14.5%;
+  margin-left: 0.75rem;
+  width: 15rem;
+  display: none;
+  border-radius: 0.5rem;
+}
+#facetime-app #webcam {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#facetime-text-container {
+  padding: 0.2rem;
+  border: 1px solid #a0a0a3;
+  width: auto;
+  background-color: #f7f7f7;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+/* Launchpad App */
+#launchpad-app {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  -webkit-backdrop-filter: blur(1rem);
+          backdrop-filter: blur(1rem);
+  display: none;
+}
+#launchpad-app #launchpad-close {
+  margin-left: 0.5rem;
+  cursor: default;
+  opacity: 75%;
+}
+
+.launchpad-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 16rem;
+}
+.launchpad-grid > div {
+  margin-top: -12.5rem;
+  margin-left: 3.25rem;
+}
+.launchpad-grid .launchpad-content-container {
+  text-align: center;
+}
+.launchpad-grid .launchpad-content-container .launchpad-image {
+  width: 9.5rem;
+}
+.launchpad-grid .launchpad-content-container .launchpad-image:hover {
+  transform: scale(1.025);
+}
+.launchpad-grid .launchpad-content-container .launchpad-text {
+  color: #f7f7f7;
+  font-size: 0.8rem;
+}
+
+/* Header Menu */
+#finder-list, #window-list, #go-list, #view-list, #edit-list, #file-list {
+  background-color: #f7f7f7;
+  text-align: center;
+  font-size: 0.75rem;
+  margin-top: 0.1rem;
+  margin-left: -0.7rem;
+  width: 3.5rem;
+  padding: 0.25rem;
+  position: absolute;
+  display: none;
+}
+#finder-list > li, #window-list > li, #go-list > li, #view-list > li, #edit-list > li, #file-list > li {
+  padding: 0.25rem 0.5rem;
+}
+
+#file-list {
+  margin-left: -0.8rem;
+  padding: 0.15rem 0 0.3rem 0;
+  width: 3.15rem;
+}
+
+#edit-list {
+  margin-left: -0.7rem;
+  padding: 0.15rem 0 0.3rem 0;
+  width: 3.15rem;
+}
+
+#view-list {
+  margin-left: -0.6rem;
+  padding: 0.15rem 0 0.3rem 0;
+  width: 3.25rem;
+}
+
+#go-list {
+  margin-left: -0.9rem;
+  padding: 0.15rem 0 0.3rem 0;
+  width: 3.15rem;
+}
+
+#window-list {
+  margin-left: -0.7rem;
+  width: 3.4rem;
+  padding: 0.25rem 0.6rem 0.25rem 0.8rem;
+}
+
+/* Desktop Environment */
+.apps-container {
+  display: grid;
+  grid-template-rows: 1fr;
+}
+.apps-container .app {
+  position: relative;
+  top: 1rem;
+  left: 93%;
+  height: 10vh;
+  padding: 0.5rem;
+}
+.apps-container .app .app-image {
   width: 5.5rem;
   height: 5.5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.apps-container .app .app-image #desktop-stickies {
+  position: absolute;
+  top: 40;
+}
+.apps-container .app .app-image #desktop-portfolio {
+  position: absolute;
+  top: 30;
+  left: 20;
 }
 
-/* Footer */
+/* Footer & Dock */
 footer {
+  background: linear-gradient(to right, rgba(139, 142, 155, 0.777), rgba(152, 149, 165, 0.752), rgba(154, 157, 188, 0.824));
   position: absolute;
   bottom: 0rem;
   left: 20%;
-  height: 3.7rem;
-  overflow: hidden;
+  height: 3.2rem;
 }
-
-.icon {
+footer .dock > ul {
+  display: flex;
+}
+footer .dock .icon {
   height: 2.8rem;
   width: 2.9rem;
   padding: 0rem 0.5rem;
-  margin-top: 0.5rem;
+  margin-top: 0.2rem;
 }
-
-.icon:hover {
-  transform: scale(1.25);
+footer .dock .icon:hover {
+  transform: scale(1.3);
+  margin-top: -10px;
 }
-
-.dock > ul {
-  display: flex;
+footer .dock #settings-icon {
+  padding-right: 0.75rem;
 }
-
-#border-icon {
-  border-left: 2px solid rgba(0, 0, 0, 0.479);
+footer .dock #trash {
+  width: 2.4rem;
+}
+footer .dock #border-line {
+  border-left: 1.5px solid black;
+  margin-top: 0.2rem;
+  padding-left: 0.25rem;
+}
+footer .dock #border-line #border-icon {
   width: 2.25rem;
+}
+
+#mobile-dock {
+  display: none;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 280px) {
+  /* Header */
+  header, footer {
+    height: 3%;
+  }
+  .menu-left {
+    margin-left: -0.75rem;
+  }
+  .menu-left #file,
+.menu-left #edit,
+.menu-left #go,
+.menu-left #view,
+.menu-left #window,
+.menu-left #help,
+.menu-left #menu-finder {
+    display: none;
+  }
+  .menu-right {
+    margin-top: 0.1rem;
+    transform: scale(0.625);
+    margin-right: -1.7rem;
+  }
+  /* Apps */
+  #launchpad-app,
+#contacts-app,
+#calendar-app,
+#reminders-app,
+#facetime-app,
+#trash-app,
+#help-app {
+    display: none;
+  }
+  #intro-window {
+    height: 64rem;
+    transform: scale(0.34);
+    top: -32.5%;
+    left: -93%;
+  }
+  #intro-window .app-window-grid {
+    grid-template-columns: 1fr;
+  }
+  #intro-window .app-window-grid #left-col {
+    margin-left: 9rem;
+  }
+  #intro-window .app-window-grid #left-col #intro-image {
+    width: 25rem;
+  }
+  #intro-window .app-window-grid #right-col {
+    margin-top: -4rem;
+    padding: 2rem;
+    font-size: 1.75rem;
+  }
+  #internet-dot {
+    transform: scale(0.725);
+    margin-top: 0.075rem;
+  }
+  .apps-container {
+    margin-left: -52.5rem;
+    margin-top: -1.25rem;
+  }
+  .apps-container .app-image {
+    transform: scale(0.65);
+  }
+  #finder-app {
+    left: -92.95%;
+    transform: scale(0.34);
+  }
+  #stickies-note {
+    transform: scale(0.5);
+    margin-top: -5rem;
+    left: -22.5%;
+  }
+  /* Footer */
+  footer {
+    transform: scale(0.9);
+    left: 5.3%;
+    bottom: -0.75%;
+    height: 3.25rem;
+  }
+  footer .dock {
+    display: none;
+  }
+  footer #mobile-dock {
+    display: block;
+  }
+}
+/* Small Devices like Mobile Phones */
+@media only screen and (min-width: 281px) and (max-width: 320px) {
+  /* Header */
+  header, footer {
+    height: 3%;
+  }
+  .menu-left {
+    margin-left: -0.75rem;
+  }
+  .menu-left #logo {
+    margin-top: 0.2rem;
+  }
+  .menu-left #file,
+.menu-left #edit,
+.menu-left #go,
+.menu-left #view,
+.menu-left #window,
+.menu-left #help,
+.menu-left #menu-finder {
+    display: none;
+  }
+  .menu-right {
+    margin-top: 0.1rem;
+    transform: scale(0.7);
+    margin-right: -1.4rem;
+  }
+  /* Apps */
+  #launchpad-app,
+#contacts-app,
+#calendar-app,
+#reminders-app,
+#facetime-app,
+#trash-app,
+#help-app {
+    display: none;
+  }
+  #intro-window {
+    height: 64rem;
+    transform: scale(0.32);
+    top: -32.5%;
+    left: -83%;
+  }
+  #intro-window .app-window-grid {
+    grid-template-columns: 1fr;
+  }
+  #intro-window .app-window-grid #left-col {
+    margin-left: 9rem;
+  }
+  #intro-window .app-window-grid #left-col #intro-image {
+    width: 25rem;
+  }
+  #intro-window .app-window-grid #right-col {
+    margin-top: -4rem;
+    padding: 2rem;
+    font-size: 1.75rem;
+  }
+  #internet-dot {
+    transform: scale(0.725);
+    margin-top: 0.085rem;
+  }
+  .apps-container {
+    margin-left: -52.5rem;
+    margin-top: -1.25rem;
+  }
+  .apps-container .app-image {
+    transform: scale(0.7);
+  }
+  #finder-app {
+    left: -72.95%;
+    transform: scale(0.35);
+  }
+  #stickies-note {
+    transform: scale(0.5);
+    margin-top: -5rem;
+    left: -22.5%;
+  }
+  /* Footer */
+  footer {
+    transform: scale(0.9);
+    left: 12%;
+    bottom: -0.75%;
+    height: 3.25rem;
+  }
+  footer .dock {
+    display: none;
+  }
+  footer #mobile-dock {
+    display: block;
+  }
+}
+@media only screen and (min-width: 321px) and (max-width: 426px) and (min-height: 700px) and (max-height: 760px) {
+  /* Header */
+  header, footer {
+    height: 3%;
+  }
+  .menu-left {
+    margin-left: -0.75rem;
+  }
+  .menu-left #logo {
+    margin-top: 0.2rem;
+  }
+  .menu-left #file,
+.menu-left #edit,
+.menu-left #go,
+.menu-left #view,
+.menu-left #window,
+.menu-left #help,
+.menu-left #menu-finder {
+    display: none;
+  }
+  .menu-right {
+    margin-top: 0.1rem;
+    transform: scale(0.7);
+    margin-right: -1.4rem;
+  }
+  /* Apps */
+  #launchpad-app,
+#contacts-app,
+#calendar-app,
+#reminders-app,
+#facetime-app,
+#trash-app,
+#help-app {
+    display: none;
+  }
+  #intro-window {
+    height: 64rem;
+    transform: scale(0.32);
+    top: -32.5%;
+    left: -50%;
+  }
+  #intro-window .app-window-grid {
+    grid-template-columns: 1fr;
+  }
+  #intro-window .app-window-grid #left-col {
+    margin-left: 9rem;
+  }
+  #intro-window .app-window-grid #left-col #intro-image {
+    width: 25rem;
+  }
+  #intro-window .app-window-grid #right-col {
+    margin-top: -4rem;
+    padding: 2rem;
+    font-size: 1.75rem;
+  }
+  #internet-dot {
+    transform: scale(0.725);
+    margin-top: 0.085rem;
+  }
+  .apps-container {
+    margin-left: -52.5rem;
+    margin-top: -1.25rem;
+  }
+  .apps-container .app-image {
+    transform: scale(0.7);
+  }
+  #finder-app {
+    margin-left: -1rem;
+    left: -50.95%;
+    top: 30%;
+    transform: scale(0.4);
+  }
+  #stickies-note {
+    transform: scale(0.5);
+    margin-top: -5rem;
+    left: -15.5%;
+  }
+  /* Footer */
+  footer {
+    transform: scale(1.05);
+    left: 20%;
+    bottom: -0.25%;
+    height: 3.25rem;
+  }
+  footer .dock {
+    display: none;
+  }
+  footer #mobile-dock {
+    display: block;
+  }
+}
+@media only screen and (min-width: 321px) and (max-width: 424px) and (max-height: 799px) {
+  /* Header */
+  .menu-left {
+    margin-left: -0.75rem;
+  }
+  .menu-left #logo {
+    transform: scale(0.9);
+  }
+  .menu-left #file,
+.menu-left #edit,
+.menu-left #go,
+.menu-left #view,
+.menu-left #window,
+.menu-left #help,
+.menu-left #menu-finder {
+    display: none;
+  }
+  .menu-right {
+    transform: scale(0.75);
+    margin-right: -1.2rem;
+  }
+  /* Apps */
+  #launchpad-app,
+#contacts-app,
+#calendar-app,
+#reminders-app,
+#facetime-app,
+#trash-app,
+#help-app {
+    display: none;
+  }
+  #intro-window {
+    height: 64rem;
+    transform: scale(0.35);
+    top: -25%;
+    left: -64%;
+  }
+  #intro-window .app-window-grid {
+    grid-template-columns: 1fr;
+  }
+  #intro-window .app-window-grid #left-col {
+    margin-left: 9rem;
+  }
+  #intro-window .app-window-grid #left-col #intro-image {
+    width: 25rem;
+  }
+  #intro-window .app-window-grid #right-col {
+    margin-top: -4rem;
+    padding: 2rem;
+    font-size: 1.75rem;
+  }
+  #internet-dot {
+    transform: scale(0.725);
+    margin-top: 0.1rem;
+  }
+  .apps-container {
+    margin-left: -52.5rem;
+    margin-top: -1rem;
+  }
+  .apps-container .app-image {
+    transform: scale(0.8);
+  }
+  #finder-app {
+    left: -57%;
+    margin-top: 5rem;
+    transform: scale(0.42);
+  }
+  #stickies-note {
+    transform: scale(0.65);
+    margin-top: 14rem;
+    left: -2.5%;
+  }
+  /* Footer */
+  footer {
+    transform: scale(1.15);
+    left: 18.25%;
+    bottom: 0.25%;
+    height: 3.25rem;
+  }
+  footer .dock {
+    display: none;
+  }
+  footer #mobile-dock {
+    display: block;
+  }
+}
+@media only screen and (min-width: 340px) and (max-width: 395px) and (min-height: 800px) and (max-height: 900px) {
+  /* Header */
+  .menu-left {
+    margin-left: -0.75rem;
+  }
+  .menu-left #logo {
+    transform: scale(0.9);
+  }
+  .menu-left #file,
+.menu-left #edit,
+.menu-left #go,
+.menu-left #view,
+.menu-left #window,
+.menu-left #help,
+.menu-left #menu-finder {
+    display: none;
+  }
+  .menu-right {
+    transform: scale(0.75);
+    margin-right: -1.2rem;
+  }
+  /* Apps */
+  #launchpad-app,
+#contacts-app,
+#calendar-app,
+#reminders-app,
+#facetime-app,
+#trash-app,
+#help-app {
+    display: none;
+  }
+  #intro-window {
+    height: 64rem;
+    transform: scale(0.35);
+    top: -25%;
+    left: -64%;
+  }
+  #intro-window .app-window-grid {
+    grid-template-columns: 1fr;
+  }
+  #intro-window .app-window-grid #left-col {
+    margin-left: 9rem;
+  }
+  #intro-window .app-window-grid #left-col #intro-image {
+    width: 25rem;
+  }
+  #intro-window .app-window-grid #right-col {
+    margin-top: -4rem;
+    padding: 2rem;
+    font-size: 1.75rem;
+  }
+  #internet-dot {
+    transform: scale(0.725);
+    margin-top: 0.1rem;
+  }
+  .apps-container {
+    margin-left: -52.5rem;
+    margin-top: -1rem;
+  }
+  .apps-container .app-image {
+    transform: scale(0.8);
+  }
+  #finder-app {
+    left: -57%;
+    margin-top: 5rem;
+    transform: scale(0.42);
+  }
+  #stickies-note {
+    transform: scale(0.65);
+    margin-top: 14rem;
+    left: -2.5%;
+  }
+  /* Footer */
+  footer {
+    transform: scale(1.15);
+    left: 18.25%;
+    bottom: 0.25%;
+    height: 3.25rem;
+  }
+  footer .dock {
+    display: none;
+  }
+  footer #mobile-dock {
+    display: block;
+  }
+}
+@media only screen and (min-width: 401px) and (max-width: 415px) and (min-height: 800px) {
+  /* Header */
+  .menu-left {
+    margin-left: -0.75rem;
+  }
+  .menu-left #file,
+.menu-left #edit,
+.menu-left #go,
+.menu-left #view,
+.menu-left #window,
+.menu-left #help,
+.menu-left #menu-finder {
+    display: none;
+  }
+  /* Apps */
+  #launchpad-app,
+#contacts-app,
+#calendar-app,
+#reminders-app,
+#facetime-app,
+#trash-app,
+#help-app {
+    display: none;
+  }
+  #intro-window {
+    height: 64rem;
+    transform: scale(0.38);
+    top: -31.5%;
+    left: -57.75%;
+  }
+  #intro-window .app-window-grid {
+    grid-template-columns: 1fr;
+  }
+  #intro-window .app-window-grid #left-col {
+    margin-left: 9rem;
+  }
+  #intro-window .app-window-grid #left-col #intro-image {
+    width: 25rem;
+  }
+  #intro-window .app-window-grid #right-col {
+    margin-top: -4rem;
+    padding: 2rem;
+    font-size: 1.75rem;
+  }
+  #internet-dot {
+    transform: scale(0.725);
+    margin-top: 0.15rem;
+  }
+  .apps-container {
+    margin-left: -52.5rem;
+    margin-top: -1rem;
+  }
+  .apps-container .app-image {
+    transform: scale(0.8);
+  }
+  #finder-app {
+    left: -47.5%;
+    margin-top: 5rem;
+    transform: scale(0.5);
+  }
+  #stickies-note {
+    transform: scale(0.75);
+    margin-top: 27.5rem;
+    left: -2.5%;
+  }
+  /* Footer */
+  footer {
+    transform: scale(1.25);
+    left: 19.5%;
+    bottom: 0.25%;
+    height: 3.25rem;
+  }
+  footer .dock {
+    display: none;
+  }
+  footer #mobile-dock {
+    display: block;
+  }
+}
+@media only screen and (min-width: 416px) and (max-width: 830px) and (min-height: 760px) {
+  /* Header */
+  .menu-left {
+    margin-left: -0.75rem;
+  }
+  .menu-left #logo {
+    margin-top: 0.1rem;
+    transform: scale(1.05);
+  }
+  .menu-left #file,
+.menu-left #edit,
+.menu-left #go,
+.menu-left #view,
+.menu-left #window,
+.menu-left #help,
+.menu-left #menu-finder {
+    display: none;
+  }
+  .menu-right {
+    margin-top: 0.1rem;
+  }
+  /* Apps */
+  #launchpad-app,
+#contacts-app,
+#calendar-app,
+#reminders-app,
+#facetime-app,
+#trash-app,
+#help-app {
+    display: none;
+  }
+  #intro-window {
+    height: 64rem;
+    transform: scale(0.5);
+    top: -16.5%;
+    left: -20.75%;
+  }
+  #intro-window .app-window-grid {
+    grid-template-columns: 1fr;
+  }
+  #intro-window .app-window-grid #left-col {
+    margin-left: 9rem;
+  }
+  #intro-window .app-window-grid #left-col #intro-image {
+    width: 25rem;
+  }
+  #intro-window .app-window-grid #right-col {
+    margin-top: -4rem;
+    padding: 2rem;
+    font-size: 1.75rem;
+  }
+  #internet-dot {
+    transform: scale(0.725);
+    margin-top: 0.15rem;
+  }
+  .apps-container {
+    margin-left: -52.5rem;
+    margin-top: 0.75rem;
+  }
+  .apps-container .app-image {
+    transform: scale(1.05);
+  }
+  #finder-app {
+    left: -10.5%;
+    margin-top: 5rem;
+    transform: scale(0.75);
+  }
+  #stickies-note {
+    transform: scale(0.95);
+    margin-top: 18.5rem;
+    left: 5%;
+  }
+  /* Footer */
+  footer {
+    transform: scale(1.75);
+    left: 32.5%;
+    bottom: 1.75%;
+    height: 3.25rem;
+  }
+  footer .dock {
+    display: none;
+  }
+  footer #mobile-dock {
+    display: block;
+  }
+}
+@media only screen and (min-width: 700px) and (max-width: 770px) and (min-height: 700px) and (max-height: 770px) {
+  /* Header */
+  header, footer {
+    height: 2.5%;
+  }
+  .menu-left {
+    margin-left: -0.75rem;
+  }
+  .menu-left #logo {
+    margin-top: 0.1rem;
+    transform: scale(1.05);
+  }
+  .menu-left #file,
+.menu-left #edit,
+.menu-left #go,
+.menu-left #view,
+.menu-left #window,
+.menu-left #help,
+.menu-left #menu-finder {
+    display: none;
+  }
+  .menu-right {
+    margin-top: 0.1rem;
+  }
+  /* Apps */
+  #launchpad-app,
+#contacts-app,
+#calendar-app,
+#reminders-app,
+#facetime-app,
+#trash-app,
+#help-app {
+    display: none;
+  }
+  #intro-window {
+    height: 64rem;
+    transform: scale(0.4);
+    top: -16.5%;
+    left: -20.75%;
+  }
+  #intro-window .app-window-grid {
+    grid-template-columns: 1fr;
+  }
+  #intro-window .app-window-grid #left-col {
+    margin-left: 9rem;
+  }
+  #intro-window .app-window-grid #left-col #intro-image {
+    width: 25rem;
+  }
+  #intro-window .app-window-grid #right-col {
+    margin-top: -4rem;
+    padding: 2rem;
+    font-size: 1.75rem;
+  }
+  #internet-dot {
+    transform: scale(0.725);
+    margin-top: 0.15rem;
+  }
+  .apps-container {
+    margin-left: -45rem;
+    margin-top: 0.05rem;
+  }
+  .apps-container .app-image {
+    transform: scale(0.9);
+  }
+  #finder-app {
+    left: -10.5%;
+    margin-top: 5rem;
+    transform: scale(0.75);
+  }
+  #stickies-note {
+    transform: scale(0.95);
+    margin-top: 18.5rem;
+    left: 5%;
+  }
+  /* Footer */
+  footer {
+    transform: scale(1.5);
+    left: 35%;
+    bottom: 1.75%;
+    height: 3.25rem;
+  }
+  footer .dock {
+    display: none;
+  }
+  footer #mobile-dock {
+    display: block;
+  }
+}
+/* Medium Sized Devices like Tablets */
+@media only screen and (min-width: 428px) and (max-width: 850px) and (max-height: 757px) {
+  /* Header */
+  .menu-left {
+    margin-left: -0.75rem;
+  }
+  .menu-left #logo {
+    margin-top: 0.05rem;
+  }
+  .menu-left #file,
+.menu-left #edit,
+.menu-left #go,
+.menu-left #view,
+.menu-left #window,
+.menu-left #help,
+.menu-left #menu-finder {
+    display: none;
+  }
+  .menu-right {
+    margin-top: 0.05rem;
+    transform: scale(0.9);
+  }
+  /* Apps */
+  #launchpad-app,
+#contacts-app,
+#calendar-app,
+#reminders-app,
+#facetime-app,
+#trash-app {
+    display: none;
+  }
+  #intro-window {
+    height: 64rem;
+    transform: scale(0.4);
+    top: -22.5%;
+    left: -28.75%;
+  }
+  #intro-window .app-window-grid {
+    grid-template-columns: 1fr;
+  }
+  #intro-window .app-window-grid #left-col {
+    margin-left: 9rem;
+  }
+  #intro-window .app-window-grid #left-col #intro-image {
+    width: 25rem;
+  }
+  #intro-window .app-window-grid #right-col {
+    margin-top: -4rem;
+    padding: 2rem;
+    font-size: 1.75rem;
+  }
+  #internet-dot {
+    transform: scale(0.725);
+    margin-top: 0.15rem;
+  }
+  .apps-container {
+    margin-left: -52.5rem;
+    margin-top: 0.25rem;
+  }
+  .apps-container .app-image {
+    transform: scale(0.87);
+  }
+  #finder-app {
+    left: -25%;
+    margin-top: 5rem;
+    transform: scale(0.5);
+  }
+  #stickies-note {
+    transform: scale(0.8);
+    margin-top: 18.5rem;
+    left: 5%;
+  }
+  /* Footer */
+  footer {
+    transform: scale(1.4);
+    left: 29%;
+    bottom: 1.25%;
+    height: 3.25rem;
+  }
+  footer .dock {
+    display: none;
+  }
+  footer #mobile-dock {
+    display: block;
+  }
+}
+@media only screen and (min-width: 500px) and (max-width: 540px) and (min-height: 700px) and (max-height: 720px) {
+  /* Header */
+  .menu-left {
+    margin-left: -0.75rem;
+  }
+  .menu-left #logo {
+    margin-top: 0.05rem;
+  }
+  .menu-left #file,
+.menu-left #edit,
+.menu-left #go,
+.menu-left #view,
+.menu-left #window,
+.menu-left #help,
+.menu-left #menu-finder {
+    display: none;
+  }
+  .menu-right {
+    margin-top: 0.05rem;
+    transform: scale(0.9);
+  }
+  /* Apps */
+  #launchpad-app,
+#contacts-app,
+#calendar-app,
+#reminders-app,
+#facetime-app,
+#trash-app {
+    display: none;
+  }
+  #intro-window {
+    height: 64rem;
+    transform: scale(0.45);
+    top: -22.5%;
+    left: -28.75%;
+  }
+  #intro-window .app-window-grid {
+    grid-template-columns: 1fr;
+  }
+  #intro-window .app-window-grid #left-col {
+    margin-left: 9rem;
+  }
+  #intro-window .app-window-grid #left-col #intro-image {
+    width: 25rem;
+  }
+  #intro-window .app-window-grid #right-col {
+    margin-top: -4rem;
+    padding: 2rem;
+    font-size: 1.75rem;
+  }
+  #internet-dot {
+    transform: scale(0.725);
+    margin-top: 0.15rem;
+  }
+  .apps-container {
+    margin-left: -52.5rem;
+    margin-top: 0.25rem;
+  }
+  .apps-container .app-image {
+    transform: scale(0.9);
+  }
+  #finder-app {
+    left: -25%;
+    margin-top: 5rem;
+    transform: scale(0.6);
+  }
+  #stickies-note {
+    transform: scale(0.95);
+    margin-top: 18.5rem;
+    left: 5%;
+  }
+  /* Footer */
+  footer {
+    transform: scale(1.4);
+    left: 29%;
+    bottom: 1.25%;
+    height: 3.25rem;
+  }
+  footer .dock {
+    display: none;
+  }
+  footer #mobile-dock {
+    display: block;
+  }
+}
+@media only screen and (min-width: 820px) and (max-width: 900px) and (min-height: 602px) and (max-height: 1200px) {
+  /* Header */
+  .menu-left {
+    margin-left: -0.75rem;
+  }
+  .menu-left #logo {
+    margin-top: 0.3rem;
+    transform: scale(1.05);
+  }
+  .menu-left #file,
+.menu-left #edit,
+.menu-left #go,
+.menu-left #view,
+.menu-left #window,
+.menu-left #help,
+.menu-left #menu-finder {
+    display: none;
+  }
+  .menu-right {
+    margin-top: 0.3rem;
+  }
+  /* Apps */
+  #launchpad-app,
+#contacts-app,
+#calendar-app,
+#reminders-app,
+#facetime-app,
+#trash-app,
+#help-app {
+    display: none;
+  }
+  #intro-window {
+    height: 64rem;
+    transform: scale(0.5);
+    top: -16.5%;
+    left: -20.75%;
+  }
+  #intro-window .app-window-grid {
+    grid-template-columns: 1fr;
+  }
+  #intro-window .app-window-grid #left-col {
+    margin-left: 9rem;
+  }
+  #intro-window .app-window-grid #left-col #intro-image {
+    width: 25rem;
+  }
+  #intro-window .app-window-grid #right-col {
+    margin-top: -4rem;
+    padding: 2rem;
+    font-size: 1.75rem;
+  }
+  #internet-dot {
+    transform: scale(0.725);
+    margin-top: 0.15rem;
+  }
+  .apps-container {
+    margin-left: -52.5rem;
+    margin-top: 0.75rem;
+  }
+  #finder-app {
+    left: -10.5%;
+    margin-top: 5rem;
+    transform: scale(0.75);
+  }
+  #stickies-note {
+    transform: scale(0.95);
+    margin-top: 18.5rem;
+    left: 5%;
+  }
+  /* Footer */
+  footer {
+    transform: scale(1.75);
+    left: 36%;
+    bottom: 1.75%;
+    height: 3.25rem;
+  }
+  footer .dock {
+    display: none;
+  }
+  footer #mobile-dock {
+    display: block;
+  }
+}
+@media only screen and (min-width: 901px) and (max-width: 920px) and (min-height: 1201px) and (max-height: 1400px) {
+  /* Header */
+  .menu-left {
+    margin-left: -0.5rem;
+  }
+  .menu-left #logo {
+    margin-top: 0.3rem;
+    transform: scale(1.5);
+  }
+  .menu-left #file,
+.menu-left #edit,
+.menu-left #go,
+.menu-left #view,
+.menu-left #window,
+.menu-left #help,
+.menu-left #menu-finder {
+    display: none;
+  }
+  .menu-right {
+    margin-top: 0.3rem;
+  }
+  /* Apps */
+  #launchpad-app,
+#contacts-app,
+#calendar-app,
+#reminders-app,
+#facetime-app,
+#trash-app,
+#help-app {
+    display: none;
+  }
+  #intro-window {
+    height: 64rem;
+    transform: scale(0.56);
+    top: -13.5%;
+    left: -17.75%;
+  }
+  #intro-window .app-window-grid {
+    grid-template-columns: 1fr;
+  }
+  #intro-window .app-window-grid #left-col {
+    margin-left: 9rem;
+  }
+  #intro-window .app-window-grid #left-col #intro-image {
+    width: 25rem;
+  }
+  #intro-window .app-window-grid #right-col {
+    margin-top: -4rem;
+    padding: 2rem;
+    font-size: 1.75rem;
+  }
+  #internet-dot {
+    transform: scale(0.725);
+    margin-top: 0.15rem;
+  }
+  .apps-container {
+    margin-right: 15rem;
+    margin-top: 7rem;
+    transform: scale(1.5);
+  }
+  .apps-container #desktop-stickies {
+    margin-top: -4rem;
+  }
+  .apps-container #desktop-portfolio {
+    margin-top: -8rem;
+  }
+  #finder-app {
+    left: 7%;
+    margin-top: 5rem;
+  }
+  #stickies-note {
+    margin-top: 40.5rem;
+    left: 5%;
+  }
+  /* Footer */
+  footer {
+    left: 36%;
+    bottom: 1.5%;
+    transform: scale(2);
+    height: 3.25rem;
+  }
+  footer .dock {
+    display: none;
+  }
+  footer #mobile-dock {
+    display: block;
+  }
+}
+@media only screen and (min-width: 891px) and (max-width: 1025px) and (min-height: 601px) and (max-height: 1000px) {
+  /*  Apps */
+  .apps-container .app {
+    left: 90%;
+  }
+  .apps-container .app .app-image {
+    transform: scale(0.88);
+  }
+  #internet-window #internet-window-wrapper {
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+  }
+  .app-window {
+    transform: scale(0.8);
+  }
+  #calender-close {
+    transform: scale(0.9);
+  }
+  #facetime-close {
+    transform: scale(0.95);
+  }
+  #finder-app {
+    left: 10%;
+  }
+  .launchpad-grid {
+    margin-top: 12rem;
+    margin-right: 3rem;
+    padding: 1rem;
+    transform: scale(0.9);
+  }
+  #contacts-app {
+    transform: scale(0.8);
+  }
+  #calendar-app {
+    transform: scale(0.75);
+  }
+  #stickies-note {
+    transform: scale(0.85);
+    left: 55%;
+  }
+  #reminders-app {
+    transform: scale(0.85);
+  }
+  #facetime-image {
+    transform: scale(0.7);
+    left: 16.5%;
+    margin-top: -2.5rem;
+  }
+  /* Footer & Dock*/
+  footer {
+    bottom: -0.35%;
+    left: 0%;
+    transform: scale(0.9);
+  }
+}
+@media only screen and (min-width: 840px) and (max-width: 1202px) and (min-height: 1601px) and (max-height: 1891px) {
+  /* Header */
+  header, footer {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .menu-left {
+    margin-left: -0.5rem;
+  }
+  .menu-left #logo {
+    margin-top: 0.1rem;
+    transform: scale(1.5);
+  }
+  .menu-left #file,
+.menu-left #edit,
+.menu-left #go,
+.menu-left #view,
+.menu-left #window,
+.menu-left #help,
+.menu-left #menu-finder {
+    display: none;
+  }
+  .menu-right {
+    margin-top: 0.3rem;
+  }
+  /* Apps */
+  #launchpad-app,
+#contacts-app,
+#calendar-app,
+#reminders-app,
+#facetime-app,
+#trash-app,
+#help-app {
+    display: none;
+  }
+  #intro-window {
+    height: 64rem;
+    transform: scale(0.7);
+    top: -3.5%;
+    left: -10.75%;
+  }
+  #intro-window .app-window-grid {
+    grid-template-columns: 1fr;
+  }
+  #intro-window .app-window-grid #left-col {
+    margin-left: 9rem;
+  }
+  #intro-window .app-window-grid #left-col #intro-image {
+    width: 25rem;
+  }
+  #intro-window .app-window-grid #right-col {
+    margin-top: -4rem;
+    padding: 2rem;
+    font-size: 1.75rem;
+  }
+  #internet-dot {
+    transform: scale(0.725);
+    margin-top: 0.15rem;
+  }
+  .apps-container {
+    margin-right: 17rem;
+    margin-top: 12rem;
+    transform: scale(1.6);
+  }
+  .apps-container #desktop-stickies {
+    margin-top: -6rem;
+  }
+  .apps-container #desktop-portfolio {
+    margin-top: -12rem;
+  }
+  #finder-app {
+    left: 7%;
+    margin-top: 5rem;
+  }
+  #stickies-note {
+    margin-top: 40.5rem;
+    left: 5%;
+  }
+  /* Footer */
+  footer {
+    left: 36%;
+    bottom: 1.5%;
+    transform: scale(2);
+    height: 3.25rem;
+  }
+  footer .dock {
+    display: none;
+  }
+  footer #mobile-dock {
+    display: block;
+  }
+}
+@media only screen and (min-width: 950px) and (max-width: 1025px) and (min-height: 500px) and (max-height: 600px) {
+  header, footer {
+    height: 3%;
+  }
+  .menu-right {
+    margin-top: 0.1rem;
+  }
+  .apps-container {
+    margin-top: -1rem;
+    margin-right: 0.8rem;
+  }
+  .apps-container .app-image {
+    transform: scale(0.75);
+  }
+  /* Apps */
+  #intro-window {
+    transform: scale(0.7);
+    margin-top: -5rem;
+    left: 0%;
+  }
+  #finder-app {
+    transform: scale(0.7);
+    margin-top: -5rem;
+    left: 5%;
+  }
+  #calendar-app,
+#reminders-app,
+#internet-close,
+#trash-app,
+#contacts-app,
+#help-app {
+    transform: scale(0.75);
+  }
+  #facetime-app {
+    transform: scale(0.95);
+  }
+  #facetime-app #facetime-image {
+    margin-top: -4rem;
+    left: -5%;
+    transform: scale(0.65);
+  }
+  #stickies-note {
+    left: 62%;
+    transform: scale(0.75);
+  }
+  .launchpad-grid {
+    margin-top: 5.75rem;
+    padding: 1rem;
+    transform: scale(0.75);
+  }
+  #internet-dot {
+    margin-top: 0.05rem;
+    transform: scale(0.7);
+  }
+  /* footer */
+  footer {
+    left: 1.75%;
+    bottom: -1%;
+    transform: scale(0.85);
+    height: 9%;
+  }
+}
+@media only screen and (min-width: 1025px) and (max-width: 1280px) and (min-height: 601px) and (max-height: 800px) {
+  .menu-right {
+    margin-top: 0.1rem;
+  }
+  .app-image {
+    transform: scale(0.92);
+  }
+  /* Apps */
+  #intro-window {
+    transform: scale(0.8);
+    margin-top: -5rem;
+    left: 0%;
+  }
+  #finder-app {
+    transform: scale(0.8);
+    margin-top: -5rem;
+    left: 5%;
+  }
+  #calendar-app,
+#reminders-app,
+#internet-close,
+#trash-app,
+#contacts-app,
+#help-app {
+    transform: scale(0.9);
+  }
+  #facetime-app {
+    transform: scale(0.95);
+  }
+  #facetime-app #facetime-image {
+    margin-top: -4rem;
+    left: -2.5%;
+    transform: scale(0.85);
+  }
+  #stickies-note {
+    left: 67%;
+    transform: scale(0.95);
+  }
+  .launchpad-grid {
+    margin-top: 12.5rem;
+    padding: 1rem;
+    transform: scale(0.9);
+  }
+  #internet-dot {
+    margin-top: 0.13rem;
+    transform: scale(0.85);
+  }
+  /* footer */
+  footer {
+    left: 11.5%;
+    bottom: -0.05%;
+    transform: scale(1.05);
+  }
+}
+@media only screen and (min-width: 1366px) and (max-width: 1400px) and (max-height: 768px) {
+  /*  Apps */
+  .menu-left {
+    margin-top: -0.05rem;
+  }
+  .menu-left #logo {
+    margin-top: -0.05rem;
+  }
+  .app-image {
+    transform: scale(0.9);
+  }
+  #calendar-app #calendar-app-top {
+    width: 49.95rem;
+  }
+  .launchpad-grid {
+    margin-top: -2.5rem;
+  }
+  #facetime-app {
+    width: 55rem;
+  }
+  #facetime-app #facetime-close {
+    transform: scale(0.95);
+  }
+  /* Footer & Dock*/
+  footer {
+    bottom: -0.25%;
+    left: 14.75%;
+    transform: scale(0.95);
+  }
+}
+/* Small to Medium sized Laptops */
+@media only screen and (min-width: 1026px) and (max-width: 1286px) and (min-height: 500px) and (max-height: 859px) {
+  /* Apps */
+  .apps-container {
+    margin-right: 1.5rem;
+  }
+  .menu-left {
+    margin-top: 0.05rem;
+  }
+  .menu-right {
+    margin-top: 0.1rem;
+  }
+  .launchpad-grid {
+    margin-top: 11.5rem;
+  }
+  #calendar-app #calendar-app-top {
+    width: 49.92rem;
+  }
+  #calendar-app #calendar-app-top #calendar-close {
+    transform: scale(0.9);
+  }
+  #internet-dot,
+#internet-close {
+    transform: scale(0.88);
+  }
+  #facetime-close {
+    transform: scale(0.9);
+  }
+  /* Footer & Dock*/
+  footer {
+    transform: scale(0.75);
+    left: 5%;
+    bottom: -3.25%;
+    height: 10%;
+  }
+}
+@media only screen and (min-width: 1026px) and (max-width: 1535px) and (min-height: 860px) {
+  /* Apps */
+  .menu-left {
+    margin-top: 0.05rem;
+  }
+  .menu-right {
+    margin-top: 0.1rem;
+  }
+  .launchpad-grid {
+    margin-top: 1.75rem;
+    transform: scale(1.08);
+  }
+  #calendar-app #calendar-app-top {
+    width: 49.92rem;
+  }
+  #calendar-app #calendar-app-top #calendar-close {
+    transform: scale(0.9);
+  }
+  #internet-dot,
+#internet-close {
+    transform: scale(0.88);
+  }
+  #facetime-close {
+    transform: scale(0.9);
+  }
+  /* Footer & Dock*/
+  footer {
+    left: 17%;
+  }
+}
+@media only screen and (min-width: 1536px) and (max-width: 1679px) {
+  /* Header */
+  .menu-right {
+    margin-top: 0.07rem;
+  }
+  /* Apps */
+  #internet-dot,
+#internet-close {
+    transform: scale(0.9);
+  }
+  .launchpad-grid {
+    margin-top: 15rem;
+    margin-right: 3rem;
+    padding: 1.5rem;
+    transform: scale(1.05);
+  }
+  #calender-close {
+    transform: scale(0.9);
+  }
+  #facetime-close {
+    transform: scale(0.95);
+  }
+  /* Footer and Dock */
+  footer {
+    left: 17.5%;
+  }
+}
+/* Large screen devices */
+@media only screen and (min-width: 1680px) and (max-width: 1899px) and (min-height: 900px) {
+  .menu-left {
+    margin-top: 0.125rem;
+  }
+  .menu-right {
+    margin-top: 0.25rem;
+  }
+  /* Apps */
+  #internet-dot {
+    margin-top: 0.175rem;
+    transform: scale(0.9);
+  }
+  #internet-dot #internet-close {
+    transform: scale(0.9);
+  }
+  .app-image {
+    transform: scale(1.1);
+  }
+  .launchpad-grid {
+    margin-top: 7rem;
+    margin-right: 3rem;
+    transform: scale(1.25);
+  }
+  #calendar-close,
+#facetime-close {
+    transform: scale(0.9);
+  }
+  /* Footer & Dock */
+  footer {
+    transform: scale(1.25);
+    bottom: 0.5%;
+  }
+}
+@media only screen and (min-width: 1900px) and (max-width: 2000px) {
+  /* Apps */
+  .menu-left ul > li {
+    margin-top: 0.065rem;
+  }
+  #calendar-app #calendar-app-top {
+    width: 49.919rem;
+  }
+  .apps-container {
+    margin-top: 1rem;
+  }
+  .apps-container .app-image {
+    transform: scale(1.15);
+  }
+  /* Footer & Dock*/
+  footer {
+    left: 25%;
+    transform: scale(1.5);
+    bottom: 1.25%;
+  }
+}
+@media only screen and (min-width: 2001px) {
+  /* Header */
+  .menu-left {
+    margin-top: 0.5rem;
+  }
+  .menu-right {
+    margin-top: 0.5rem;
+  }
+  .apps-container .app-image {
+    margin-top: 3rem;
+    transform: scale(1.75);
+  }
+  /* Apps */
+  #help-app,
+#trash-app,
+#calendar-app,
+#stickies-note,
+#reminders-app,
+#facetime-app,
+#contacts-app {
+    transform: scale(1.15);
+  }
+  #calendar-app #calendar-app-top {
+    width: 49.95rem;
+  }
+  #launchpad-close {
+    font-size: 1.75rem;
+  }
+  .launchpad-grid {
+    transform: scale(1.75);
+    margin: 23.5rem 25rem 25rem 25rem;
+  }
+  /* Footer & Dock*/
+  footer {
+    left: 32.5%;
+    transform: scale(1.75);
+    bottom: 1.25%;
+  }
 }/*# sourceMappingURL=style.css.map */

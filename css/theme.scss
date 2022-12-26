@@ -1,6 +1,28 @@
+/* Colors */
+
+$headerColor: #fff4f3;
+$windowTopColor: #f6f6f6;
+$closeDotColor: #ff514f;
+$closeColor: #101820;
+$borderColor: #a0a0a3;
+$windowContentColor: #f7f7f7;
+$stickiesPColor: #fef485;
+$transparentColor: rgba(255, 255, 255, 0);
+
+/* Font */
+
 @font-face {
   font-family: "hn";
   src: url("../fonts/HelveticaNeue\ Medium.ttf");
 }
 
 $mainFont: "hn";
+
+/* One Size Fits All */
+
+$border: 1px solid $borderColor;
+
+/* Sizes */
+
+$borderRadiusSize: 0.5rem;
+$paddingList: 0.15rem 0 0.3rem 0;

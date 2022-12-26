@@ -1,0 +1,225 @@
+@import "theme";
+
+/* General Styles */
+
+html {
+  overflow: hidden;
+  body {
+    @extend html;
+    background-image: url("../assets/startup.png");
+    background-size: 75%;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+    background-position-x: 35%;
+    background-position-y: 68%;
+    z-index: 80;
+    position: relative;
+  }
+}
+
+/* Content */
+
+#loader {
+  z-index: 100;
+  opacity: 50%;
+  position: absolute;
+  bottom: 19.25rem;
+  left: 39.5%;
+  transform: scale(0.7);
+}
+
+/* Media Queries */
+
+/* Small devices like Phones */
+
+//Galaxy Fold
+@media only screen and (max-width: 280px) {
+  /* Content */
+  html {
+    body {
+      background-size: contain;
+      margin-top: -8rem;
+    }
+  }
+  #loader {
+    transform: scale(0.4);
+    bottom: 17.25%;
+    left: -10%;
+  }
+}
+
+@media only screen and (min-width: 281px) and (max-width: 320px) {
+  /* Content */
+  html {
+    body {
+      background-size: contain;
+      margin-top: -8rem;
+    }
+  }
+  #loader {
+    transform: scale(0.4);
+    bottom: 19%;
+    left: -2.5%;
+  }
+}
+
+@media only screen and (min-width: 321px) and (max-width: 426px) and (min-height: 700px) and (max-height: 760px) {
+  /* Content */
+  html {
+    body {
+      background-size: contain;
+      margin-top: -8rem;
+    }
+  }
+  #loader {
+    transform: scale(0.45);
+    bottom: 20%;
+    left: 8.5%;
+  }
+}
+
+@media only screen and (min-width: 321px) and (max-width: 389px) and (min-height: 600px) {
+  /* Content */
+  html {
+    body {
+      background-size: contain;
+      margin-top: -8rem;
+    }
+  }
+  #loader {
+    transform: scale(0.45);
+    bottom: 19%;
+    left: 5%;
+  }
+}
+
+@media only screen and (min-width: 390px) and (max-width: 415px) and (min-height: 800px) {
+  /* Content */
+  html {
+    body {
+      background-size: contain;
+      margin-top: -8rem;
+    }
+  }
+  #loader {
+    transform: scale(0.45);
+    bottom: 22.25%;
+    left: 8.5%;
+  }
+}
+/* Medium Sized Tablets */
+
+@media only screen and (min-width: 416px) and (max-width: 830px) and (min-height: 761px) {
+  /* Content */
+  html {
+    body {
+      background-size: contain;
+      margin-top: -8rem;
+    }
+  }
+  #loader {
+    bottom: 26.5%;
+    left: 30%;
+  }
+}
+
+@media only screen and (min-width: 500px) and (max-width: 540px) and (max-height: 720px) {
+  /* Content */
+  html {
+    body {
+      background-size: contain;
+      margin-top: -8rem;
+    }
+  }
+  #loader {
+    bottom: 20.5%;
+    left: 20%;
+  }
+}
+
+@media only screen and (min-width: 891px) and (max-width: 1025px) {
+  /* General Styles */
+  html {
+    body {
+      margin-top: -2.5rem;
+    }
+  }
+
+  /* Content */
+  #loader {
+    bottom: 28%;
+    left: 31%;
+  }
+}
+
+@media only screen and (min-width: 700px) and (max-width: 770px) and (min-height: 700px) and (max-height: 770px) {
+  /* General Styles */
+  html {
+    body {
+      margin-top: -2.5rem;
+    }
+  }
+
+  /* Content */
+  #loader {
+    bottom: 26%;
+    left: 28%;
+  }
+}
+
+@media only screen and (min-width: 901px) and (max-width: 920px) and (min-height: 1201px) and (max-height: 1400px) {
+  /* General Styles */
+  html {
+    body {
+      margin-top: -10rem;
+      background-size: contain;
+    }
+  }
+
+  /* Content */
+  #loader {
+    transform: scale(1.05);
+    bottom: 26.5%;
+    left: 30%;
+  }
+}
+
+/* Small to Medium sized Laptops */
+@media only screen and (min-width: 1026px) and (max-width: 1536px) {
+  /* Content */
+  #loader {
+    transform: scale(1.025);
+    bottom: 33.15%;
+    left: 36%;
+  }
+}
+
+@media only screen and (min-width: 1537px) and (max-width: 1679px) {
+  /* Content */
+  #loader {
+    transform: scale(1.1);
+    bottom: 32.5%;
+    left: 36%;
+  }
+}
+
+/* Large screen devices */
+
+@media only screen and (min-width: 1680px) and (max-width: 1921px) and (min-height: 1000px) {
+  /* Content */
+  #loader {
+    transform: scale(1.25);
+    bottom: 34%;
+    left: 38%;
+  }
+}
+
+@media only screen and (min-width: 1922px) {
+  /* Content */
+  #loader {
+    transform: scale(1.5);
+    bottom: 36.5%;
+    left: 41%;
+  }
+}
