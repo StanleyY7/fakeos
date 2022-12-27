@@ -42,11 +42,11 @@ html body {
   }
   #loader {
     transform: scale(0.4);
-    bottom: 17.25%;
+    bottom: 16%;
     left: -10%;
   }
 }
-@media only screen and (min-width: 281px) and (max-width: 320px) {
+@media only screen and (min-width: 281px) and (max-width: 320px) and (max-height: 649px) {
   /* Content */
   html body {
     background-size: contain;
@@ -54,8 +54,32 @@ html body {
   }
   #loader {
     transform: scale(0.4);
-    bottom: 19%;
+    bottom: 15%;
     left: -2.5%;
+  }
+}
+@media only screen and (min-width: 281px) and (max-width: 320px) and (min-height: 650px) {
+  /* Content */
+  html body {
+    background-size: contain;
+    margin-top: -8rem;
+  }
+  #loader {
+    transform: scale(0.4);
+    bottom: 18%;
+    left: -2.5%;
+  }
+}
+@media only screen and (min-width: 321px) and (max-width: 390px) {
+  /* Content */
+  html body {
+    background-size: contain;
+    margin-top: -8rem;
+  }
+  #loader {
+    transform: scale(0.4);
+    bottom: 17.5%;
+    left: 5%;
   }
 }
 @media only screen and (min-width: 321px) and (max-width: 426px) and (min-height: 700px) and (max-height: 760px) {
@@ -70,18 +94,6 @@ html body {
     left: 8.5%;
   }
 }
-@media only screen and (min-width: 321px) and (max-width: 389px) and (min-height: 600px) {
-  /* Content */
-  html body {
-    background-size: contain;
-    margin-top: -8rem;
-  }
-  #loader {
-    transform: scale(0.45);
-    bottom: 19%;
-    left: 5%;
-  }
-}
 @media only screen and (min-width: 390px) and (max-width: 415px) and (min-height: 800px) {
   /* Content */
   html body {
@@ -92,6 +104,30 @@ html body {
     transform: scale(0.45);
     bottom: 22.25%;
     left: 8.5%;
+  }
+}
+@media only screen and (min-width: 390px) and (max-width: 540px) and (max-height: 799px) {
+  /* Content */
+  html body {
+    background-size: contain;
+    margin-top: -8rem;
+  }
+  #loader {
+    transform: scale(0.4);
+    margin-top: 7rem;
+    margin-left: 1.75rem;
+  }
+}
+@media only screen and (min-width: 541px) and (max-width: 690px) and (max-height: 720px) {
+  /* Content */
+  html body {
+    background-size: contain;
+    margin-top: -8rem;
+  }
+  #loader {
+    transform: scale(0.45);
+    bottom: 18.5%;
+    margin-left: -2rem;
   }
 }
 /* Medium Sized Tablets */
@@ -115,6 +151,29 @@ html body {
   #loader {
     bottom: 20.5%;
     left: 20%;
+  }
+}
+@media only screen and (min-width: 390px) and (max-width: 540px) and (max-height: 757px) {
+  /* Content */
+  html body {
+    background-size: contain;
+    margin-top: -5rem;
+  }
+  #loader {
+    bottom: 22.5%;
+    left: 9%;
+  }
+}
+@media only screen and (min-width: 541px) and (max-width: 891px) and (max-height: 757px) {
+  /* Content */
+  html body {
+    background-size: contain;
+    margin-top: -5rem;
+    transform: scale(1.025);
+  }
+  #loader {
+    bottom: 22.5%;
+    left: 26.5%;
   }
 }
 @media only screen and (min-width: 891px) and (max-width: 1025px) {
@@ -156,15 +215,15 @@ html body {
 @media only screen and (min-width: 1026px) and (max-width: 1536px) {
   /* Content */
   #loader {
-    transform: scale(1.025);
-    bottom: 33.15%;
+    transform: scale(1);
+    bottom: 32.15%;
     left: 36%;
   }
 }
 @media only screen and (min-width: 1537px) and (max-width: 1679px) {
   /* Content */
   #loader {
-    transform: scale(1.1);
+    transform: scale(1.05);
     bottom: 32.5%;
     left: 36%;
   }
@@ -173,7 +232,7 @@ html body {
 @media only screen and (min-width: 1680px) and (max-width: 1921px) and (min-height: 1000px) {
   /* Content */
   #loader {
-    transform: scale(1.25);
+    transform: scale(1.2);
     bottom: 34%;
     left: 38%;
   }
