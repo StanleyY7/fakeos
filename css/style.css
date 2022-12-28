@@ -2172,6 +2172,10 @@ footer .dock #border-line #border-icon {
   #calendar-app #calendar-app-top {
     width: 49.919rem;
   }
+  .launchpad-grid {
+    transform: scale(1.25);
+    margin-top: 7.75rem;
+  }
   .apps-container {
     margin-top: 1rem;
   }
