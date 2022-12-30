@@ -506,12 +506,31 @@ window.addEventListener("DOMContentLoaded", () => {
   const remindersClose = document.getElementById("reminders-close");
   const remindersApp = document.getElementById("reminders-app");
   const reminders = document.getElementById("reminders");
+  const lastTextarea = document.querySelector("#reminders-last-textarea");
+  const ul = document.querySelector("#reminders-list");
 
   const toggleRemindersClose = (event) => {
     if (event.type === "mouseover") {
       remindersClose.style.display = "block";
     } else {
       remindersClose.style.display = "none";
+    }
+  };
+
+  const addList = (event) => {
+    if (event.key === "Enter" && ul.children.length < 7) {
+      const newLi = document.createElement("li");
+      const newDiv = document.createElement("div");
+      const newTextarea = document.createElement("textarea");
+
+      newDiv.setAttribute("class", "reminders-textarea-container");
+      newTextarea.setAttribute("maxlength", "30");
+      newTextarea.setAttribute("rows", "1");
+      newTextarea.setAttribute("id", "reminders-last-textarea");
+
+      newLi.appendChild(newDiv);
+      newDiv.appendChild(newTextarea);
+      ul.appendChild(newLi);
     }
   };
 
@@ -522,6 +541,7 @@ window.addEventListener("DOMContentLoaded", () => {
   remindersDot.addEventListener("mouseleave", toggleRemindersClose);
   remindersClose.addEventListener("click", closeReminders);
   reminders.addEventListener("click", displayReminders);
+  lastTextarea.addEventListener("keydown", addList);
 
   /* Trash App */
   const trashDot = document.getElementById("trash-dot");
