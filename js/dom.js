@@ -228,15 +228,81 @@ window.addEventListener("DOMContentLoaded", () => {
 
     document.addEventListener("touchend", (event) => {
       isDragging = false;
+    });
+  });
 
-      // Check if the dragged element is colliding with the target element
-      let draggedRect = img.getBoundingClientRect();
-      let targetRect = document.querySelector("#trash").getBoundingClientRect();
-      if (collision(draggedRect, targetRect)) {
-        // Remove the dragged element from the DOM
-        img.remove();
-        targetRect.style.transform = "scale(1.3)";
+  /* Draggable App Windows */
+
+  document.querySelectorAll(".draggable").forEach((item) => {
+    let isDragging = false;
+    let currentPosition = {};
+    let initialPosition = {};
+    let initialX;
+    let initialY;
+
+    item.addEventListener("mousedown", (event) => {
+      isDragging = true;
+      initialPosition = {
+        x: item.offsetLeft,
+        y: item.offsetTop,
+      };
+      initialX = event.clientX;
+      initialY = event.clientY;
+    });
+
+    document.addEventListener("mousemove", (event) => {
+      if (isDragging === true) {
+        currentPosition = {
+          x: event.clientX,
+          y: event.clientY,
+        };
+
+        diffX = currentPosition.x - initialX;
+        diffY = currentPosition.y - initialY;
+        item.style.left = initialPosition.x + diffX + "px";
+        item.style.top = initialPosition.y + diffY + "px";
       }
+    });
+
+    document.addEventListener("mouseup", (event) => {
+      isDragging = false;
+    });
+  });
+
+  document.querySelectorAll(".draggable").forEach((item) => {
+    let isDragging = false;
+    let currentPosition = {};
+    let initialPosition = {};
+    let initialX;
+    let initialY;
+
+    item.addEventListener("touchstart", (event) => {
+      isDragging = true;
+      initialPosition = {
+        x: item.offsetLeft,
+        y: item.offsetTop,
+      };
+      initialX = event.touches[0].clientX;
+      initialY = event.touches[0].clientY;
+    });
+
+    item.addEventListener("touchmove", (event) => {
+      if (isDragging === true) {
+        event.preventDefault();
+        currentPosition = {
+          x: event.touches[0].clientX,
+          y: event.touches[0].clientY,
+        };
+
+        diffX = currentPosition.x - initialX;
+        diffY = currentPosition.y - initialY;
+        item.style.left = initialPosition.x + diffX + "px";
+        item.style.top = initialPosition.y + diffY + "px";
+      }
+    });
+
+    item.addEventListener("touchend", (event) => {
+      isDragging = false;
     });
   });
 
@@ -506,12 +572,28 @@ window.addEventListener("DOMContentLoaded", () => {
   const remindersClose = document.getElementById("reminders-close");
   const remindersApp = document.getElementById("reminders-app");
   const reminders = document.getElementById("reminders");
+  const lastTextarea = document.querySelector("#reminders-last-textarea");
+  const ul = document.querySelector("#reminders-list");
 
   const toggleRemindersClose = (event) => {
-    if (event.type === "mouseover") {
-      remindersClose.style.display = "block";
-    } else {
-      remindersClose.style.display = "none";
+    remindersClose.style.display =
+      event.type === "mouseover" ? "block" : "none";
+  };
+
+  const addList = (event) => {
+    if (event.key === "Enter" && ul.children.length < 7) {
+      const newLi = document.createElement("li");
+      const newDiv = document.createElement("div");
+      const newTextarea = document.createElement("textarea");
+
+      newDiv.setAttribute("class", "reminders-textarea-container");
+      newTextarea.setAttribute("maxlength", "30");
+      newTextarea.setAttribute("rows", "1");
+      newTextarea.setAttribute("id", "reminders-last-textarea");
+
+      newLi.appendChild(newDiv);
+      newDiv.appendChild(newTextarea);
+      ul.appendChild(newLi);
     }
   };
 
@@ -522,6 +604,7 @@ window.addEventListener("DOMContentLoaded", () => {
   remindersDot.addEventListener("mouseleave", toggleRemindersClose);
   remindersClose.addEventListener("click", closeReminders);
   reminders.addEventListener("click", displayReminders);
+  lastTextarea.addEventListener("keydown", addList);
 
   /* Trash App */
   const trashDot = document.getElementById("trash-dot");
@@ -551,9 +634,15 @@ window.addEventListener("DOMContentLoaded", () => {
   const desktopStickies = document.getElementById("desktop-stickies");
   const desktopPortfolio = document.getElementById("desktop-portfolio");
 
-  harddisk.addEventListener("click", displayMac);
-  desktopStickies.addEventListener("click", displayStickies);
-  desktopPortfolio.addEventListener("click", displayPortfolio);
+  if (window.matchMedia("(min-width: 1300px)").matches) {
+    harddisk.addEventListener("dblclick", displayMac);
+    desktopStickies.addEventListener("dblclick", displayStickies);
+    desktopPortfolio.addEventListener("dblclick", displayPortfolio);
+  } else {
+    harddisk.addEventListener("click", displayMac);
+    desktopStickies.addEventListener("click", displayStickies);
+    desktopPortfolio.addEventListener("click", displayPortfolio);
+  }
 
   /* Finder Apps */
 

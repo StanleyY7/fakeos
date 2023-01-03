@@ -207,7 +207,7 @@
     </footer>
 
     <section>
-      <div class="app-window" id="intro-window">
+      <div class="app-window draggable" id="intro-window">
         <div class="app-window-wrapper">
           <div class="dots-wrapper">
             <div class="dots-close" id="intro-dot">
@@ -247,7 +247,7 @@
     </section>
 
     <section>
-      <div class="app-window" id="finder-app">
+      <div class="app-window draggable" id="finder-app">
         <div class="app-window-wrapper">
           <div class="dots-wrapper">
             <div class="dots-close" id="finder-dot">
@@ -364,14 +364,14 @@
     </section>
 
     <section>
-      <div id="stickies-note">
+      <div class="draggable" id="stickies-note">
         <p><strong id="stickies-close">X</strong></p>
         <textarea id="stickies-input"></textarea>
       </div>
     </section>
 
     <section>
-      <div id="help-app">
+      <div class="draggable" id="help-app">
         <div id="help-app-top">
           <div class="dots-wrapper">
             <div class="dots-close" id="help-dot">
@@ -390,9 +390,9 @@
             actions (either a link elsewhere or opening a modal with content).
           </p>
           <p>
-            To open an application or any entity (i.e. Finder -> open from the
-            top menu) in this mock-up, just single-click on the application or
-            on the entity (note: the "trash app" opens via a double-click).
+            To open any application or any entity (i.e. Finder -> open from the
+            top menu) in this mock-up, all you need to do is either a
+            single-click or a double-click on the application or entity.
           </p>
           <p>
             Some applications are links to other websites which open on external
@@ -409,7 +409,7 @@
     </section>
 
     <section>
-      <div id="trash-app">
+      <div class="draggable" id="trash-app">
         <div id="trash-app-top">
           <div class="dots-wrapper">
             <div class="dots-close" id="trash-dot">
@@ -452,7 +452,7 @@
     </section>
 
     <section>
-      <div id="calendar-app">
+      <div class="draggable" id="calendar-app">
         <div id="calendar-app-top">
           <div class="dots-wrapper">
             <div class="dots-close" id="calendar-dot">
@@ -467,7 +467,7 @@
     </section>
 
     <section>
-      <div id="contacts-app">
+      <div class="draggable" id="contacts-app">
         <div id="contacts-app-top">
           <div class="dots-wrapper">
             <div class="dots-close" id="contacts-dot">
@@ -505,7 +505,7 @@
     </section>
 
     <section>
-      <div id="reminders-app">
+      <div class="draggable" id="reminders-app">
         <div id="reminders-app-top">
           <div class="dots-wrapper">
             <div class="dots-close" id="reminders-dot">
@@ -518,55 +518,35 @@
           <ol id="reminders-list">
             <li>
               <div class="reminders-textarea-container">
-                <textarea
-                  id="reminders-textarea"
-                  maxlength="30"
-                  rows="1"
-                ></textarea>
+                <textarea maxlength="30" rows="1"></textarea>
+              </div>
+            </li>
+            <li>
+              <div class="reminders-textarea-container">
+                <textarea maxlength="30" rows="1"></textarea>
+              </div>
+            </li>
+            <li>
+              <div class="reminders-textarea-container">
+                <textarea maxlength="30" rows="1"></textarea>
+              </div>
+            </li>
+            <li>
+              <div class="reminders-textarea-container">
+                <textarea maxlength="30" rows="1"></textarea>
+              </div>
+            </li>
+            <li>
+              <div class="reminders-textarea-container">
+                <textarea maxlength="30" rows="1"></textarea>
               </div>
             </li>
             <li>
               <div class="reminders-textarea-container">
                 <textarea
-                  id="reminders-textarea"
                   maxlength="30"
                   rows="1"
-                ></textarea>
-              </div>
-            </li>
-            <li>
-              <div class="reminders-textarea-container">
-                <textarea
-                  id="reminders-textarea"
-                  maxlength="30"
-                  rows="1"
-                ></textarea>
-              </div>
-            </li>
-            <li>
-              <div class="reminders-textarea-container">
-                <textarea
-                  id="reminders-textarea"
-                  maxlength="30"
-                  rows="1"
-                ></textarea>
-              </div>
-            </li>
-            <li>
-              <div class="reminders-textarea-container">
-                <textarea
-                  id="reminders-textarea"
-                  maxlength="30"
-                  rows="1"
-                ></textarea>
-              </div>
-            </li>
-            <li>
-              <div class="reminders-textarea-container">
-                <textarea
-                  id="reminders-textarea"
-                  maxlength="30"
-                  rows="1"
+                  id="reminders-last-textarea"
                 ></textarea>
               </div>
             </li>
@@ -717,7 +697,7 @@
     </section>
 
     <section>
-      <div id="facetime-app">
+      <div class="draggable" id="facetime-app">
         <div id="facetime-text-container">
           <div class="dots-wrapper">
             <div class="dots-close" id="facetime-dot">
