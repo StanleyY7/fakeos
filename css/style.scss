@@ -5,6 +5,7 @@
 * {
   margin: 0;
   padding: 0;
+  user-select: none;
 }
 
 html,
@@ -879,7 +880,7 @@ footer {
 
   #intro-window {
     height: 64rem;
-    transform: scale(0.34);
+    transform: scale(0.3);
     top: -32.5%;
     left: -93%;
 
@@ -914,11 +915,11 @@ footer {
 
   #finder-app {
     left: -92.95%;
-    transform: scale(0.34);
+    transform: scale(0.3);
   }
 
   #stickies-note {
-    transform: scale(0.5);
+    transform: scale(0.45);
     margin-top: -5rem;
     left: -22.5%;
   }
@@ -985,7 +986,7 @@ footer {
 
   #intro-window {
     height: 64rem;
-    transform: scale(0.32);
+    transform: scale(0.28);
     top: -32.5%;
     left: -83%;
 
@@ -1020,7 +1021,7 @@ footer {
 
   #finder-app {
     left: -72.95%;
-    transform: scale(0.35);
+    transform: scale(0.325);
   }
 
   #stickies-note {
@@ -1046,7 +1047,7 @@ footer {
   }
 }
 
-@media only screen and (min-width: 321px) and (max-width: 426px) and (min-height: 700px) and (max-height: 760px) {
+@media only screen and (min-width: 321px) and (max-width: 428px) and (min-height: 700px) and (max-height: 760px) {
   /* Header */
 
   header {
@@ -1090,9 +1091,9 @@ footer {
 
   #intro-window {
     height: 64rem;
-    transform: scale(0.32);
     top: -32.5%;
-    left: -50%;
+    margin-left: 0.8rem;
+    transform: scale(0.3);
 
     .app-window-grid {
       grid-template-columns: 1fr;
@@ -1127,11 +1128,11 @@ footer {
     margin-left: -1rem;
     left: -50.95%;
     top: 30%;
-    transform: scale(0.4);
+    transform: scale(0.35);
   }
 
   #stickies-note {
-    transform: scale(0.5);
+    transform: scale(0.4);
     margin-top: -5rem;
     left: -15.5%;
   }
@@ -1191,7 +1192,7 @@ footer {
 
   #intro-window {
     height: 64rem;
-    transform: scale(0.35);
+    transform: scale(0.325);
     top: -25%;
     left: -64%;
 
@@ -1226,7 +1227,7 @@ footer {
   #finder-app {
     left: -57%;
     margin-top: 5rem;
-    transform: scale(0.42);
+    transform: scale(0.38);
   }
 
   #stickies-note {
@@ -1471,9 +1472,9 @@ footer {
 
   #intro-window {
     height: 64rem;
-    transform: scale(0.5);
+    transform: scale(0.35);
     top: -16.5%;
-    left: -20.75%;
+    left: -23.75%;
 
     .app-window-grid {
       grid-template-columns: 1fr;
@@ -1499,26 +1500,23 @@ footer {
   .apps-container {
     margin-left: -52.5rem;
     margin-top: 0.75rem;
-    .app-image {
-      transform: scale(1.05);
-    }
   }
   #finder-app {
-    left: -10.5%;
+    left: -15%;
     margin-top: 5rem;
-    transform: scale(0.75);
+    transform: scale(0.45);
   }
 
   #stickies-note {
-    transform: scale(0.95);
+    transform: scale(0.65);
     margin-top: 18.5rem;
     left: 5%;
   }
   /* Footer */
   footer {
-    transform: scale(1.75);
-    left: 32.5%;
-    bottom: 1.75%;
+    transform: scale(1.25);
+    left: 30%;
+    bottom: 1%;
     height: 3.25rem;
 
     .dock {
@@ -1669,7 +1667,7 @@ footer {
 
   #intro-window {
     height: 64rem;
-    transform: scale(0.4);
+    transform: scale(0.375);
     top: -22.5%;
     left: -28.75%;
 
@@ -1704,7 +1702,7 @@ footer {
   #finder-app {
     left: -25%;
     margin-top: 5rem;
-    transform: scale(0.5);
+    transform: scale(0.465);
   }
 
   #stickies-note {
@@ -1862,8 +1860,8 @@ footer {
 
   #intro-window {
     height: 64rem;
-    transform: scale(0.5);
-    top: -16.5%;
+    transform: scale(0.425);
+    top: -25.5%;
     left: -20.75%;
 
     .app-window-grid {
@@ -1904,7 +1902,7 @@ footer {
   }
   /* Footer */
   footer {
-    transform: scale(1.75);
+    transform: scale(1.5);
     left: 36%;
     bottom: 1.75%;
     height: 3.25rem;
@@ -2024,71 +2022,96 @@ footer {
 }
 
 @media only screen and (min-width: 891px) and (max-width: 1025px) and (min-height: 601px) and (max-height: 1000px) {
-  /*  Apps */
-  .apps-container {
-    .app {
-      left: 90%;
+  /* Header */
+  .menu-left {
+    #logo {
+      margin-top: 0.3rem;
+      transform: scale(1.05);
+    }
+    margin-left: -0.75rem;
+    #file,
+    #edit,
+    #go,
+    #view,
+    #window,
+    #help,
+    #menu-finder {
+      display: none;
+    }
+  }
 
-      .app-image {
-        transform: scale(0.88);
+  .menu-right {
+    margin-top: 0.3rem;
+  }
+
+  /* Apps */
+
+  #launchpad-app,
+  #contacts-app,
+  #calendar-app,
+  #reminders-app,
+  #facetime-app,
+  #trash-app,
+  #help-app {
+    display: none;
+  }
+
+  #intro-window {
+    height: 64rem;
+    transform: scale(0.425);
+    top: -26.5%;
+    left: -20.75%;
+
+    .app-window-grid {
+      grid-template-columns: 1fr;
+      #left-col {
+        margin-left: 9rem;
+        #intro-image {
+          width: 25rem;
+        }
+      }
+      #right-col {
+        margin-top: -4rem;
+        padding: 2rem;
+        font-size: 1.75rem;
       }
     }
   }
 
-  #internet-window {
-    #internet-window-wrapper {
-      border-top-left-radius: $borderRadiusSize;
-      border-top-right-radius: $borderRadiusSize;
-    }
+  #internet-dot {
+    transform: scale(0.725);
+    margin-top: 0.15rem;
   }
 
-  .app-window {
-    transform: scale(0.8);
+  .apps-container {
+    margin-left: -52.5rem;
+    margin-top: 0.75rem;
   }
-
-  #calender-close {
-    transform: scale(0.9);
-  }
-  #facetime-close {
-    transform: scale(0.95);
-  }
-
   #finder-app {
-    left: 10%;
-  }
-
-  .launchpad-grid {
-    margin-top: 12rem;
-    margin-right: 3rem;
-    padding: 1rem;
-    transform: scale(0.9);
-  }
-  #contacts-app {
-    transform: scale(0.8);
-  }
-
-  #calendar-app {
-    transform: scale(0.75);
-  }
-  #stickies-note {
-    transform: scale(0.85);
-    left: 55%;
-  }
-  #reminders-app {
-    transform: scale(0.85);
-  }
-
-  #facetime-image {
+    left: -10.5%;
+    margin-top: 5rem;
     transform: scale(0.7);
-    left: 16.5%;
-    margin-top: -2.5rem;
   }
 
-  /* Footer & Dock*/
+  #stickies-note {
+    transform: scale(0.95);
+    margin-top: 18.5rem;
+    left: 5%;
+  }
+  /* Footer */
   footer {
-    bottom: -0.35%;
-    left: 0%;
-    transform: scale(0.9);
+    transform: scale(1.5);
+    left: 36%;
+    bottom: 1.5%;
+    height: 3.25rem;
+
+    .dock {
+      display: none;
+    }
+
+    #mobile-dock {
+      display: block;
+    }
   }
 }
 
@@ -2335,7 +2358,7 @@ footer {
 
   /* footer */
   footer {
-    left: 11.5%;
+    margin-left: 5rem;
     bottom: -0.05%;
     transform: scale(1.05);
   }
@@ -2431,7 +2454,7 @@ footer {
   }
 }
 
-@media only screen and (min-width: 1026px) and (max-width: 1535px) and (min-height: 860px) {
+@media only screen and (min-width: 1026px) and (max-width: 1535px) and (min-height: 860px) and (max-height: 1200px) {
   /* Apps */
   .menu-left {
     margin-top: 0.05rem;
@@ -2468,6 +2491,111 @@ footer {
   /* Footer & Dock*/
   footer {
     left: 17%;
+  }
+}
+
+@media only screen and (min-width: 831px) and (max-width: 1270px) and (min-height: 1201px) and (max-height: 1376px) {
+  /* Header */
+  .menu-left {
+    #logo {
+      margin-top: 0.3rem;
+
+      transform: scale(1.5);
+    }
+    margin-left: -0.5rem;
+    #file,
+    #edit,
+    #go,
+    #view,
+    #window,
+    #help,
+    #menu-finder {
+      display: none;
+    }
+  }
+
+  .menu-right {
+    margin-top: 0.3rem;
+  }
+
+  /* Apps */
+
+  #launchpad-app,
+  #contacts-app,
+  #calendar-app,
+  #reminders-app,
+  #facetime-app,
+  #trash-app,
+  #help-app {
+    display: none;
+  }
+
+  #intro-window {
+    height: 64rem;
+    transform: scale(0.45);
+    top: -13.5%;
+    left: -16.5%;
+
+    .app-window-grid {
+      grid-template-columns: 1fr;
+      #left-col {
+        margin-left: 9rem;
+        #intro-image {
+          width: 25rem;
+        }
+      }
+      #right-col {
+        margin-top: -4rem;
+        padding: 2rem;
+        font-size: 1.75rem;
+      }
+    }
+  }
+
+  #internet-dot {
+    transform: scale(0.725);
+    margin-top: 0.15rem;
+  }
+
+  .apps-container {
+    margin-right: 17.2rem;
+    margin-top: 7.25rem;
+    transform: scale(1.5);
+
+    #desktop-stickies {
+      margin-top: -4rem;
+    }
+
+    #desktop-portfolio {
+      margin-top: -8rem;
+    }
+  }
+
+  #finder-app {
+    left: 7%;
+    margin-top: 5rem;
+    transform: scale(0.75);
+  }
+
+  #stickies-note {
+    margin-top: 40.5rem;
+    left: 5%;
+  }
+  /* Footer */
+
+  footer {
+    left: 36%;
+    bottom: 1.5%;
+    transform: scale(2);
+    height: 3.25rem;
+
+    .dock {
+      display: none;
+    }
+
+    #mobile-dock {
+      display: block;
+    }
   }
 }
 
@@ -2572,7 +2700,7 @@ footer {
   footer {
     left: 25%;
     transform: scale(1.5);
-    bottom: 1.25%;
+    bottom: 1%;
   }
 }
 
@@ -2581,11 +2709,11 @@ footer {
   /* Header */
 
   .menu-left {
-    margin-top: 0.5rem;
+    margin-top: 0.25rem;
   }
 
   .menu-right {
-    margin-top: 0.5rem;
+    margin-top: 0.25rem;
   }
 
   .apps-container {
@@ -2625,7 +2753,7 @@ footer {
 
   footer {
     left: 32.5%;
-    transform: scale(1.75);
+    transform: scale(1.7);
     bottom: 1.25%;
   }
 }
