@@ -5,7 +5,6 @@
 * {
   margin: 0;
   padding: 0;
-  user-select: none;
 }
 
 html,
@@ -30,6 +29,7 @@ ul > li:hover,
 
 img {
   width: 100%;
+  user-select: none;
 }
 
 /* Header */
