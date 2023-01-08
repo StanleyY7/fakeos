@@ -541,6 +541,7 @@ window.addEventListener("DOMContentLoaded", () => {
   const facetimeApp = document.getElementById("facetime-app");
   const webcam = document.getElementById("webcam");
   const facetimeImage = document.getElementById("facetime-image");
+  const available = document.getElementsByClassName("available-text")[2];
 
   const toggleFacetimeClose = (event) => {
     facetimeClose.style.display = event.type === "mouseover" ? "block" : "none";
@@ -565,6 +566,7 @@ window.addEventListener("DOMContentLoaded", () => {
   facetimeDot.addEventListener("mouseover", toggleFacetimeClose);
   facetimeDot.addEventListener("mouseleave", toggleFacetimeClose);
   facetime.addEventListener("click", displayFacetime);
+  available.addEventListener("click", displayFacetime);
 
   /* Reminders App */
 
