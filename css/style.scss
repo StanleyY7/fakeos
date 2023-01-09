@@ -167,30 +167,19 @@ header {
   grid-template-rows: 1fr;
 
   .app {
-    position: relative;
-    top: 1rem;
-    left: 93%;
     height: 10vh;
-    padding: 0.5rem;
+    position: relative;
+    margin-top: 1rem;
+    left: 93%;
+    padding: 0.75rem;
+  }
 
-    .app-image {
-      width: 5.5rem;
-      height: 5.5rem;
-      position: absolute;
-      top: 0;
-      left: 0;
-
-      #desktop-stickies {
-        position: absolute;
-        top: 40;
-      }
-
-      #desktop-portfolio {
-        position: absolute;
-        top: 30;
-        left: 20;
-      }
-    }
+  .app-image {
+    width: 5.5rem;
+    height: 5.5rem;
+    position: absolute;
+    top: 0;
+    z-index: 100;
   }
 }
 

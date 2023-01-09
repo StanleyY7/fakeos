@@ -164,27 +164,18 @@ header, footer {
   grid-template-rows: 1fr;
 }
 .apps-container .app {
-  position: relative;
-  top: 1rem;
-  left: 93%;
   height: 10vh;
-  padding: 0.5rem;
+  position: relative;
+  margin-top: 1rem;
+  left: 93%;
+  padding: 0.75rem;
 }
-.apps-container .app .app-image {
+.apps-container .app-image {
   width: 5.5rem;
   height: 5.5rem;
   position: absolute;
   top: 0;
-  left: 0;
-}
-.apps-container .app .app-image #desktop-stickies {
-  position: absolute;
-  top: 40;
-}
-.apps-container .app .app-image #desktop-portfolio {
-  position: absolute;
-  top: 30;
-  left: 20;
+  z-index: 100;
 }
 
 /* Apps */
