@@ -280,6 +280,7 @@ header {
 
   backdrop-filter: blur(1rem);
   display: none;
+  z-index: 101;
 
   #launchpad-close {
     margin-left: 0.5rem;
@@ -2563,7 +2564,7 @@ footer {
   }
 }
 
-@media only screen and (min-width: 1281px) and (max-width: 1371px) and (min-height: 600px) and (max-height: 860px) {
+@media only screen and (min-width: 1281px) and (max-width: 1372px) and (min-height: 600px) and (max-height: 860px) {
   .menu-left {
     margin-top: 0.05rem;
   }
@@ -2578,7 +2579,7 @@ footer {
     margin-right: 1.5rem;
   }
   .launchpad-grid {
-    margin-top: 11.5rem;
+    margin-top: -2.5rem;
   }
 
   #calendar-app {
@@ -3050,9 +3051,9 @@ footer {
   }
 
   .launchpad-grid {
-    transform: scale(1.75);
+    transform: scale(1.5);
 
-    margin: 23.5rem 25rem 25rem 25rem;
+    margin: 14rem 20rem 20rem 20rem;
   }
 
   /* Footer & Dock*/
@@ -3103,9 +3104,9 @@ footer {
   }
 
   .launchpad-grid {
-    transform: scale(1.75);
+    transform: scale(1.5);
 
-    margin: 23.5rem 25rem 25rem 25rem;
+    margin: 12.5rem 25rem 25rem 25rem;
   }
 
   /* Footer & Dock*/
@@ -3155,9 +3156,9 @@ footer {
   }
 
   .launchpad-grid {
-    transform: scale(1.75);
+    transform: scale(1.7);
 
-    margin: 23.5rem 25rem 25rem 25rem;
+    margin: 19.75rem 25rem 25rem 25rem;
   }
 
   /* Footer & Dock*/
