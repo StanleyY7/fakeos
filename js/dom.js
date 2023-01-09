@@ -138,8 +138,7 @@ window.addEventListener("DOMContentLoaded", () => {
   logo.addEventListener("click", () => toggleIntroLogo(true));
   logo.addEventListener("mouseleave", () => toggleIntroLogo(false));
 
-  /* Draggable Desktop Apps  */
-
+  /* Draggable Items  */
   const collision = (rect1, rect2) =>
     !(
       rect1.right < rect2.left ||
@@ -148,162 +147,63 @@ window.addEventListener("DOMContentLoaded", () => {
       rect1.top > rect2.bottom
     );
 
-  document.querySelectorAll(".app-image").forEach((img) => {
+  const draggableElements = document.querySelectorAll(".draggable, .app-image");
+
+  draggableElements.forEach((item) => {
     let isDragging = false;
-    let initialPosition = {};
-    let currentPosition = {};
     let initialX;
     let initialY;
-
-    img.addEventListener("mousedown", (event) => {
-      isDragging = true;
-      initialPosition = {
-        x: img.offsetLeft,
-        y: img.offsetTop,
-      };
-      initialX = event.clientX;
-      initialY = event.clientY;
-    });
-
-    document.addEventListener("mousemove", (event) => {
-      if (isDragging) {
-        currentPosition = {
-          x: event.clientX,
-          y: event.clientY,
-        };
-
-        let diffX = currentPosition.x - initialX;
-        let diffY = currentPosition.y - initialY;
-
-        img.style.left = initialPosition.x + diffX + "px";
-        img.style.top = initialPosition.y + diffY + "px";
-      }
-    });
-
-    document.addEventListener("mouseup", (event) => {
-      isDragging = false;
-
-      // Check if the dragged element is colliding with the target element
-      let draggedRect = img.getBoundingClientRect();
-      let targetRect = document.querySelector("#trash").getBoundingClientRect();
-      if (collision(draggedRect, targetRect)) {
-        // Remove the dragged element from the DOM
-        img.remove();
-        targetRect.style.transform = "scale(1.3)";
-      }
-    });
-  });
-
-  document.querySelectorAll(".app-image").forEach((img) => {
-    let isDragging = false;
-    let initialPosition = {};
-    let currentPosition = {};
-    let initialX;
-    let initialY;
-
-    img.addEventListener("touchstart", (event) => {
-      isDragging = true;
-      initialPosition = {
-        x: img.offsetLeft,
-        y: img.offsetTop,
-      };
-      initialX = event.touches[0].clientX;
-      initialY = event.touches[0].clientY;
-    });
-
-    document.addEventListener("touchmove", (event) => {
-      if (isDragging) {
-        currentPosition = {
-          x: event.touches[0].clientX,
-          y: event.touches[0].clientY,
-        };
-
-        let diffX = currentPosition.x - initialX;
-        let diffY = currentPosition.y - initialY;
-
-        img.style.left = initialPosition.x + diffX + "px";
-        img.style.top = initialPosition.y + diffY + "px";
-      }
-    });
-
-    document.addEventListener("touchend", (event) => {
-      isDragging = false;
-    });
-  });
-
-  /* Draggable App Windows */
-
-  document.querySelectorAll(".draggable").forEach((item) => {
-    let isDragging = false;
     let currentPosition = {};
     let initialPosition = {};
-    let initialX;
-    let initialY;
 
-    item.addEventListener("mousedown", (event) => {
+    const startDrag = (event) => {
       isDragging = true;
       initialPosition = {
         x: item.offsetLeft,
         y: item.offsetTop,
       };
-      initialX = event.clientX;
-      initialY = event.clientY;
-    });
 
-    document.addEventListener("mousemove", (event) => {
-      if (isDragging === true) {
+      initialX = event.clientX || event.targetTouches[0].clientX;
+      initialY = event.clientY || event.targetTouches[0].clientY;
+    };
+
+    const drag = (event) => {
+      event.preventDefault();
+      if (isDragging) {
         currentPosition = {
-          x: event.clientX,
-          y: event.clientY,
+          x: event.clientX || event.targetTouches[0].clientX,
+          y: event.clientY || event.targetTouches[0].clientY,
         };
 
-        diffX = currentPosition.x - initialX;
-        diffY = currentPosition.y - initialY;
+        let diffX = currentPosition.x - initialX;
+        let diffY = currentPosition.y - initialY;
+
         item.style.left = initialPosition.x + diffX + "px";
         item.style.top = initialPosition.y + diffY + "px";
       }
-    });
+    };
 
-    document.addEventListener("mouseup", (event) => {
+    const endDrag = (event) => {
       isDragging = false;
-    });
-  });
 
-  document.querySelectorAll(".draggable").forEach((item) => {
-    let isDragging = false;
-    let currentPosition = {};
-    let initialPosition = {};
-    let initialX;
-    let initialY;
-
-    item.addEventListener("touchstart", (event) => {
-      isDragging = true;
-      initialPosition = {
-        x: item.offsetLeft,
-        y: item.offsetTop,
-      };
-      initialX = event.touches[0].clientX;
-      initialY = event.touches[0].clientY;
-    });
-
-    item.addEventListener("touchmove", (event) => {
-      if (isDragging === true) {
-        event.preventDefault();
-        currentPosition = {
-          x: event.touches[0].clientX,
-          y: event.touches[0].clientY,
-        };
-
-        diffX = currentPosition.x - initialX;
-        diffY = currentPosition.y - initialY;
-        item.style.left = initialPosition.x + diffX + "px";
-        item.style.top = initialPosition.y + diffY + "px";
+      if (item.classList.contains("app-image")) {
+        let draggedRect = item.getBoundingClientRect();
+        let targetRect = document
+          .querySelector("#trash")
+          .getBoundingClientRect();
+        if (collision(draggedRect, targetRect)) {
+          item.remove();
+          targetRect.style.transform = "scale(1.3)";
+        }
       }
-    });
+    };
 
-    item.addEventListener("touchend", (event) => {
-      isDragging = false;
-    });
+    item.addEventListener("mousedown", startDrag);
+    item.addEventListener("touchstart", startDrag);
+    document.addEventListener("mousemove", drag);
+    document.addEventListener("touchmove", drag);
+    document.addEventListener("mouseup", endDrag);
+    document.addEventListener("touchend", endDrag);
   });
 
   /* For Intro App */
@@ -541,6 +441,7 @@ window.addEventListener("DOMContentLoaded", () => {
   const facetimeApp = document.getElementById("facetime-app");
   const webcam = document.getElementById("webcam");
   const facetimeImage = document.getElementById("facetime-image");
+  const available = document.getElementsByClassName("available-text")[2];
 
   const toggleFacetimeClose = (event) => {
     facetimeClose.style.display = event.type === "mouseover" ? "block" : "none";
@@ -565,6 +466,7 @@ window.addEventListener("DOMContentLoaded", () => {
   facetimeDot.addEventListener("mouseover", toggleFacetimeClose);
   facetimeDot.addEventListener("mouseleave", toggleFacetimeClose);
   facetime.addEventListener("click", displayFacetime);
+  available.addEventListener("click", displayFacetime);
 
   /* Reminders App */
 
