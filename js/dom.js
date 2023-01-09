@@ -194,6 +194,7 @@ window.addEventListener("DOMContentLoaded", () => {
         if (collision(draggedRect, targetRect)) {
           item.remove();
           targetRect.style.transform = "scale(1.3)";
+          targetRect.style.zIndex = "110";
         }
       }
     };

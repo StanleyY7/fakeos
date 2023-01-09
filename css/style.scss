@@ -727,9 +727,9 @@ iframe {
   }
 
   #facetime-image {
-    position: fixed;
-    top: 14.5%;
-    margin-left: 0.75rem;
+    position: absolute;
+    top: 10.25%;
+    margin-left: 1rem;
     width: 15rem;
     display: none;
     border-radius: 0.5rem;
