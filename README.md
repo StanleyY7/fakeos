@@ -2,6 +2,8 @@
 
 Link https://stanleyy7.github.io/fakeos/
 
+Repo Link https://github.com/StanleyY7/fakeos
+
 ![image](https://user-images.githubusercontent.com/119549394/210021374-98510733-7967-422d-a443-562cac48ed22.png)
 
 ## Outline
