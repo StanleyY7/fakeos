@@ -46,6 +46,17 @@ The main requirements for this project were:
 I achieved the above requirements by first selecting the reference image/s I would center my design on, then I used available resources to see what features I could implement and what modals I could create to simulate users using certain applications. After this initial design stage, I then worked on creating each part of the desktop environment ensuring that it looks as close to the reference image as possible. When I was happy with the way it looked visually in comparison to the reference image, I then worked on each individual application of the dock (designing/creating modals and/or ensuring each application does an action) and then added functionality to the apps on the desktop so that it was draggable. Lastly, I then completed the header menu of the desktop environment and then worked on media enquiries for several viewports. Once all MVP requirements were met I then worked on bonus features such as added functionality for certain applications and making it able to be viewed/used on mobile and tablet devices as well. 
 
 The main challenges experienced with this project was making it responsive as the modals also had to be visually appealing across several devices and making the applications on the desktop environment draggable. To resolve these issues I used available resources online and worked on potential solutions till I eventually resolved these challenges. 
+
+### Bonus Features
+
+I added several bonus features into the project. These features are:
+
+- Full Scalability/Responsiveness from 4k (2560 x 1375) down to Galaxy Fold Resolution Size.
+- Made dragging work on mobile/tablet interfaces.
+- Mimicked IOS dock for mobile/tablet interfaces.
+- From a design perspective made sure it all had the same general theme, I created certain icons, logos whilst referring to reference images etc...
+- Ensured that every button or entity that would be clicked did "something" (links to external pages, modals etc..). In future I will aim to replace as many external links as possible with my own project links or modals of my own projects.
+- Mimicked start up loading screen for Mac OSX Yosemite. (I included startup chime as well upon startup page load).
  
  ## Tech Stack
  - HTML
