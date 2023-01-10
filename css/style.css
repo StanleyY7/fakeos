@@ -908,7 +908,7 @@ footer .dock #border-line #border-icon {
   #intro-window {
     height: 64rem;
     top: -32.5%;
-    margin-left: 0.8rem;
+    left: -50%;
     transform: scale(0.3);
   }
   #intro-window .app-window-grid {
@@ -2265,6 +2265,9 @@ footer .dock #border-line #border-icon {
   #facetime-close {
     transform: scale(0.9);
   }
+  #facetime-image {
+    margin-top: -2rem;
+  }
   /* Footer & Dock*/
   footer {
     left: 17%;
@@ -2434,6 +2437,9 @@ footer .dock #border-line #border-icon {
     margin-top: 40.5rem;
     left: 5%;
   }
+  #facetime-image {
+    margin-top: -3.25rem;
+  }
   /* Footer */
   footer {
     left: 36%;
@@ -2474,6 +2480,9 @@ footer .dock #border-line #border-icon {
   #facetime-close {
     transform: scale(0.95);
   }
+  #facetime-image {
+    margin-top: -1.75rem;
+  }
   /* Footer and Dock */
   footer {
     left: 17.5%;
@@ -2507,6 +2516,9 @@ footer .dock #border-line #border-icon {
 #facetime-close {
     transform: scale(0.9);
   }
+  #facetime-image {
+    margin-top: -3.25rem;
+  }
   /* Footer & Dock */
   footer {
     transform: scale(1.25);
@@ -2530,6 +2542,9 @@ footer .dock #border-line #border-icon {
   }
   .apps-container .app-image {
     transform: scale(1.15);
+  }
+  #facetime-image {
+    margin-top: -3.25rem;
   }
   /* Footer & Dock*/
   footer {
@@ -2570,6 +2585,9 @@ footer .dock #border-line #border-icon {
     transform: scale(1.5);
     margin: 14rem 20rem 20rem 20rem;
   }
+  #facetime-image {
+    margin-top: -3.25rem;
+  }
   /* Footer & Dock*/
   footer {
     left: 24%;
@@ -2608,6 +2626,9 @@ footer .dock #border-line #border-icon {
   .launchpad-grid {
     transform: scale(1.5);
     margin: 12.5rem 25rem 25rem 25rem;
+  }
+  #facetime-image {
+    margin-top: -3.25rem;
   }
   /* Footer & Dock*/
   footer {
@@ -2648,6 +2669,9 @@ footer .dock #border-line #border-icon {
     transform: scale(1.7);
     margin: 19.75rem 25rem 25rem 25rem;
   }
+  #facetime-image {
+    margin-top: -3.25rem;
+  }
   /* Footer & Dock*/
   footer {
     left: 32.5%;
@@ -2657,9 +2681,6 @@ footer .dock #border-line #border-icon {
 }
 @media only screen and (min-width: 321px) and (max-width: 400px) and (min-height: 770px) and (max-height: 1376px) {
   /* Header */
-  header, footer {
-    height: 3%;
-  }
   .menu-left {
     margin-left: -0.75rem;
   }
@@ -2693,7 +2714,7 @@ footer .dock #border-line #border-icon {
   #intro-window {
     height: 64rem;
     transform: scale(0.28);
-    top: -32.5%;
+    top: -20.5%;
     left: -83%;
   }
   #intro-window .app-window-grid {
@@ -2780,9 +2801,9 @@ footer .dock #border-line #border-icon {
   }
   #intro-window {
     height: 64rem;
-    transform: scale(0.4);
+    transform: scale(0.37);
     top: -16.5%;
-    left: -20.75%;
+    left: -32%;
   }
   #intro-window .app-window-grid {
     grid-template-columns: 1fr;
