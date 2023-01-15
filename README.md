@@ -2,6 +2,8 @@
 
 Link https://stanleyy7.github.io/fakeos/
 
+![Copy of Display Template](https://user-images.githubusercontent.com/119549394/212572471-cfc41680-3dde-4209-be9b-1168b06d57b0.png)
+
 ![image](https://user-images.githubusercontent.com/119549394/210021374-98510733-7967-422d-a443-562cac48ed22.png)
 
 ## Outline
