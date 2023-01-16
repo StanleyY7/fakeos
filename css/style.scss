@@ -900,7 +900,7 @@ footer {
   }
 
   .apps-container {
-    margin-left: -52.5rem;
+    margin-left: -58rem;
     margin-top: -1.25rem;
     .app-image {
       transform: scale(0.65);
@@ -1002,7 +1002,7 @@ footer {
   }
 
   .apps-container {
-    margin-left: -52.5rem;
+    margin-left: -58.5rem;
     margin-top: -1.25rem;
     .app-image {
       transform: scale(0.7);
@@ -1037,7 +1037,7 @@ footer {
   }
 }
 
-@media only screen and (min-width: 321px) and (max-width: 428px) and (max-height: 770px) {
+@media only screen and (min-width: 320px) and (max-width: 428px) and (max-height: 770px) {
   /* Header */
 
   .menu-left {
@@ -1104,7 +1104,7 @@ footer {
   }
 
   .apps-container {
-    margin-left: -52.5rem;
+    margin-left: -58.5rem;
     margin-top: -1.25rem;
     .app-image {
       transform: scale(0.7);
@@ -1141,19 +1141,16 @@ footer {
   }
 }
 
-@media only screen and (min-width: 321px) and (max-width: 428px) and (min-height: 771px) and (max-height: 799px) {
+@media only screen and (min-width: 321px) and (max-width: 401px) and (min-height: 770px) and (max-height: 799px) {
   /* Header */
 
   header {
-    height: 3%;
+    height: min-content;
   }
 
   .menu-left {
     margin-left: -0.75rem;
 
-    #logo {
-      margin-top: 0.2rem;
-    }
     #file,
     #edit,
     #go,
@@ -1187,7 +1184,6 @@ footer {
   #intro-window {
     height: 64rem;
     top: -32.5%;
-    margin-left: 0.8rem;
     transform: scale(0.3);
 
     .app-window-grid {
@@ -1212,7 +1208,216 @@ footer {
   }
 
   .apps-container {
-    margin-left: -52.5rem;
+    margin-right: 0.5rem;
+    margin-top: -1.25rem;
+    .app-image {
+      transform: scale(0.7);
+    }
+  }
+
+  #finder-app {
+    margin-left: -1rem;
+    left: -50.95%;
+    top: 30%;
+    transform: scale(0.35);
+  }
+
+  #stickies-note {
+    transform: scale(0.4);
+    margin-top: -5rem;
+    left: -15.5%;
+  }
+
+  /* Footer */
+  footer {
+    transform: scale(1.05);
+    left: 20%;
+    bottom: -0.25%;
+    height: 3.25rem;
+
+    .dock {
+      display: none;
+    }
+
+    #mobile-dock {
+      display: block;
+    }
+  }
+}
+
+@media only screen and (min-width: 401px) and (max-width: 414px) and (min-height: 770px) and (max-height: 799px) {
+  /* Header */
+
+  header {
+    height: min-content;
+  }
+
+  .menu-left {
+    margin-left: -0.75rem;
+
+    #file,
+    #edit,
+    #go,
+    #view,
+    #window,
+    #help,
+    #menu-finder {
+      display: none;
+    }
+  }
+
+  .menu-right {
+    transform: scale(0.7);
+
+    margin-right: -1.4rem;
+    margin-top: 0.1rem !important;
+  }
+
+  /* Apps */
+
+  #launchpad-app,
+  #contacts-app,
+  #calendar-app,
+  #reminders-app,
+  #facetime-app,
+  #trash-app,
+  #help-app {
+    display: none;
+  }
+
+  #intro-window {
+    height: 64rem;
+    top: -32.5%;
+    transform: scale(0.3);
+
+    .app-window-grid {
+      grid-template-columns: 1fr;
+      #left-col {
+        margin-left: 9rem;
+        #intro-image {
+          width: 25rem;
+        }
+      }
+      #right-col {
+        margin-top: -4rem;
+        padding: 2rem;
+        font-size: 1.75rem;
+      }
+    }
+  }
+
+  #internet-dot {
+    transform: scale(0.725);
+    margin-top: 0.085rem;
+  }
+
+  .apps-container {
+    margin-right: 4rem;
+    margin-top: -1.25rem;
+    .app-image {
+      transform: scale(0.7);
+    }
+  }
+
+  #finder-app {
+    margin-left: -1rem;
+    left: -50.95%;
+    top: 30%;
+    transform: scale(0.35);
+  }
+
+  #stickies-note {
+    transform: scale(0.4);
+    margin-top: -5rem;
+    left: -15.5%;
+  }
+
+  /* Footer */
+  footer {
+    transform: scale(1.05);
+    left: 20%;
+    bottom: -0.25%;
+    height: 3.25rem;
+
+    .dock {
+      display: none;
+    }
+
+    #mobile-dock {
+      display: block;
+    }
+  }
+}
+
+@media only screen and (min-width: 414px) and (max-width: 460px) and (min-height: 770px) and (max-height: 799px) {
+  /* Header */
+
+  header {
+    height: min-content;
+  }
+
+  .menu-left {
+    margin-left: -0.75rem;
+    margin-top: -0.25rem;
+
+    #file,
+    #edit,
+    #go,
+    #view,
+    #window,
+    #help,
+    #menu-finder {
+      display: none;
+    }
+  }
+
+  .menu-right {
+    transform: scale(0.7);
+
+    margin-right: -1.4rem;
+    margin-top: 0.1rem !important;
+  }
+
+  /* Apps */
+
+  #launchpad-app,
+  #contacts-app,
+  #calendar-app,
+  #reminders-app,
+  #facetime-app,
+  #trash-app,
+  #help-app {
+    display: none;
+  }
+
+  #intro-window {
+    height: 64rem;
+    top: -32.5%;
+    transform: scale(0.3);
+
+    .app-window-grid {
+      grid-template-columns: 1fr;
+      #left-col {
+        margin-left: 9rem;
+        #intro-image {
+          width: 25rem;
+        }
+      }
+      #right-col {
+        margin-top: -4rem;
+        padding: 2rem;
+        font-size: 1.75rem;
+      }
+    }
+  }
+
+  #internet-dot {
+    transform: scale(0.725);
+    margin-top: 0.085rem;
+  }
+
+  .apps-container {
+    margin-right: 0.75rem;
     margin-top: -1.25rem;
     .app-image {
       transform: scale(0.7);
@@ -1313,7 +1518,7 @@ footer {
   }
 
   .apps-container {
-    margin-left: -52.5rem;
+    margin-right: 0.25rem;
     margin-top: -1rem;
     .app-image {
       transform: scale(0.8);
@@ -1402,7 +1607,7 @@ footer {
   }
 
   .apps-container {
-    margin-left: -52.5rem;
+    margin-left: -60rem;
     margin-top: -1rem;
     .app-image {
       transform: scale(0.8);
@@ -1499,7 +1704,6 @@ footer {
 
   .apps-container {
     margin-left: -52.5rem;
-    margin-top: 0.75rem;
   }
   #finder-app {
     left: -15%;
@@ -1593,7 +1797,7 @@ footer {
   }
 
   .apps-container {
-    margin-left: -45rem;
+    margin-right: 0.25rem;
     margin-top: 0.05rem;
     .app-image {
       transform: scale(0.9);
@@ -1629,7 +1833,7 @@ footer {
 
 // Medium Sized Devices like Tablets
 
-@media only screen and (min-width: 428px) and (max-width: 950px) and (max-height: 770px) {
+@media only screen and (min-width: 429px) and (max-width: 950px) and (max-height: 770px) {
   /* Header */
   .menu-left {
     #logo {
@@ -1691,7 +1895,7 @@ footer {
   }
 
   .apps-container {
-    margin-left: -52.5rem;
+    margin-left: -58.5rem;
     margin-top: -0.5rem;
     .app-image {
       transform: scale(0.87);
@@ -1788,7 +1992,7 @@ footer {
 
   .apps-container {
     margin-left: -52.5rem;
-    margin-top: 0.25rem;
+
     .app-image {
       transform: scale(0.9);
     }
@@ -1885,7 +2089,7 @@ footer {
 
   .apps-container {
     margin-left: -52.5rem;
-    margin-top: 0.25rem;
+    margin-top: 0.15rem;
   }
   #finder-app {
     left: -10.5%;
@@ -1979,8 +2183,8 @@ footer {
   }
 
   .apps-container {
-    margin-right: 15rem;
-    margin-top: 7rem;
+    margin-left: -20rem;
+    margin-top: 8rem;
     transform: scale(1.5);
 
     #desktop-stickies {
@@ -2082,8 +2286,8 @@ footer {
   }
 
   .apps-container {
-    margin-left: -52.5rem;
-    margin-top: 0.75rem;
+    margin-left: -52rem;
+    margin-top: 0.25rem;
   }
   #finder-app {
     left: -10.5%;
@@ -2181,8 +2385,8 @@ footer {
   }
 
   .apps-container {
-    margin-right: 17rem;
-    margin-top: 12rem;
+    margin-right: 18rem;
+    margin-top: 11.5rem;
     transform: scale(1.6);
 
     #desktop-stickies {
@@ -2232,7 +2436,7 @@ footer {
 
   .apps-container {
     margin-top: -1rem;
-    margin-right: 0.8rem;
+    margin-right: 2rem;
     .app-image {
       transform: scale(0.75);
     }
