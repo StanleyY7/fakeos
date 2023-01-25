@@ -9,23 +9,12 @@ html {
     background-image: url("../assets/startup.gif");
     background-size: 75%;
     background-repeat: no-repeat;
+    background-color: #fdfdfd;
     height: 100vh;
     width: 100vw;
     background-position: center;
-    background-color: #fcfcff;
+
     z-index: 80;
     position: relative;
   }
-}
-
-/* Content */
-
-#loader {
-  z-index: 100;
-  opacity: 50%;
-  position: absolute;
-  bottom: 19.25rem;
-  left: 39.5%;
-  transform: scale(0.7);
-  display: none;
 }
