@@ -36,7 +36,6 @@ img {
   width: 100%;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
 }
 
@@ -47,7 +46,6 @@ header, footer {
           backdrop-filter: blur(0.25rem);
   border-bottom: 1px solid rgba(255, 255, 255, 0.104);
   justify-content: space-around;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
 }
@@ -333,7 +331,6 @@ iframe #safari-iframe {
 }
 
 #help-app {
-  height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
   width: 20rem;
@@ -709,12 +706,12 @@ footer .dock #border-line #border-icon {
     margin-left: -0.75rem;
   }
   .menu-left #file,
-.menu-left #edit,
-.menu-left #go,
-.menu-left #view,
-.menu-left #window,
-.menu-left #help,
-.menu-left #menu-finder {
+  .menu-left #edit,
+  .menu-left #go,
+  .menu-left #view,
+  .menu-left #window,
+  .menu-left #help,
+  .menu-left #menu-finder {
     display: none;
   }
   .menu-right {
@@ -724,12 +721,12 @@ footer .dock #border-line #border-icon {
   }
   /* Apps */
   #launchpad-app,
-#contacts-app,
-#calendar-app,
-#reminders-app,
-#facetime-app,
-#trash-app,
-#help-app {
+  #contacts-app,
+  #calendar-app,
+  #reminders-app,
+  #facetime-app,
+  #trash-app,
+  #help-app {
     display: none;
   }
   #intro-window {
@@ -795,12 +792,12 @@ footer .dock #border-line #border-icon {
     margin-top: 0.2rem;
   }
   .menu-left #file,
-.menu-left #edit,
-.menu-left #go,
-.menu-left #view,
-.menu-left #window,
-.menu-left #help,
-.menu-left #menu-finder {
+  .menu-left #edit,
+  .menu-left #go,
+  .menu-left #view,
+  .menu-left #window,
+  .menu-left #help,
+  .menu-left #menu-finder {
     display: none;
   }
   .menu-right {
@@ -810,12 +807,12 @@ footer .dock #border-line #border-icon {
   }
   /* Apps */
   #launchpad-app,
-#contacts-app,
-#calendar-app,
-#reminders-app,
-#facetime-app,
-#trash-app,
-#help-app {
+  #contacts-app,
+  #calendar-app,
+  #reminders-app,
+  #facetime-app,
+  #trash-app,
+  #help-app {
     display: none;
   }
   #intro-window {
@@ -882,12 +879,12 @@ footer .dock #border-line #border-icon {
     margin-top: 0.5rem;
   }
   .menu-left #file,
-.menu-left #edit,
-.menu-left #go,
-.menu-left #view,
-.menu-left #window,
-.menu-left #help,
-.menu-left #menu-finder {
+  .menu-left #edit,
+  .menu-left #go,
+  .menu-left #view,
+  .menu-left #window,
+  .menu-left #help,
+  .menu-left #menu-finder {
     display: none;
   }
   .menu-right {
@@ -897,12 +894,12 @@ footer .dock #border-line #border-icon {
   }
   /* Apps */
   #launchpad-app,
-#contacts-app,
-#calendar-app,
-#reminders-app,
-#facetime-app,
-#trash-app,
-#help-app {
+  #contacts-app,
+  #calendar-app,
+  #reminders-app,
+  #facetime-app,
+  #trash-app,
+  #help-app {
     display: none;
   }
   #intro-window {
@@ -964,7 +961,6 @@ footer .dock #border-line #border-icon {
 @media only screen and (min-width: 321px) and (max-width: 401px) and (min-height: 770px) and (max-height: 799px) {
   /* Header */
   header, footer {
-    height: -webkit-min-content;
     height: -moz-min-content;
     height: min-content;
   }
@@ -972,12 +968,12 @@ footer .dock #border-line #border-icon {
     margin-left: -0.75rem;
   }
   .menu-left #file,
-.menu-left #edit,
-.menu-left #go,
-.menu-left #view,
-.menu-left #window,
-.menu-left #help,
-.menu-left #menu-finder {
+  .menu-left #edit,
+  .menu-left #go,
+  .menu-left #view,
+  .menu-left #window,
+  .menu-left #help,
+  .menu-left #menu-finder {
     display: none;
   }
   .menu-right {
@@ -987,12 +983,12 @@ footer .dock #border-line #border-icon {
   }
   /* Apps */
   #launchpad-app,
-#contacts-app,
-#calendar-app,
-#reminders-app,
-#facetime-app,
-#trash-app,
-#help-app {
+  #contacts-app,
+  #calendar-app,
+  #reminders-app,
+  #facetime-app,
+  #trash-app,
+  #help-app {
     display: none;
   }
   #intro-window {
@@ -1053,7 +1049,6 @@ footer .dock #border-line #border-icon {
 @media only screen and (min-width: 401px) and (max-width: 414px) and (min-height: 770px) and (max-height: 799px) {
   /* Header */
   header, footer {
-    height: -webkit-min-content;
     height: -moz-min-content;
     height: min-content;
   }
@@ -1061,12 +1056,12 @@ footer .dock #border-line #border-icon {
     margin-left: -0.75rem;
   }
   .menu-left #file,
-.menu-left #edit,
-.menu-left #go,
-.menu-left #view,
-.menu-left #window,
-.menu-left #help,
-.menu-left #menu-finder {
+  .menu-left #edit,
+  .menu-left #go,
+  .menu-left #view,
+  .menu-left #window,
+  .menu-left #help,
+  .menu-left #menu-finder {
     display: none;
   }
   .menu-right {
@@ -1076,12 +1071,12 @@ footer .dock #border-line #border-icon {
   }
   /* Apps */
   #launchpad-app,
-#contacts-app,
-#calendar-app,
-#reminders-app,
-#facetime-app,
-#trash-app,
-#help-app {
+  #contacts-app,
+  #calendar-app,
+  #reminders-app,
+  #facetime-app,
+  #trash-app,
+  #help-app {
     display: none;
   }
   #intro-window {
@@ -1142,7 +1137,6 @@ footer .dock #border-line #border-icon {
 @media only screen and (min-width: 414px) and (max-width: 460px) and (min-height: 770px) and (max-height: 799px) {
   /* Header */
   header, footer {
-    height: -webkit-min-content;
     height: -moz-min-content;
     height: min-content;
   }
@@ -1151,12 +1145,12 @@ footer .dock #border-line #border-icon {
     margin-top: -0.25rem;
   }
   .menu-left #file,
-.menu-left #edit,
-.menu-left #go,
-.menu-left #view,
-.menu-left #window,
-.menu-left #help,
-.menu-left #menu-finder {
+  .menu-left #edit,
+  .menu-left #go,
+  .menu-left #view,
+  .menu-left #window,
+  .menu-left #help,
+  .menu-left #menu-finder {
     display: none;
   }
   .menu-right {
@@ -1166,12 +1160,12 @@ footer .dock #border-line #border-icon {
   }
   /* Apps */
   #launchpad-app,
-#contacts-app,
-#calendar-app,
-#reminders-app,
-#facetime-app,
-#trash-app,
-#help-app {
+  #contacts-app,
+  #calendar-app,
+  #reminders-app,
+  #facetime-app,
+  #trash-app,
+  #help-app {
     display: none;
   }
   #intro-window {
@@ -1238,12 +1232,12 @@ footer .dock #border-line #border-icon {
     transform: scale(0.9);
   }
   .menu-left #file,
-.menu-left #edit,
-.menu-left #go,
-.menu-left #view,
-.menu-left #window,
-.menu-left #help,
-.menu-left #menu-finder {
+  .menu-left #edit,
+  .menu-left #go,
+  .menu-left #view,
+  .menu-left #window,
+  .menu-left #help,
+  .menu-left #menu-finder {
     display: none;
   }
   .menu-right {
@@ -1252,12 +1246,12 @@ footer .dock #border-line #border-icon {
   }
   /* Apps */
   #launchpad-app,
-#contacts-app,
-#calendar-app,
-#reminders-app,
-#facetime-app,
-#trash-app,
-#help-app {
+  #contacts-app,
+  #calendar-app,
+  #reminders-app,
+  #facetime-app,
+  #trash-app,
+  #help-app {
     display: none;
   }
   #intro-window {
@@ -1321,22 +1315,22 @@ footer .dock #border-line #border-icon {
     margin-left: -0.75rem;
   }
   .menu-left #file,
-.menu-left #edit,
-.menu-left #go,
-.menu-left #view,
-.menu-left #window,
-.menu-left #help,
-.menu-left #menu-finder {
+  .menu-left #edit,
+  .menu-left #go,
+  .menu-left #view,
+  .menu-left #window,
+  .menu-left #help,
+  .menu-left #menu-finder {
     display: none;
   }
   /* Apps */
   #launchpad-app,
-#contacts-app,
-#calendar-app,
-#reminders-app,
-#facetime-app,
-#trash-app,
-#help-app {
+  #contacts-app,
+  #calendar-app,
+  #reminders-app,
+  #facetime-app,
+  #trash-app,
+  #help-app {
     display: none;
   }
   #intro-window {
@@ -1403,12 +1397,12 @@ footer .dock #border-line #border-icon {
     transform: scale(1.05);
   }
   .menu-left #file,
-.menu-left #edit,
-.menu-left #go,
-.menu-left #view,
-.menu-left #window,
-.menu-left #help,
-.menu-left #menu-finder {
+  .menu-left #edit,
+  .menu-left #go,
+  .menu-left #view,
+  .menu-left #window,
+  .menu-left #help,
+  .menu-left #menu-finder {
     display: none;
   }
   .menu-right {
@@ -1416,12 +1410,12 @@ footer .dock #border-line #border-icon {
   }
   /* Apps */
   #launchpad-app,
-#contacts-app,
-#calendar-app,
-#reminders-app,
-#facetime-app,
-#trash-app,
-#help-app {
+  #contacts-app,
+  #calendar-app,
+  #reminders-app,
+  #facetime-app,
+  #trash-app,
+  #help-app {
     display: none;
   }
   #intro-window {
@@ -1485,12 +1479,12 @@ footer .dock #border-line #border-icon {
     transform: scale(1.05);
   }
   .menu-left #file,
-.menu-left #edit,
-.menu-left #go,
-.menu-left #view,
-.menu-left #window,
-.menu-left #help,
-.menu-left #menu-finder {
+  .menu-left #edit,
+  .menu-left #go,
+  .menu-left #view,
+  .menu-left #window,
+  .menu-left #help,
+  .menu-left #menu-finder {
     display: none;
   }
   .menu-right {
@@ -1498,12 +1492,12 @@ footer .dock #border-line #border-icon {
   }
   /* Apps */
   #launchpad-app,
-#contacts-app,
-#calendar-app,
-#reminders-app,
-#facetime-app,
-#trash-app,
-#help-app {
+  #contacts-app,
+  #calendar-app,
+  #reminders-app,
+  #facetime-app,
+  #trash-app,
+  #help-app {
     display: none;
   }
   #intro-window {
@@ -1570,12 +1564,12 @@ footer .dock #border-line #border-icon {
     margin-top: 0.05rem;
   }
   .menu-left #file,
-.menu-left #edit,
-.menu-left #go,
-.menu-left #view,
-.menu-left #window,
-.menu-left #help,
-.menu-left #menu-finder {
+  .menu-left #edit,
+  .menu-left #go,
+  .menu-left #view,
+  .menu-left #window,
+  .menu-left #help,
+  .menu-left #menu-finder {
     display: none;
   }
   .menu-right {
@@ -1584,11 +1578,11 @@ footer .dock #border-line #border-icon {
   }
   /* Apps */
   #launchpad-app,
-#contacts-app,
-#calendar-app,
-#reminders-app,
-#facetime-app,
-#trash-app {
+  #contacts-app,
+  #calendar-app,
+  #reminders-app,
+  #facetime-app,
+  #trash-app {
     display: none;
   }
   #intro-window {
@@ -1655,12 +1649,12 @@ footer .dock #border-line #border-icon {
     margin-top: 0.05rem;
   }
   .menu-left #file,
-.menu-left #edit,
-.menu-left #go,
-.menu-left #view,
-.menu-left #window,
-.menu-left #help,
-.menu-left #menu-finder {
+  .menu-left #edit,
+  .menu-left #go,
+  .menu-left #view,
+  .menu-left #window,
+  .menu-left #help,
+  .menu-left #menu-finder {
     display: none;
   }
   .menu-right {
@@ -1669,11 +1663,11 @@ footer .dock #border-line #border-icon {
   }
   /* Apps */
   #launchpad-app,
-#contacts-app,
-#calendar-app,
-#reminders-app,
-#facetime-app,
-#trash-app {
+  #contacts-app,
+  #calendar-app,
+  #reminders-app,
+  #facetime-app,
+  #trash-app {
     display: none;
   }
   #intro-window {
@@ -1740,12 +1734,12 @@ footer .dock #border-line #border-icon {
     transform: scale(1.05);
   }
   .menu-left #file,
-.menu-left #edit,
-.menu-left #go,
-.menu-left #view,
-.menu-left #window,
-.menu-left #help,
-.menu-left #menu-finder {
+  .menu-left #edit,
+  .menu-left #go,
+  .menu-left #view,
+  .menu-left #window,
+  .menu-left #help,
+  .menu-left #menu-finder {
     display: none;
   }
   .menu-right {
@@ -1753,12 +1747,12 @@ footer .dock #border-line #border-icon {
   }
   /* Apps */
   #launchpad-app,
-#contacts-app,
-#calendar-app,
-#reminders-app,
-#facetime-app,
-#trash-app,
-#help-app {
+  #contacts-app,
+  #calendar-app,
+  #reminders-app,
+  #facetime-app,
+  #trash-app,
+  #help-app {
     display: none;
   }
   #intro-window {
@@ -1823,12 +1817,12 @@ footer .dock #border-line #border-icon {
     transform: scale(1.5);
   }
   .menu-left #file,
-.menu-left #edit,
-.menu-left #go,
-.menu-left #view,
-.menu-left #window,
-.menu-left #help,
-.menu-left #menu-finder {
+  .menu-left #edit,
+  .menu-left #go,
+  .menu-left #view,
+  .menu-left #window,
+  .menu-left #help,
+  .menu-left #menu-finder {
     display: none;
   }
   .menu-right {
@@ -1836,12 +1830,12 @@ footer .dock #border-line #border-icon {
   }
   /* Apps */
   #launchpad-app,
-#contacts-app,
-#calendar-app,
-#reminders-app,
-#facetime-app,
-#trash-app,
-#help-app {
+  #contacts-app,
+  #calendar-app,
+  #reminders-app,
+  #facetime-app,
+  #trash-app,
+  #help-app {
     display: none;
   }
   #intro-window {
@@ -1911,12 +1905,12 @@ footer .dock #border-line #border-icon {
     transform: scale(1.05);
   }
   .menu-left #file,
-.menu-left #edit,
-.menu-left #go,
-.menu-left #view,
-.menu-left #window,
-.menu-left #help,
-.menu-left #menu-finder {
+  .menu-left #edit,
+  .menu-left #go,
+  .menu-left #view,
+  .menu-left #window,
+  .menu-left #help,
+  .menu-left #menu-finder {
     display: none;
   }
   .menu-right {
@@ -1924,12 +1918,12 @@ footer .dock #border-line #border-icon {
   }
   /* Apps */
   #launchpad-app,
-#contacts-app,
-#calendar-app,
-#reminders-app,
-#facetime-app,
-#trash-app,
-#help-app {
+  #contacts-app,
+  #calendar-app,
+  #reminders-app,
+  #facetime-app,
+  #trash-app,
+  #help-app {
     display: none;
   }
   #intro-window {
@@ -1987,7 +1981,6 @@ footer .dock #border-line #border-icon {
 @media only screen and (min-width: 840px) and (max-width: 1202px) and (min-height: 1601px) and (max-height: 1891px) {
   /* Header */
   header, footer {
-    height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
   }
@@ -1999,12 +1992,12 @@ footer .dock #border-line #border-icon {
     transform: scale(1.5);
   }
   .menu-left #file,
-.menu-left #edit,
-.menu-left #go,
-.menu-left #view,
-.menu-left #window,
-.menu-left #help,
-.menu-left #menu-finder {
+  .menu-left #edit,
+  .menu-left #go,
+  .menu-left #view,
+  .menu-left #window,
+  .menu-left #help,
+  .menu-left #menu-finder {
     display: none;
   }
   .menu-right {
@@ -2012,12 +2005,12 @@ footer .dock #border-line #border-icon {
   }
   /* Apps */
   #launchpad-app,
-#contacts-app,
-#calendar-app,
-#reminders-app,
-#facetime-app,
-#trash-app,
-#help-app {
+  #contacts-app,
+  #calendar-app,
+  #reminders-app,
+  #facetime-app,
+  #trash-app,
+  #help-app {
     display: none;
   }
   #intro-window {
@@ -2103,11 +2096,11 @@ footer .dock #border-line #border-icon {
     left: 5%;
   }
   #calendar-app,
-#reminders-app,
-#internet-close,
-#trash-app,
-#contacts-app,
-#help-app {
+  #reminders-app,
+  #internet-close,
+  #trash-app,
+  #contacts-app,
+  #help-app {
     transform: scale(0.75);
   }
   #facetime-app {
@@ -2158,11 +2151,11 @@ footer .dock #border-line #border-icon {
     left: 5%;
   }
   #calendar-app,
-#reminders-app,
-#internet-close,
-#trash-app,
-#contacts-app,
-#help-app {
+  #reminders-app,
+  #internet-close,
+  #trash-app,
+  #contacts-app,
+  #help-app {
     transform: scale(0.9);
   }
   #facetime-app {
@@ -2245,11 +2238,11 @@ footer .dock #border-line #border-icon {
     left: 5%;
   }
   #calendar-app,
-#reminders-app,
-#internet-close,
-#trash-app,
-#contacts-app,
-#help-app {
+  #reminders-app,
+  #internet-close,
+  #trash-app,
+  #contacts-app,
+  #help-app {
     transform: scale(0.9);
   }
   #facetime-app {
@@ -2301,7 +2294,7 @@ footer .dock #border-line #border-icon {
     transform: scale(0.9);
   }
   #internet-dot,
-#internet-close {
+  #internet-close {
     transform: scale(0.88);
   }
   #facetime-close {
@@ -2336,7 +2329,7 @@ footer .dock #border-line #border-icon {
     transform: scale(0.9);
   }
   #internet-dot,
-#internet-close {
+  #internet-close {
     transform: scale(0.88);
   }
   #facetime-close {
@@ -2371,7 +2364,7 @@ footer .dock #border-line #border-icon {
     transform: scale(0.9);
   }
   #internet-dot,
-#internet-close {
+  #internet-close {
     transform: scale(0.88);
   }
   #facetime-close {
@@ -2404,7 +2397,7 @@ footer .dock #border-line #border-icon {
     transform: scale(0.9);
   }
   #internet-dot,
-#internet-close {
+  #internet-close {
     transform: scale(0.88);
   }
   #facetime-close {
@@ -2434,7 +2427,7 @@ footer .dock #border-line #border-icon {
     transform: scale(0.9);
   }
   #internet-dot,
-#internet-close {
+  #internet-close {
     transform: scale(0.88);
   }
   #facetime-close {
@@ -2458,12 +2451,12 @@ footer .dock #border-line #border-icon {
     transform: scale(1.5);
   }
   .menu-left #file,
-.menu-left #edit,
-.menu-left #go,
-.menu-left #view,
-.menu-left #window,
-.menu-left #help,
-.menu-left #menu-finder {
+  .menu-left #edit,
+  .menu-left #go,
+  .menu-left #view,
+  .menu-left #window,
+  .menu-left #help,
+  .menu-left #menu-finder {
     display: none;
   }
   .menu-right {
@@ -2471,12 +2464,12 @@ footer .dock #border-line #border-icon {
   }
   /* Apps */
   #launchpad-app,
-#contacts-app,
-#calendar-app,
-#reminders-app,
-#facetime-app,
-#trash-app,
-#help-app {
+  #contacts-app,
+  #calendar-app,
+  #reminders-app,
+  #facetime-app,
+  #trash-app,
+  #help-app {
     display: none;
   }
   #intro-window {
@@ -2547,12 +2540,12 @@ footer .dock #border-line #border-icon {
     transform: scale(1.5);
   }
   .menu-left #file,
-.menu-left #edit,
-.menu-left #go,
-.menu-left #view,
-.menu-left #window,
-.menu-left #help,
-.menu-left #menu-finder {
+  .menu-left #edit,
+  .menu-left #go,
+  .menu-left #view,
+  .menu-left #window,
+  .menu-left #help,
+  .menu-left #menu-finder {
     display: none;
   }
   .menu-right {
@@ -2560,12 +2553,12 @@ footer .dock #border-line #border-icon {
   }
   /* Apps */
   #launchpad-app,
-#contacts-app,
-#calendar-app,
-#reminders-app,
-#facetime-app,
-#trash-app,
-#help-app {
+  #contacts-app,
+  #calendar-app,
+  #reminders-app,
+  #facetime-app,
+  #trash-app,
+  #help-app {
     display: none;
   }
   #intro-window {
@@ -2640,7 +2633,7 @@ footer .dock #border-line #border-icon {
     transform: scale(1.15);
   }
   #internet-dot,
-#internet-close {
+  #internet-close {
     transform: scale(0.9);
   }
   .launchpad-grid {
@@ -2688,7 +2681,7 @@ footer .dock #border-line #border-icon {
     transform: scale(1.25);
   }
   #calendar-close,
-#facetime-close {
+  #facetime-close {
     transform: scale(0.9);
   }
   #facetime-image {
@@ -2697,7 +2690,7 @@ footer .dock #border-line #border-icon {
   /* Footer & Dock */
   footer {
     transform: scale(1.25);
-    bottom: 0.5%;
+    bottom: 0.4%;
   }
 }
 @media only screen and (min-width: 1900px) and (max-width: 2000px) {
@@ -2725,7 +2718,7 @@ footer .dock #border-line #border-icon {
   footer {
     left: 25%;
     transform: scale(1.5);
-    bottom: 0.9%;
+    bottom: 0.75%;
   }
 }
 @media only screen and (min-width: 2001px) and (max-width: 2129px) {
@@ -2742,12 +2735,12 @@ footer .dock #border-line #border-icon {
   }
   /* Apps */
   #help-app,
-#trash-app,
-#calendar-app,
-#stickies-note,
-#reminders-app,
-#facetime-app,
-#contacts-app {
+  #trash-app,
+  #calendar-app,
+  #stickies-note,
+  #reminders-app,
+  #facetime-app,
+  #contacts-app {
     transform: scale(1.15);
   }
   #calendar-app #calendar-app-top {
@@ -2767,7 +2760,7 @@ footer .dock #border-line #border-icon {
   footer {
     left: 24%;
     transform: scale(1.65);
-    bottom: 1.1%;
+    bottom: 1%;
   }
 }
 @media only screen and (min-width: 2130px) and (max-width: 2499px) {
@@ -2784,12 +2777,12 @@ footer .dock #border-line #border-icon {
   }
   /* Apps */
   #help-app,
-#trash-app,
-#calendar-app,
-#stickies-note,
-#reminders-app,
-#facetime-app,
-#contacts-app {
+  #trash-app,
+  #calendar-app,
+  #stickies-note,
+  #reminders-app,
+  #facetime-app,
+  #contacts-app {
     transform: scale(1.15);
   }
   #calendar-app #calendar-app-top {
@@ -2809,7 +2802,7 @@ footer .dock #border-line #border-icon {
   footer {
     left: 27%;
     transform: scale(1.65);
-    bottom: 1.1%;
+    bottom: 1%;
   }
 }
 @media only screen and (min-width: 2500px) {
@@ -2826,12 +2819,12 @@ footer .dock #border-line #border-icon {
   }
   /* Apps */
   #help-app,
-#trash-app,
-#calendar-app,
-#stickies-note,
-#reminders-app,
-#facetime-app,
-#contacts-app {
+  #trash-app,
+  #calendar-app,
+  #stickies-note,
+  #reminders-app,
+  #facetime-app,
+  #contacts-app {
     transform: scale(1.15);
   }
   #calendar-app #calendar-app-top {
@@ -2851,7 +2844,7 @@ footer .dock #border-line #border-icon {
   footer {
     left: 32.5%;
     transform: scale(1.7);
-    bottom: 1.25%;
+    bottom: 1%;
   }
 }
 @media only screen and (min-width: 321px) and (max-width: 400px) and (min-height: 770px) and (max-height: 1376px) {
@@ -2863,12 +2856,12 @@ footer .dock #border-line #border-icon {
     margin-top: 0.2rem;
   }
   .menu-left #file,
-.menu-left #edit,
-.menu-left #go,
-.menu-left #view,
-.menu-left #window,
-.menu-left #help,
-.menu-left #menu-finder {
+  .menu-left #edit,
+  .menu-left #go,
+  .menu-left #view,
+  .menu-left #window,
+  .menu-left #help,
+  .menu-left #menu-finder {
     display: none;
   }
   .menu-right {
@@ -2878,12 +2871,12 @@ footer .dock #border-line #border-icon {
   }
   /* Apps */
   #launchpad-app,
-#contacts-app,
-#calendar-app,
-#reminders-app,
-#facetime-app,
-#trash-app,
-#help-app {
+  #contacts-app,
+  #calendar-app,
+  #reminders-app,
+  #facetime-app,
+  #trash-app,
+  #help-app {
     display: none;
   }
   #intro-window {
@@ -2953,12 +2946,12 @@ footer .dock #border-line #border-icon {
     transform: scale(1.05);
   }
   .menu-left #file,
-.menu-left #edit,
-.menu-left #go,
-.menu-left #view,
-.menu-left #window,
-.menu-left #help,
-.menu-left #menu-finder {
+  .menu-left #edit,
+  .menu-left #go,
+  .menu-left #view,
+  .menu-left #window,
+  .menu-left #help,
+  .menu-left #menu-finder {
     display: none;
   }
   .menu-right {
@@ -2966,12 +2959,12 @@ footer .dock #border-line #border-icon {
   }
   /* Apps */
   #launchpad-app,
-#contacts-app,
-#calendar-app,
-#reminders-app,
-#facetime-app,
-#trash-app,
-#help-app {
+  #contacts-app,
+  #calendar-app,
+  #reminders-app,
+  #facetime-app,
+  #trash-app,
+  #help-app {
     display: none;
   }
   #intro-window {
@@ -3042,12 +3035,12 @@ footer .dock #border-line #border-icon {
     transform: scale(1.05);
   }
   .menu-left #file,
-.menu-left #edit,
-.menu-left #go,
-.menu-left #view,
-.menu-left #window,
-.menu-left #help,
-.menu-left #menu-finder {
+  .menu-left #edit,
+  .menu-left #go,
+  .menu-left #view,
+  .menu-left #window,
+  .menu-left #help,
+  .menu-left #menu-finder {
     display: none;
   }
   .menu-right {
@@ -3055,12 +3048,12 @@ footer .dock #border-line #border-icon {
   }
   /* Apps */
   #launchpad-app,
-#contacts-app,
-#calendar-app,
-#reminders-app,
-#facetime-app,
-#trash-app,
-#help-app {
+  #contacts-app,
+  #calendar-app,
+  #reminders-app,
+  #facetime-app,
+  #trash-app,
+  #help-app {
     display: none;
   }
   #intro-window {
@@ -3131,12 +3124,12 @@ footer .dock #border-line #border-icon {
     transform: scale(1.05);
   }
   .menu-left #file,
-.menu-left #edit,
-.menu-left #go,
-.menu-left #view,
-.menu-left #window,
-.menu-left #help,
-.menu-left #menu-finder {
+  .menu-left #edit,
+  .menu-left #go,
+  .menu-left #view,
+  .menu-left #window,
+  .menu-left #help,
+  .menu-left #menu-finder {
     display: none;
   }
   .menu-right {
@@ -3144,12 +3137,12 @@ footer .dock #border-line #border-icon {
   }
   /* Apps */
   #launchpad-app,
-#contacts-app,
-#calendar-app,
-#reminders-app,
-#facetime-app,
-#trash-app,
-#help-app {
+  #contacts-app,
+  #calendar-app,
+  #reminders-app,
+  #facetime-app,
+  #trash-app,
+  #help-app {
     display: none;
   }
   #intro-window {
@@ -3217,12 +3210,12 @@ footer .dock #border-line #border-icon {
     transform: scale(1.5);
   }
   .menu-left #file,
-.menu-left #edit,
-.menu-left #go,
-.menu-left #view,
-.menu-left #window,
-.menu-left #help,
-.menu-left #menu-finder {
+  .menu-left #edit,
+  .menu-left #go,
+  .menu-left #view,
+  .menu-left #window,
+  .menu-left #help,
+  .menu-left #menu-finder {
     display: none;
   }
   .menu-right {
@@ -3230,12 +3223,12 @@ footer .dock #border-line #border-icon {
   }
   /* Apps */
   #launchpad-app,
-#contacts-app,
-#calendar-app,
-#reminders-app,
-#facetime-app,
-#trash-app,
-#help-app {
+  #contacts-app,
+  #calendar-app,
+  #reminders-app,
+  #facetime-app,
+  #trash-app,
+  #help-app {
     display: none;
   }
   #intro-window {
@@ -3306,12 +3299,12 @@ footer .dock #border-line #border-icon {
     transform: scale(1.5);
   }
   .menu-left #file,
-.menu-left #edit,
-.menu-left #go,
-.menu-left #view,
-.menu-left #window,
-.menu-left #help,
-.menu-left #menu-finder {
+  .menu-left #edit,
+  .menu-left #go,
+  .menu-left #view,
+  .menu-left #window,
+  .menu-left #help,
+  .menu-left #menu-finder {
     display: none;
   }
   .menu-right {
@@ -3319,12 +3312,12 @@ footer .dock #border-line #border-icon {
   }
   /* Apps */
   #launchpad-app,
-#contacts-app,
-#calendar-app,
-#reminders-app,
-#facetime-app,
-#trash-app,
-#help-app {
+  #contacts-app,
+  #calendar-app,
+  #reminders-app,
+  #facetime-app,
+  #trash-app,
+  #help-app {
     display: none;
   }
   #intro-window {
@@ -3395,12 +3388,12 @@ footer .dock #border-line #border-icon {
     transform: scale(1.05);
   }
   .menu-left #file,
-.menu-left #edit,
-.menu-left #go,
-.menu-left #view,
-.menu-left #window,
-.menu-left #help,
-.menu-left #menu-finder {
+  .menu-left #edit,
+  .menu-left #go,
+  .menu-left #view,
+  .menu-left #window,
+  .menu-left #help,
+  .menu-left #menu-finder {
     display: none;
   }
   .menu-right {
@@ -3408,12 +3401,12 @@ footer .dock #border-line #border-icon {
   }
   /* Apps */
   #launchpad-app,
-#contacts-app,
-#calendar-app,
-#reminders-app,
-#facetime-app,
-#trash-app,
-#help-app {
+  #contacts-app,
+  #calendar-app,
+  #reminders-app,
+  #facetime-app,
+  #trash-app,
+  #help-app {
     display: none;
   }
   #intro-window {
