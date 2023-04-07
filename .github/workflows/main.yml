@@ -1,0 +1,21 @@
+name: Cucumber-JS BDD Tests
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Install dependencies
+      run: |
+        npm install
+    - name: Set file permissions
+      run: chmod -R 777 node_modules    
+    - name: Run tests
+      run: |
+        npm run test
