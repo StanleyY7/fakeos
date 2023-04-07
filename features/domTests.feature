@@ -22,3 +22,30 @@ Given I am on the page
     And I should see the "mobile-safari" icon
     And I should see the "mobile-stickies" icon
     And I should see the "mobile-github" icon
+
+Scenario: Test Header is rendering
+Given I am on the page
+    Then It should render the header
+    And I should see the "menu" 
+    And I should see the "logo" 
+    And I should see the "menu-finder" 
+    And I should see the "file" 
+    And I should see the "edit" 
+    And I should see the "view" 
+    And I should see the "go"
+    And I should see the "window"
+    And I should see the "help"
+    And I should see the "battery"
+    And I should see the "wifi" 
+    And I should see the "time" 
+
+Scenario: Test Apps on desktop is rendering
+Given I am on the page
+    Then It should render the apps-container 
+    And I should see the "harddisk" render
+    And I should see the "desktop-stickies" render
+    And I should see the "desktop-portfolio" render
+
+Scenario: Test Intro Window on desktop is rendering
+Given I am on the page
+    Then I should see the intro-window rendering
