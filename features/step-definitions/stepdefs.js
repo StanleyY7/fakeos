@@ -504,7 +504,7 @@ Given("I am on the page", () => {
                 <li>
                   LinkedIn:
                   <a
-                    href="https://www.linkedin.com/in/stanleyyu-ccs/"
+                    href="https://www.linkedin.com/in/stanleyyu-swe/"
                     class="available-text"
                     >Available</a
                   >
@@ -700,7 +700,7 @@ Given("I am on the page", () => {
                 <p class="launchpad-text">Excel</p>
               </div>
               <div class="launchpad-content-container">
-                <a href="https://www.linkedin.com/in/stanleyyu-ccs/">
+                <a href="https://www.linkedin.com/in/stanleyyu-swe/">
                   <img
                     class="launchpad-image"
                     src="assets/launchpadAssets/linkedin-icon.png"
